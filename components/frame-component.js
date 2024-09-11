@@ -29,7 +29,8 @@ const FrameComponent = ({ className = "" }) => {
 
   // Fetch data from the API when the component loads
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/get_data2")
+    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
+    fetch(`${baseURL}/get_data2`)
       .then((response) => response.json())
       .then((fetchedData) => setData(fetchedData))
       .catch((error) => console.error("Error fetching data:", error));

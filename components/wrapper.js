@@ -18,7 +18,8 @@ const Wrapper = ({ className = "" }) => {
   });
     
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/get_data4")
+    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
+    fetch(`${baseURL}/get_data4`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
