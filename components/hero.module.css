@@ -160,7 +160,7 @@
   margin: 0;
 }
 .experienceUniquely {
-  animation: slideLeftToRight 2s ease-out forwards;
+  animation: slideLeftToRight 3s ease-out forwards;
   text-align: center;
   font-size: var(--font-size-61xl); /* Adjust font size for your needs */
   margin: 0;
