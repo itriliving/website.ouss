@@ -1,0 +1,193 @@
+.keepUpWith {
+  margin: 0;
+}
+.keepUpWithContainer,
+.nameemailcom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.keepUpWithContainer {
+  height: 56px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.nameemailcom {
+  width: 241px;
+  white-space: nowrap;
+}
+.input {
+  flex: 1;
+  box-shadow: 0 0 0#fff inset, 0 0 0 1px #fcfbf8 inset;
+  border-radius: var(--br-9980xl) 0 0 var(--br-9980xl);
+  background-color: var(--color-floralwhite);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs-1) var(--padding-base) var(--padding-3xs-9);
+  box-sizing: border-box;
+  min-width: 236px;
+  max-width: 100%;
+}
+.buttonIcon {
+  height: 36px;
+  width: 38px;
+  position: relative;
+  border-radius: 0 var(--br-9980xl) var(--br-9980xl) 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 36px;
+  z-index: 1;
+  margin-left: -1px;
+}
+.form,
+.newsletterForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.form {
+  align-self: stretch;
+  border-radius: var(--br-9980xl);
+  flex-direction: row;
+  row-gap: 20px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+}
+.newsletterForm {
+  width: 400px;
+  flex-direction: column;
+  gap: var(--gap-base-5);
+  min-width: 400px;
+}
+.downloadTheItri {
+  flex: 1;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+}
+.downloadTheItriAppNowWrapper {
+  width: 287.8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs);
+  box-sizing: border-box;
+}
+.linkAppStoreButton667a53,
+.linkGooglePlayButton0e48 {
+  align-self: stretch;
+  width: 136px;
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 41px;
+}
+.linkGooglePlayButton0e48 {
+  width: 121px;
+}
+.appStoreButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.removalai121894cdCd9e424bIcon {
+  width: 155px;
+  height: 126px;
+  position: absolute;
+  margin: 0 !important;
+  right: -4.5px;
+  bottom: -29px;
+  object-fit: cover;
+  z-index: 1;
+}
+.verticalborder {
+  width: 732px;
+  border-left: 1px solid var(--color-snow-300);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base-5) var(--padding-197xl);
+  position: relative;
+  gap: var(--gap-5xs);
+  min-width: 732px;
+  max-width: 100%;
+  font-size: var(--font-size-mid-7);
+}
+.newsletter,
+.newsletterContent {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.newsletterContent {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.newsletter {
+  width: 1396px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-36xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-mid-4);
+  color: var(--color-snow-100);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1425px) {
+  .newsletterForm,
+  .verticalborder {
+    flex: 1;
+  }
+  .newsletterContent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .newsletter {
+    padding-left: var(--padding-8xl);
+    padding-right: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .verticalborder {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 825px) {
+  .newsletterForm {
+    min-width: 100%;
+  }
+  .verticalborder {
+    padding-left: var(--padding-89xl);
+    padding-right: var(--padding-89xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .buttonIcon {
+    margin-left: 0;
+  }
+  .appStoreButtons,
+  .form {
+    flex-wrap: wrap;
+  }
+  .verticalborder {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

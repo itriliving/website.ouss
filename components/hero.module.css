@@ -1,0 +1,256 @@
+.captureDEcran20240625AIcon {
+  height: 50px;
+  width: 174px;
+  position: relative;
+  object-fit: cover;
+}
+.vectorIcon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.vectorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+}
+.vectorIcon1 {
+  width: 26.8px;
+  height: 20px;
+  position: relative;
+}
+.aCall {
+  color: var(--color-gray-100);
+}
+.requestACallContainer {
+  position: relative;
+  z-index: 1;
+  line-height: 24px;
+}
+.buttonContainer,
+.heroButton {
+  z-index: 10;
+  position: relative; 
+  display: flex;
+  z-index: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buttonContainer {
+  border-radius: var(--br-81xl);
+  background-color: var(--color-tan);
+  flex-direction: row;
+  z-index: 1;
+  padding: var(--padding-7xs) var(--padding-6xl);
+  white-space: nowrap;
+}
+.heroButton {
+  pointer-events: auto;
+  z-index: 10;
+  position: relative;
+  flex-direction: column;
+  padding: var(--padding-10xs) 0 0;
+}
+.buttonContainer a {
+  text-decoration: none; /* This will remove the underline */
+  color: white; /* Ensure the color is as desired */
+}
+
+.heroButton a {
+  text-decoration: none; /* Ensure no underline */
+}
+
+.requestACallContainer span {
+  text-decoration: none; /* Just in case the span has an underline */
+}
+.backgroundborderIcon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  border-radius: var(--br-9980xl);
+}
+.imgIcon {
+  width: 24px;
+  height: 16px;
+  position: relative;
+}
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs) 0 0;
+}
+.buttonMenu,
+.heroTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.buttonMenu {
+  width: 74px;
+  border-radius: var(--br-9980xl);
+  border: 1px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) var(--padding-9xs);
+  gap: var(--gap-5xs);
+}
+.heroTitle {
+  align-self: stretch;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.heroContainer,
+.heroContent {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.heroContent {
+  width: 400.8px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) 0 0;
+  box-sizing: border-box;
+}
+.heroContainer {
+  width: 1259.8px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.experience {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-lightcyan-200);
+  z-index: 1;
+}
+.heroContainerParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-8xl-5) var(--padding-xl) var(--padding-7xl-5);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-family: var(--font-inria-serif);
+}
+.travel {
+  font-family: var(--font-inter);
+  color: var(--color-darkslategray-300);
+}
+
+.travelUniquely {
+  margin: 0;
+}
+.experienceUniquely {
+  animation: slideLeftToRight 2s ease-out forwards;
+  text-align: center;
+  font-size: var(--font-size-61xl); /* Adjust font size for your needs */
+  margin: 0;
+  font-family: var(--font-inria-serif);
+}
+.discoverItriLiving {
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.icon {
+  height: 94.9px;
+  width: 94.9px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -90.9px;
+  left: 67.1px;
+  object-fit: contain;
+  z-index: 1;
+}
+.discoverItriLivingParent,
+.frameWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.discoverItriLivingParent {
+  width: 234px;
+  justify-content: flex-start;
+  position: relative;
+}
+.frameWrapper {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-2xl) 0 var(--padding-xl);
+  font-size: var(--text-regular-normal-size);
+  color: var(--color-darkslategray-300);
+  font-family: var(--font-inter);
+}
+.experienceUniquelyParent,
+.hero,
+.uniquely {
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  max-width: 100%;
+}
+.experienceUniquelyParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-7xl);
+}
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.hero,
+.uniquely {
+  
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  box-sizing: border-box;
+}
+.hero {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-lg);
+  gap: var(--gap-3xs);
+  text-align: center;
+  font-size: var(--font-size-61xl);
+  color: var(--color-darkslategray-100);
+  font-family: var(--font-inria-serif);
+}
+@media screen and (max-width: 825px) {
+  .experienceUniquely {
+    font-size: var(--font-size-21xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .experienceUniquely {
+    font-size: var(--font-size-5xl);
+  }
+}

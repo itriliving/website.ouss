@@ -1,0 +1,127 @@
+.membersChild {
+  width: 1358px;
+  height: 732px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-paleturquoise-100);
+  display: none;
+  max-width: 100%;
+}
+.whatMakesOur {
+  margin: 0;
+}
+.truly,
+.whatMakesOur {
+  font-weight: 600;
+}
+.authentic {
+  font-weight: 700;
+  font-family: var(--font-inria-serif);
+}
+.trulyAuthentic {
+  margin: 0;
+}
+.mediumLengthHeroContainer {
+  margin: 0;
+  width: 595px;
+  height: 116px;
+  position: relative;
+  font-size: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+  font-family: inherit;
+}
+.name,
+.placeholderImageIcon {
+  align-self: stretch;
+  position: relative;
+}
+.placeholderImageIcon {
+  height: 296px;
+  border-radius: var(--br-8xs);
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.name {
+  line-height: 150%;
+  font-weight: 600;
+}
+.card,
+.content {
+  flex-direction: column;
+}
+.content {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card {
+  flex: 1;
+  gap: var(--gap-5xl);
+  color: var(--color-darkslategray-300);
+}
+.card,
+.members,
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.row {
+  width: 1259px;
+  overflow-x: auto;
+  flex-direction: row;
+  gap: var(--gap-13xl);
+  z-index: 1;
+  font-size: var(--text-single-300-bold-size);
+  color: var(--black);
+  font-family: var(--text-tiny-normal);
+}
+.members {
+  align-self: stretch;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-paleturquoise-100);
+  flex-direction: column;
+  padding: var(--padding-75xl) var(--padding-30xl) var(--padding-80xl);
+  box-sizing: border-box;
+  gap: var(--gap-24xl);
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-darkslategray-300);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1425px) {
+  .members {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 825px) {
+  .mediumLengthHeroContainer {
+    font-size: var(--font-size-19xl);
+  }
+  .row {
+    gap: var(--gap-base);
+  }
+  .members {
+    gap: var(--gap-2xl);
+    padding-top: var(--padding-42xl);
+    padding-bottom: var(--padding-45xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mediumLengthHeroContainer {
+    font-size: var(--font-size-10xl);
+  }
+  .name {
+    font-size: var(--text-regular-normal-size);
+    line-height: 24px;
+  }
+}

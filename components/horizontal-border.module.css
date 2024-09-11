@@ -1,0 +1,37 @@
+.howDoesItri {
+  width: 580px;
+  position: relative;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  max-width: calc(100% - 44px);
+}
+.imgIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.horizontalborder,
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.horizontalborder {
+  align-self: stretch;
+  border-top: 1px solid var(--color-darkslategray-100);
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-mini) var(--padding-14xl) var(--padding-base)
+    var(--padding-5xs);
+  max-width: 100%;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--text-medium-normal-size);
+  color: var(--color-darkslategray-100);
+  font-family: var(--font-inter);
+}
