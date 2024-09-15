@@ -86,6 +86,7 @@
   z-index: 1;
 }
 .heading2WhyBecomeAMembeParent {
+
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -96,10 +97,12 @@
 .bookAStay {
   position: relative;
   line-height: 150%;
+
 }
 .stylesecondarySmallfalse {
+  
   border-radius: var(--br-90xl);
-  background-color: var(--color-tan);
+  background-color: #ffffff;
   flex-direction: row;
   align-items: flex-start;
   padding: var(--padding-xs) var(--padding-5xl);
