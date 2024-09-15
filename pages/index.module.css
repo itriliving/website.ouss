@@ -17,7 +17,7 @@
   max-height: 100%;
   object-fit: cover;
   max-width: 100%;
-  animation: slideUp 3s ease-out forwards;
+  animation: slideUp 2s ease-out forwards;
 }
 .amalfi {
   align-self: stretch;
@@ -28,7 +28,7 @@
   padding: 0 var(--padding-xl);
   box-sizing: border-box;
   max-width: 100%;
-  animation: slideUp 3s ease-out forwards;
+  animation: slideUp 2s ease-out forwards;
 }
 .contentContainerParent,
 .whyMember {
