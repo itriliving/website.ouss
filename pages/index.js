@@ -19,11 +19,21 @@ import Membership from "../components/membership";
 import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
+import { useState, useEffect } from "react";
 
 const LandingPageItriLiving = () => {
+  const [loading, setLoading] = useState(true);  // Track the overall page loading state
+
+  const handleLoadComplete = () => {
+    setLoading(false);  // Stop loading when data is fetched
+  };
+
+  if (loading) {
+    return <div>Loading page...</div>;  // Show this while waiting for all data to load
+  }
   return (
     <div className={styles.landingPageItriLiving}>
-      <Hero />
+       <Hero onLoadComplete={handleLoadComplete} /> 
       <section className={styles.amalfi}>
         <img
           className={styles.amalfi201204112801Icon}
