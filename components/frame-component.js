@@ -64,7 +64,7 @@ const FrameComponent = ({ className = "" }) => {
         alt=""
         src="/image-5@2x.png"
       />
-      <div className={styles.memberContent}>
+      <div className={`${styles.memberContent} ${!isVisible ? styles.hidden :  styles.slideInFromBottom}`}>
       <div className={`${styles.memberContentChild} ${!isVisible ? styles.hidden :  styles.slideInFromBottom}`} />
         <div className={styles.contentContainer}>
           <div className={styles.heading2WhyBecomeAMembeParent}>
