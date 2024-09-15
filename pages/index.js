@@ -19,8 +19,24 @@ import Membership from "../components/membership";
 import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
+import { useState, useEffect } from "react";
 
 const LandingPageItriLiving = () => {
+  const [loading, setLoading] = useState(true); // State to manage loading
+
+  useEffect(() => {
+    // Set a timer (e.g., 3 seconds = 3000 ms)
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 3 seconds
+    }, 5000); // Change the delay time in milliseconds (3000ms = 3 seconds)
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+  if (loading) {
+    // Show a loading indicator during the timer
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles.landingPageItriLiving}>
       <Hero />
