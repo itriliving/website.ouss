@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./hero.module.css";
 
-const Hero = ({ className = "" , onLoadComplete}) => {
-    const [loading, setLoading] = useState(true); 
+const Hero = ({ className = "" }) => {
+
     const [data, setData] = useState({
       a1: "",
       a2: "",
@@ -16,17 +16,9 @@ const Hero = ({ className = "" , onLoadComplete}) => {
       const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
     fetch(`${baseURL}/get_data0`)
         .then((response) => response.json())
-        .then((data) => {
-          setData(data);  // Keep this as it is
-          setLoading(false); 
-          onLoadComplete(); // Add this line to stop loading after fetching data
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-          setLoading(false);
-          onLoadComplete();  // Add this line to stop loading even if there's an error
-        });
-    }, [onLoadComplete]);
+        .then((data) => setData(data))
+        .catch((error) => console.error("Error fetching data:", error));
+    }, []);
            
   return (
     <section className={[styles.hero, className].join(" ")}>
