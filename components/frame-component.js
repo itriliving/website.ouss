@@ -88,7 +88,7 @@ const FrameComponent = ({ className = "" }) => {
                   <p
                     className={styles.atItrilivingAccomodations}
                   > {data.p1}</p>
-                  <p className={styles.asItriTokensItriTokensHa}>
+                  <p className={`${styles.asItriTokensItriTokensHa} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.asItriTokens}>{data.p2}</span>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
