@@ -5,6 +5,7 @@
   max-height: 100%;
   object-fit: cover;
   max-width: 100%;
+  animation: slideUp 0.8s ease-out forwards;
 }
 .amalfi {
   align-self: stretch;
@@ -205,6 +206,17 @@
   .container {
     gap: var(--gap-34xl);
   }
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%); /* Start off-screen at the bottom */
+      opacity: 0; /* Optionally, fade in */
+    }
+    to {
+      transform: translateY(0); /* End at the original position */
+      opacity: 1;
+    }
+  }
+
   .content {
     padding-bottom: var(--padding-16xl);
     box-sizing: border-box;
