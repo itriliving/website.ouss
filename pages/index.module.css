@@ -16,6 +16,7 @@
   padding: 0 var(--padding-xl);
   box-sizing: border-box;
   max-width: 100%;
+  animation: slideUp 10s ease-out forwards;
 }
 .contentContainerParent,
 .whyMember {
