@@ -18,6 +18,74 @@
   display: none;
   max-width: 100%;
 }
+.image5Parent,
+.memberContentChild,
+.heading2Container,
+.tokenDescription,
+.valuableContent {
+  opacity: 0;
+  transform: translateY(100%); /* For bottom-to-up animation */
+  transition: transform 4s ease-out, opacity 4s ease-out; 
+}
+
+/* Keyframes for animations */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation triggers */
+.animate .memberContentChild {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideInFromBottom 4s ease-out forwards;
+}
+
+.animate .heading2Container {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromLeft 4s ease-out forwards;
+}
+
+.animate .tokenDescription {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromRight 4s ease-out forwards;
+}
+
+.animate .valuableContent {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideInFromBottom 4s ease-out forwards;
+}
 .noUnderline {
   text-decoration: none;  /* Remove underline */
   color: inherit;         /* Inherit the color from the parent */

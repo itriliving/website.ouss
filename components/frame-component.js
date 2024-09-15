@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./frame-component.module.css";
 
 const FrameComponent = ({ className = "" }) => {
@@ -26,7 +26,7 @@ const FrameComponent = ({ className = "" }) => {
     p18: "",
     p19: "",
   });
-
+  const containerRef = useRef(null); 
   // Fetch data from the API when the component loads
   useEffect(() => {
     const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
@@ -35,10 +35,32 @@ const FrameComponent = ({ className = "" }) => {
       .then((fetchedData) => setData(fetchedData))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            entry.target.classList.add(styles.animate); // Apply animation class
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
   return (
 
     
-    <div className={[styles.image5Parent, className].join(" ")}>
+    <div ref={containerRef} className={[styles.image5Parent, className].join(" ")}>
       <img
         className={styles.image5Icon}
         loading="lazy"
