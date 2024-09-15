@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>Itri website v2</title>
+        <title>Itri website</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
