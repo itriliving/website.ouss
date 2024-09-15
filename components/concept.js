@@ -34,7 +34,7 @@ const Concept = ({ className = "" }) => {
           observer.disconnect(); // Disconnect the observer once triggered
         }
       },
-      { threshold: 0.6 } // Adjust as necessary, 10% visibility
+      { threshold: 0.8 } // Adjust as necessary, 10% visibility
     );
 
     if (sectionRef.current) {
