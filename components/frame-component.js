@@ -45,7 +45,7 @@ const FrameComponent = ({ className = "" }) => {
           observer.disconnect(); // Stop observing after it's visible
         }
       },
-      { threshold: 0.3 } // Change this threshold to 30% visibility
+      { threshold: 0.1 } // Change this threshold to 30% visibility
     );
   
     if (sectionRef.current) {
