@@ -78,7 +78,7 @@ const FrameComponent = ({ className = "" }) => {
             </h1>
             <div className={styles.memberToken}>
               <img
-                className={styles.leonardoPhoenixAHighlyDetaIcon}
+                className={`${styles.leonardoPhoenixAHighlyDetaIcon} ${isVisible ? styles.slideInFromLeft : ""}`}
                 loading="lazy"
                 alt=""
                 src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1@2x.png"
