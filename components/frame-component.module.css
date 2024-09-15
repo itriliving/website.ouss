@@ -45,7 +45,7 @@
 }
 
 .slideInFromBottom {
-  animation: slideInFromBottom 4s ease-out forwards;
+  animation: slideInFromBottom 2s ease-out forwards;
 }
 
 /* Slide from the left animation */
@@ -63,7 +63,7 @@
 }
 
 .slideInFromLeft {
-  animation: slideInFromLeft 4s ease-out forwards;
+  animation: slideInFromLeft 2s ease-out forwards;
 }
 
 /* Slide from the right animation */
@@ -81,7 +81,7 @@
 }
 
 .slideInFromRight {
-  animation: slideInFromRight 4s ease-out forwards;
+  animation: slideInFromRight 2s ease-out forwards;
 }
 
 .noUnderline:hover {
