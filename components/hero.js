@@ -12,7 +12,6 @@ const Hero = ({ className = "" , onLoadComplete }) => {
       a5: ""
     });
       
-  const [loading, setLoading] = useState(true);  // Add loading state
   
   useEffect(() => {
     const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -114,6 +113,7 @@ const Hero = ({ className = "" , onLoadComplete }) => {
 
 Hero.propTypes = {
   className: PropTypes.string,
+  onLoadComplete: PropTypes.func.isRequired, 
 };
 
 export default Hero;
