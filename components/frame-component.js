@@ -26,7 +26,8 @@ const FrameComponent = ({ className = "" }) => {
     p18: "",
     p19: "",
   });
-  const containerRef = useRef(null); 
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility
+  const sectionRef = useRef(null); 
   // Fetch data from the API when the component loads
   useEffect(() => {
     const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
@@ -38,29 +39,25 @@ const FrameComponent = ({ className = "" }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
-            entry.target.classList.add(styles.animate); // Apply animation class
-          }
-        });
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Trigger the animation when it's visible
+          observer.disconnect(); // Stop observing after it's visible
+        }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 } // Change this threshold to 30% visibility
     );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+  
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current); // Start observing
     }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
+  
+    return () => observer.disconnect(); // Cleanup the observer
   }, []);
   return (
 
     
-    <div ref={containerRef} className={[styles.image5Parent, className].join(" ")}>
+    <div ref={sectionRef} className={[styles.image5Parent, className].join(" ")}>
       <img
         className={styles.image5Icon}
         loading="lazy"
@@ -68,10 +65,10 @@ const FrameComponent = ({ className = "" }) => {
         src="/image-5@2x.png"
       />
       <div className={styles.memberContent}>
-        <div className={styles.memberContentChild} />
+      <div className={`${styles.memberContentChild} ${isVisible ? styles.slideInFromBottom : ""}`} />
         <div className={styles.contentContainer}>
           <div className={styles.heading2WhyBecomeAMembeParent}>
-            <h1 className={styles.heading2Container}>
+          <h1 className={`${styles.heading2Container} ${isVisible ? styles.slideInFromLeft : ""}`}>
               <span className={styles.heading2Container1}>
                 <span
                   className={styles.tokenisedAccomodationRights}
@@ -99,64 +96,64 @@ const FrameComponent = ({ className = "" }) => {
                       </span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b>{data.p4}</b>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p5}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
                       {data.p6}
                       </span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b>{data.p7}</b>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p8}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p9}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p10}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p11}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b className={styles.royaltyFees}>{data.p12}</b>
                       <span className={styles.itriTokensHaveTheFollowing}>
@@ -164,14 +161,14 @@ const FrameComponent = ({ className = "" }) => {
                       </span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span className={styles.itriTokensHaveTheFollowing}>
                         &nbsp;
                       </span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b className={styles.accomodationBooking2}>
                       {data.p14}
@@ -179,7 +176,7 @@ const FrameComponent = ({ className = "" }) => {
                       <span>{` : `}</span>
                     </span>
                   </p>
-                  <p className={styles.blankLine}>
+                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
                       {data.p15}
