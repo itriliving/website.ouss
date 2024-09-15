@@ -65,10 +65,10 @@ const FrameComponent = ({ className = "" }) => {
         src="/image-5@2x.png"
       />
       <div className={styles.memberContent}>
-      <div className={`${styles.memberContentChild} ${isVisible ? styles.slideInFromBottom : ""}`} />
+      <div className={`${styles.memberContentChild} ${!isVisible ? styles.hidden :  styles.slideInFromBottom}`} />
         <div className={styles.contentContainer}>
           <div className={styles.heading2WhyBecomeAMembeParent}>
-          <h1 className={`${styles.heading2Container} ${isVisible ? styles.slideInFromLeft : ""}`}>
+          <h1 className={`${styles.heading2Container} ${!isVisible ? styles.hidden : styles.slideInFromLeft}`}>
               <span className={styles.heading2Container1}>
                 <span
                   className={styles.tokenisedAccomodationRights}
@@ -78,7 +78,7 @@ const FrameComponent = ({ className = "" }) => {
             </h1>
             <div className={styles.memberToken}>
               <img
-                className={`${styles.leonardoPhoenixAHighlyDetaIcon} ${isVisible ? styles.slideInFromLeft : ""}`}
+                className={`${styles.leonardoPhoenixAHighlyDetaIcon} ${!isVisible ? styles.hidden :  styles.slideInFromLeft}`}
                 loading="lazy"
                 alt=""
                 src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1@2x.png"
@@ -86,9 +86,9 @@ const FrameComponent = ({ className = "" }) => {
               <div className={styles.tokenDescription}>
                 <div className={styles.atItrilivingAccomodationsContainer}>
                   <p
-                   className={`${styles.atItrilivingAccomodations} ${isVisible ? styles.slideInFromRight : ""}`}>
+                   className={`${styles.atItrilivingAccomodations} ${!isVisible ? styles.hidden :   styles.slideInFromRight}`}>
                    {data.p1}</p>
-                  <p className={`${styles.asItriTokensItriTokensHa} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.asItriTokensItriTokensHa} ${!isVisible ? styles.hidden :   styles.slideInFromRight}`}>
                     <span className={styles.asItriTokens}>{data.p2}</span>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
@@ -96,64 +96,64 @@ const FrameComponent = ({ className = "" }) => {
                       </span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b>{data.p4}</b>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p5}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
                       {data.p6}
                       </span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b>{data.p7}</b>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p8}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p9}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p10}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>{data.p11}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>&nbsp;</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b className={styles.royaltyFees}>{data.p12}</b>
                       <span className={styles.itriTokensHaveTheFollowing}>
@@ -161,14 +161,14 @@ const FrameComponent = ({ className = "" }) => {
                       </span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span className={styles.itriTokensHaveTheFollowing}>
                         &nbsp;
                       </span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <b className={styles.accomodationBooking2}>
                       {data.p14}
@@ -176,7 +176,7 @@ const FrameComponent = ({ className = "" }) => {
                       <span>{` : `}</span>
                     </span>
                   </p>
-                  <p className={`${styles.blankLine} ${isVisible ? styles.slideInFromRight : ""}`}>
+                  <p className={`${styles.blankLine} ${!isVisible ? styles.hidden :  styles.slideInFromRight}`}>
                     <span className={styles.itriTokensHaveTheFollowing}>
                       <span>
                       {data.p15}
