@@ -41,14 +41,7 @@ const Stays = ({ className = "" }) => {
             </h3>
             <div className={styles.stylesecondarySmallfalse}>
             <div className={styles.bookAStay}>
-  <a 
-    href="https://calendly.com/admin-itri/itri-living-concept-explained" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className={styles.noUnderline}
-  >
     Book a Stay
-  </a>
 </div>
             </div>
           </div>
