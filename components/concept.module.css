@@ -56,11 +56,11 @@
 }
 
 .slideInFromLeft {
-  animation: slideInFromLeft 1s ease-out forwards; /* Control the duration and easing */
+  animation: slideInFromLeft 5s ease-out forwards; /* Control the duration and easing */
 }
 
 .slideInFromRight {
-  animation: slideInFromRight 1s ease-out forwards; /* Control the duration and easing */
+  animation: slideInFromRight 5s ease-out forwards; /* Control the duration and easing */
 }
 .aCall {
   color: var(--color-gray-100);
