@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./concept.module.css";
 
 const Concept = ({ className = "" }) => {
+  const [isVisible, setIsVisible] = useState(false); 
+  const conceptRef = useRef(null);
   // State to hold the API response
   const [data, setData] = useState({
     title: "",
@@ -22,15 +24,32 @@ const Concept = ({ className = "" }) => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); // When the section comes into view
+          observer.disconnect(); // Stop observing after it becomes visible
+        }
+      });
+    });
+
+    if (conceptRef.current) {
+      observer.observe(conceptRef.current); // Observe the concept section
+    }   return () => observer.disconnect(); // Cleanup observer on unmount
+  }, []);
+
   return (
     <section className={[styles.concept, className].join(" ")}>
       <div className={styles.itriLivingConceptParent}>
+      <div className={`${styles.itriLivingConceptContainer} ${isVisible ? styles.slideInFromLeft : ""}`}>
         <h1 className={styles.itriLivingConceptContainer}>
           <span className={styles.itriLivingConceptContainer1}>
             <span className={styles.itriLiving}>{data.title}</span>
             <i className={styles.concept1}>{data.title2}</i>
           </span>
         </h1>
+        </div>
         <div className={styles.conceptContent}>
           <div className={styles.contentContainerWrapper}>
             <div className={styles.contentContainer}>
@@ -62,7 +81,7 @@ const Concept = ({ className = "" }) => {
             </div>
           </div>
           <img
-            className={styles.sea815134012801Icon}
+            className={`${styles.sea815134012801Icon} ${isVisible ? styles.slideInFromRight : ""}`}
             loading="lazy"
             alt=""
             src="/sea8151340-1280-1@2x.png"

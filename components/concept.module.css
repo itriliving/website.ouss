@@ -32,6 +32,36 @@
   line-height: 28px;
   display: inline-block;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Start from off-screen on the left */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End at the final position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%); /* Start from off-screen on the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End at the final position */
+    opacity: 1;
+  }
+}
+
+.slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out forwards; /* Control the duration and easing */
+}
+
+.slideInFromRight {
+  animation: slideInFromRight 1s ease-out forwards; /* Control the duration and easing */
+}
 .aCall {
   color: var(--color-gray-100);
 }
