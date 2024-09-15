@@ -188,7 +188,7 @@ const FrameComponent = ({ className = "" }) => {
             </div>
           </div>
         </div>
-        <div className={styles.valuable}>
+        <div className={`${styles.valuable} ${!isVisible ? styles.hidden :  styles.slideInFromLeft}`}>
           <div className={styles.valuableContainerWrapper}>
             <div className={styles.valuableContainer}>
               <div className={styles.valuableContainerChild} />
