@@ -8,6 +8,20 @@
 .itriLivingConceptContainer1 {
   width: 100%;
 }
+.itriLivingConceptContainer,
+.contentContainer {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Initial hidden state for sliding in from right */
+.sea815134012801Icon {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
 .itriLivingConceptContainer {
   margin: 0;
   width: 741px;
@@ -55,12 +69,16 @@
   }
 }
 
+
+/* When the element becomes visible, apply the slide-in effect */
 .slideInFromLeft {
-  animation: slideInFromLeft 5s ease-out forwards; /* Control the duration and easing */
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .slideInFromRight {
-  animation: slideInFromRight 5s ease-out forwards; /* Control the duration and easing */
+  opacity: 1;
+  transform: translateX(0);
 }
 .aCall {
   color: var(--color-gray-100);
