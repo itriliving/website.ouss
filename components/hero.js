@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./hero.module.css";
 
-const Hero = ({ className = "" , onLoadComplete }) => {
+const Hero = ({ className = "" }) => {
 
     const [data, setData] = useState({
       a1: "",
@@ -12,25 +12,14 @@ const Hero = ({ className = "" , onLoadComplete }) => {
       a5: ""
     });
       
-  
-  useEffect(() => {
-    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
-    
+    useEffect(() => {
+      const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
     fetch(`${baseURL}/get_data0`)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);  // Set loading to false when data is fetched
-        onLoadComplete();   // Notify parent that loading is done
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);  // Set loading to false even if there's an error
-        onLoadComplete();   // Notify parent that loading is done (even in error case)
-      });
-  }, [onLoadComplete]);
-
-   
+        .then((response) => response.json())
+        .then((data) => setData(data))
+        .catch((error) => console.error("Error fetching data:", error));
+    }, []);
+           
   return (
     <section className={[styles.hero, className].join(" ")}>
       <header className={styles.heroContainerParent}>
@@ -113,7 +102,6 @@ const Hero = ({ className = "" , onLoadComplete }) => {
 
 Hero.propTypes = {
   className: PropTypes.string,
-  onLoadComplete: PropTypes.func.isRequired, 
 };
 
 export default Hero;
