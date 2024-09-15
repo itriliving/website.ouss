@@ -73,8 +73,25 @@ const Concept = ({ className = "" }) => {
                 <p className={styles.itrilivingIsA}>&nbsp;</p>
                 <p className={styles.itrilivingIsA}>{data.p4}</p>
               </div>
+              <div className={styles.requestCall}>
+                <b className={styles.requestACallContainer}>
+                <a 
+    href="https://calendly.com/admin-itri/itri-living-concept-explained" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className={styles.buttonContainer}
+    style={{ textDecoration: 'none' }} // Inline style as an option
+  >
+    <b className={styles.requestACallContainer}>
+      
+      <span className={styles.aCall}>Request a Call</span>
+    </b>
+  </a>
+                </b>
+              </div>
             </div>
           </div>
+         
           <img
             className={`${styles.sea815134012801Icon} ${
               isVisible ? styles.slideInFromRight : ""
