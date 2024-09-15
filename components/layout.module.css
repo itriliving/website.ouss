@@ -101,7 +101,7 @@
 }
 .stylesecondarySmallfalse {
   border-radius: var(--br-90xl);
-  background-color: #ffffff;
+  background-color: #708090;
   flex-direction: row;
   align-items: flex-start;
   padding: var(--padding-xs) var(--padding-5xl);
