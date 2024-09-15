@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./concept.module.css";
 
 const Concept = ({ className = "" }) => {
-  // State to hold the API response
   const [data, setData] = useState({
     title: "",
     title2: "",
@@ -12,6 +11,9 @@ const Concept = ({ className = "" }) => {
     p3: "",
     p4: ""
   });
+
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility
+  const sectionRef = useRef(null); // Ref for the section to observe
 
   // Fetch data from the API when the component mounts
   useEffect(() => {
@@ -22,10 +24,34 @@ const Concept = ({ className = "" }) => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  // Intersection Observer to trigger animation when visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Trigger the animation when visible
+          observer.disconnect(); // Disconnect the observer once triggered
+        }
+      },
+      { threshold: 0.1 } // Adjust as necessary, 10% visibility
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current); // Observe the section
+    }
+
+    return () => observer.disconnect(); // Cleanup the observer
+  }, []);
+
   return (
-    <section className={[styles.concept, className].join(" ")}>
+    <section ref={sectionRef} className={[styles.concept, className].join(" ")}>
       <div className={styles.itriLivingConceptParent}>
-        <h1 className={styles.itriLivingConceptContainer}>
+        <h1
+          className={`${styles.itriLivingConceptContainer} ${
+            isVisible ? styles.slideInFromLeft : ""
+          }`}
+        >
           <span className={styles.itriLivingConceptContainer1}>
             <span className={styles.itriLiving}>{data.title}</span>
             <i className={styles.concept1}>{data.title2}</i>
@@ -33,7 +59,11 @@ const Concept = ({ className = "" }) => {
         </h1>
         <div className={styles.conceptContent}>
           <div className={styles.contentContainerWrapper}>
-            <div className={styles.contentContainer}>
+            <div
+              className={`${styles.contentContainer} ${
+                isVisible ? styles.slideInFromLeft : ""
+              }`}
+            >
               <div className={styles.itrilivingIsAContainer}>
                 <p className={styles.itrilivingIsA}>{data.p1}</p>
                 <p className={styles.itrilivingIsA}>&nbsp;</p>
@@ -43,26 +73,12 @@ const Concept = ({ className = "" }) => {
                 <p className={styles.itrilivingIsA}>&nbsp;</p>
                 <p className={styles.itrilivingIsA}>{data.p4}</p>
               </div>
-              <div className={styles.requestCall}>
-                <b className={styles.requestACallContainer}>
-                <a 
-    href="https://calendly.com/admin-itri/itri-living-concept-explained" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className={styles.buttonContainer}
-    style={{ textDecoration: 'none' }} // Inline style as an option
-  >
-    <b className={styles.requestACallContainer}>
-      
-      <span className={styles.aCall}>Request a Call</span>
-    </b>
-  </a>
-                </b>
-              </div>
             </div>
           </div>
           <img
-            className={styles.sea815134012801Icon}
+            className={`${styles.sea815134012801Icon} ${
+              isVisible ? styles.slideInFromRight : ""
+            }`}
             loading="lazy"
             alt=""
             src="/sea8151340-1280-1@2x.png"

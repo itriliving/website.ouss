@@ -46,6 +46,38 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for sliding in from right */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to the text content */
+.slideInFromLeft {
+  animation: slideInFromLeft 4s ease-out forwards;
+}
+
+/* Apply animation to the image */
+.slideInFromRight {
+  animation: slideInFromRight 4s ease-out forwards;
+}
 .requestCall {
   border-radius: var(--br-81xl);
   background-color: var(--color-tan);
