@@ -94,11 +94,14 @@
   justify-content: flex-start;
   gap: var(--gap-9xl);
 }
+
+
 .bookAStay {
   position: relative;
   line-height: 150%;
-
 }
+
+
 .stylesecondarySmallfalse {
   border-radius: var(--br-90xl);
   background-color: #708090;
@@ -110,6 +113,8 @@
   font-size: var(--text-single-300-bold-size);
   color: var(--color-azure);
 }
+
+
 .booking,
 .layout,
 .stylesecondarySmallfalse,
