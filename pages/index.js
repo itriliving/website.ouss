@@ -28,6 +28,8 @@ const LandingPageItriLiving = () => {
   const [isStayVisible, setIsStayVisible] = useState(false);
   const [isConsultationVisible, setIsConsultationVisible] = useState(false);
   const [isSpaceVisible, setIsSpaceVisible] = useState(false);
+  const [isFrame2Visible, setIsFrame2Visible] = useState(false);
+  const Frame2Ref = useRef(null); 
   const SpaceRef = useRef(null); 
   const ConsultationRef = useRef(null);
   const newsletterRef = useRef(null);
@@ -36,6 +38,18 @@ const LandingPageItriLiving = () => {
   const StayRef = useRef(null); 
 
   useEffect(() => {
+
+    const Frame2Observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsFrame2Visible(true);
+          Frame2Observer.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+
     const newsletterObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -109,6 +123,9 @@ const LandingPageItriLiving = () => {
     if (SpaceRef.current) {
       SpaceObserver.observe(SpaceRef.current);
     }
+    if (Frame2Ref.current) {
+      Frame2Observer.observe(Frame2Ref.current);
+    }
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
     }
@@ -128,6 +145,7 @@ const LandingPageItriLiving = () => {
       membersObserver.disconnect();
       ConsultationObserver.disconnect();
       SpaceObserver.disconnect();
+      Frame2Observer.disconnect();
       StayObserver.disconnect();
       LayoutObserver.disconnect();
     };
@@ -210,7 +228,14 @@ const LandingPageItriLiving = () => {
           >
       <Spaces />
       </div>
+      <div
+            ref={Frame2Ref}
+            className={`${
+              isFrame2Visible ? styles.slideInFromLeft : styles.hidden
+            }`}
+          >
       <FrameComponent2 />
+      </div>
       <FrameComponent3 />
       <FrameComponent4 />
       <FrameComponent5 />
