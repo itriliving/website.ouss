@@ -200,7 +200,7 @@ const LandingPageItriLiving = () => {
       <div
             ref={SpaceRef}
             className={`${
-              isSpaceVisible ? styles.slideInFromBottom : styles.hidden
+              isSpaceVisible ? styles.slideInFromLeft : styles.hidden
             }`}
           >
       <Spaces />
