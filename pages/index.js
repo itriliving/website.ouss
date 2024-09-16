@@ -85,8 +85,19 @@ const LandingPageItriLiving = () => {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setIsSpaceVisible(true);
+          setIsStayVisible(true);
           StayObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+    
+    const SpaceObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsSpaceVisible(true);
+          SpaceObserver.disconnect(); // Stop observing after the animation is triggered
         }
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
@@ -95,7 +106,9 @@ const LandingPageItriLiving = () => {
     if (StayRef.current) {
       StayObserver.observe(StayRef.current);
     }
-
+    if (SpaceRef.current) {
+      SpaceObserver.observe(SpaceRef.current);
+    }
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
     }
@@ -114,6 +127,7 @@ const LandingPageItriLiving = () => {
       newsletterObserver.disconnect();
       membersObserver.disconnect();
       ConsultationObserver.disconnect();
+      SpaceObserver.disconnect();
       StayObserver.disconnect();
       LayoutObserver.disconnect();
     };
