@@ -241,14 +241,15 @@ const LandingPageItriLiving = () => {
       <section className={styles.landingPageItriLivingInner}>
         <div className={styles.contentContainerParent}>
     
-          <ContentContainer />
-         
-          <div
+        <div
             ref={membersRef}
             className={`${
               isMembersVisible ? styles.slideInFromBottom : styles.hidden
             }`}
           >
+          <ContentContainer />
+         
+   
             <Members />
           </div>
         </div>
