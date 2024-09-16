@@ -19,13 +19,14 @@ const Exceptional = ({ className = "" }) => {
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-  useEffect(() => {
+   // Trigger animation when the element becomes visible
+   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // Stop observing after animation starts
+          setIsVisible(true); // Set visible state when the section is in view
+          observer.disconnect(); // Stop observing after it becomes visible
         }
       },
       { threshold: 0.1 } // 10% visibility triggers the animation
