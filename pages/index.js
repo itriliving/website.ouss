@@ -23,28 +23,44 @@ import React, { useState, useEffect, useRef } from "react";
 
 const LandingPageItriLiving = () => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
+  const [isMembersVisible, setIsMembersVisible] = useState(false); // State for Members visibility
   const newsletterRef = useRef(null);
+  const membersRef = useRef(null); 
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const newsletterObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
           setIsNewsletterVisible(true);
-          observer.disconnect(); // Stop observing after the animation is triggered
+          newsletterObserver.disconnect(); // Stop observing after the animation is triggered
         }
       },
-      { threshold: 0.05 } // Trigger when 20% of the element is visible
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+
+    const membersObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsMembersVisible(true);
+          membersObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
 
     if (newsletterRef.current) {
-      observer.observe(newsletterRef.current);
+      newsletterObserver.observe(newsletterRef.current);
+    }
+
+    if (membersRef.current) {
+      membersObserver.observe(membersRef.current);
     }
 
     return () => {
-      if (newsletterRef.current) {
-        observer.disconnect();
-      }
+      newsletterObserver.disconnect();
+      membersObserver.disconnect();
     };
   }, []);
   return (
@@ -75,7 +91,14 @@ const LandingPageItriLiving = () => {
       >
           <ContentContainer />
           </div>
-          <Members />
+          <div
+            ref={membersRef}
+            className={`${styles.membersWrapper} ${
+              isMembersVisible ? styles.slideInFromBottom : styles.hidden
+            }`}
+          >
+            <Members />
+          </div>
         </div>
       </section>
       <section className={styles.content}>
