@@ -83,14 +83,9 @@ const LandingPageItriLiving = () => {
       <Exceptional />
       <section className={styles.landingPageItriLivingInner}>
         <div className={styles.contentContainerParent}>
-        <div
-        ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
-        }`}
-      >
+    
           <ContentContainer />
-          </div>
+         
           <div
             ref={membersRef}
             className={`${styles.membersWrapper} ${
@@ -103,7 +98,14 @@ const LandingPageItriLiving = () => {
       </section>
       <section className={styles.content}>
         <div className={styles.container}>
+        <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
           <Wrapper />
+          </div>
           <Layout />
         </div>
       </section>
