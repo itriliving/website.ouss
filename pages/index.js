@@ -63,10 +63,18 @@ const LandingPageItriLiving = () => {
         <FrameComponent />
         <FrameComponent1 />
       </section>
+
       <Exceptional />
       <section className={styles.landingPageItriLivingInner}>
         <div className={styles.contentContainerParent}>
+        <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
           <ContentContainer />
+          </div>
           <Members />
         </div>
       </section>
@@ -79,40 +87,14 @@ const LandingPageItriLiving = () => {
       <Stays />
       
       <Consultation />
-      <div
-        ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
-        }`}
-      >
       <Spaces />
-      </div>
-      <div
-        ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
-        }`}
-      >
       <FrameComponent2 />
-      </div>
-      <div
-        ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
-        }`}
-      >
       <FrameComponent3 />
-      </div>
       <FrameComponent4 />
       <FrameComponent5 />
-      <div
-        ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
-        }`}
-      >
+    
         <Newsletter1 />
-      </div>
+      
       <Membership />
       <footer className={styles.card}>
         <div className={styles.spacesImage}>
