@@ -20,13 +20,15 @@ import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
 import React, { useState, useEffect, useRef } from "react";
-Consultation
+
 const LandingPageItriLiving = () => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
   const [isMembersVisible, setIsMembersVisible] = useState(false); 
   const [isLayoutVisible, setIsLayoutVisible] = useState(false);
   const [isStayVisible, setIsStayVisible] = useState(false);
   const [isConsultationVisible, setIsConsultationVisible] = useState(false);
+  const [isSpaceVisible, setIsSpaceVisible] = useState(false);
+  const SpaceRef = useRef(null); 
   const ConsultationRef = useRef(null);
   const newsletterRef = useRef(null);
   const membersRef = useRef(null); 
@@ -62,6 +64,17 @@ const LandingPageItriLiving = () => {
         if (entry.isIntersecting) {
           setIsLayoutVisible(true);
           LayoutObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+
+    const SpaceObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsSpaceVisible(true);
+          SpaceObserver.disconnect(); // Stop observing after the animation is triggered
         }
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
@@ -109,6 +122,8 @@ const LandingPageItriLiving = () => {
     return () => {
       newsletterObserver.disconnect();
       membersObserver.disconnect();
+      ConsultationObserver.disconnect();
+      StayObserver.disconnect();
       LayoutObserver.disconnect();
     };
   }, []);
@@ -182,7 +197,14 @@ const LandingPageItriLiving = () => {
           >
       <Consultation />
       </div>
+      <div
+            ref={SpaceRef}
+            className={`${
+              isSpaceVisible ? styles.slideInFromBottom : styles.hidden
+            }`}
+          >
       <Spaces />
+      </div>
       <FrameComponent2 />
       <FrameComponent3 />
       <FrameComponent4 />
