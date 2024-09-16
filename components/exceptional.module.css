@@ -5,47 +5,6 @@
   font-weight: 700;
   font-family: var(--font-inria-serif);
 }
-/* Initially hidden */
-.hidden {
-  opacity: 0;
-  visibility: hidden; /* Ensures it's fully hidden initially */
-}
-
-/* Slide in from left */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.slideInFromLeft {
-  animation: slideInFromLeft 4s ease-out forwards;
-}
-
-/* Slide in from right */
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.slideInFromRight {
-  animation: slideInFromRight 4s ease-out forwards;
-}
 .mediumLengthHeroContainer {
   margin: 0;
   align-self: stretch;
