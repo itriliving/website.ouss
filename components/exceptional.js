@@ -28,7 +28,7 @@ const Exceptional = ({ className = "" }) => {
           observer.disconnect(); // Stop observing after it's triggered
         }
       },
-      { threshold: 0.2 } // 10% of the element should be visible before animation
+      { threshold: 0.8 } // 10% of the element should be visible before animation
     );
   
     const section = document.querySelector(`.${styles.exceptional}`);
