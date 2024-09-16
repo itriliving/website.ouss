@@ -36,6 +36,7 @@ const FrameComponent = ({ className = "" }) => {
       .then((fetchedData) => setData(fetchedData))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
