@@ -23,9 +23,11 @@ import React, { useState, useEffect, useRef } from "react";
 
 const LandingPageItriLiving = () => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
-  const [isMembersVisible, setIsMembersVisible] = useState(false); // State for Members visibility
+  const [isMembersVisible, setIsMembersVisible] = useState(false); 
+  const [isLayoutVisible, setIsLayoutVisible] = useState(false);
   const newsletterRef = useRef(null);
   const membersRef = useRef(null); 
+  const LayoutRef = useRef(null); 
 
   useEffect(() => {
     const newsletterObserver = new IntersectionObserver(
@@ -49,7 +51,20 @@ const LandingPageItriLiving = () => {
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
+    const LayoutObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsLayoutVisible(true);
+          LayoutObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
 
+    if (LayoutRef.current) {
+      LayoutObserver.observe(LayoutRef.current);
+    }
     if (newsletterRef.current) {
       newsletterObserver.observe(newsletterRef.current);
     }
@@ -61,6 +76,7 @@ const LandingPageItriLiving = () => {
     return () => {
       newsletterObserver.disconnect();
       membersObserver.disconnect();
+      LayoutObserver.disconnect();
     };
   }, []);
   return (
@@ -106,7 +122,15 @@ const LandingPageItriLiving = () => {
       >
           <Wrapper />
           </div>
+
+          <div
+            ref={membersRef}
+            className={`${styles.membersWrapper} ${
+              isLayoutVisible ? styles.slideInFromBottom : styles.hidden
+            }`}
+          >
           <Layout />
+          </div>
         </div>
       </section>
       <Stays />
