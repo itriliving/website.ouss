@@ -29,6 +29,8 @@ const LandingPageItriLiving = () => {
   const [isConsultationVisible, setIsConsultationVisible] = useState(false);
   const [isSpaceVisible, setIsSpaceVisible] = useState(false);
   const [isFrame2Visible, setIsFrame2Visible] = useState(false);
+  const [isFrame3Visible, setIsFrame3Visible] = useState(false);
+  const Frame3Ref = useRef(null); 
   const Frame2Ref = useRef(null); 
   const SpaceRef = useRef(null); 
   const ConsultationRef = useRef(null);
@@ -38,7 +40,16 @@ const LandingPageItriLiving = () => {
   const StayRef = useRef(null); 
 
   useEffect(() => {
-
+    const Frame3Observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsFrame3Visible(true);
+          Frame3Observer.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
     const Frame2Observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -120,18 +131,27 @@ const LandingPageItriLiving = () => {
     if (StayRef.current) {
       StayObserver.observe(StayRef.current);
     }
+
     if (SpaceRef.current) {
       SpaceObserver.observe(SpaceRef.current);
     }
+
     if (Frame2Ref.current) {
       Frame2Observer.observe(Frame2Ref.current);
     }
+
+    if (Frame3Ref.current) {
+      Frame3Observer.observe(Frame3Ref.current);
+    }
+
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
     }
+
     if (ConsultationRef.current) {
       ConsultationObserver.observe(ConsultationRef.current);
     }
+
     if (newsletterRef.current) {
       newsletterObserver.observe(newsletterRef.current);
     }
@@ -146,6 +166,7 @@ const LandingPageItriLiving = () => {
       ConsultationObserver.disconnect();
       SpaceObserver.disconnect();
       Frame2Observer.disconnect();
+      Frame3Observer.disconnect();
       StayObserver.disconnect();
       LayoutObserver.disconnect();
     };
@@ -236,7 +257,14 @@ const LandingPageItriLiving = () => {
           >
       <FrameComponent2 />
       </div>
+    <div
+            ref={Frame2Ref}
+            className={`${
+              isFrame2Visible ? styles.slideInFromLeft : styles.hidden
+            }`}
+          >
       <FrameComponent3 />
+      </div>
       <FrameComponent4 />
       <FrameComponent5 />
     
