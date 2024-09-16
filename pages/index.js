@@ -159,6 +159,7 @@ const LandingPageItriLiving = () => {
           >
       <Stays />
       </div>
+      
       <Consultation />
       <Spaces />
       <FrameComponent2 />
