@@ -34,7 +34,7 @@ const LandingPageItriLiving = () => {
           observer.disconnect(); // Stop observing after the animation is triggered
         }
       },
-      { threshold: 0.2 } // Trigger when 20% of the element is visible
+      { threshold: 0.1 } // Trigger when 20% of the element is visible
     );
 
     if (newsletterRef.current) {
@@ -77,10 +77,32 @@ const LandingPageItriLiving = () => {
         </div>
       </section>
       <Stays />
+      
       <Consultation />
+      <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
       <Spaces />
+      </div>
+      <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
       <FrameComponent2 />
+      </div>
+      <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
       <FrameComponent3 />
+      </div>
       <FrameComponent4 />
       <FrameComponent5 />
       <div
