@@ -20,12 +20,14 @@ import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
 import React, { useState, useEffect, useRef } from "react";
-
+Consultation
 const LandingPageItriLiving = () => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
   const [isMembersVisible, setIsMembersVisible] = useState(false); 
   const [isLayoutVisible, setIsLayoutVisible] = useState(false);
   const [isStayVisible, setIsStayVisible] = useState(false);
+  const [isConsultationVisible, setIsConsultationVisible] = useState(false);
+  const ConsultationRef = useRef(null);
   const newsletterRef = useRef(null);
   const membersRef = useRef(null); 
   const LayoutRef = useRef(null); 
@@ -64,6 +66,16 @@ const LandingPageItriLiving = () => {
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
+    const ConsultationObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsConsultationVisible(true);
+          ConsultationObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
 
     const StayObserver = new IntersectionObserver(
       (entries) => {
@@ -82,6 +94,9 @@ const LandingPageItriLiving = () => {
 
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
+    }
+    if (ConsultationRef.current) {
+      ConsultationObserver.observe(ConsultationRef.current);
     }
     if (newsletterRef.current) {
       newsletterObserver.observe(newsletterRef.current);
@@ -159,8 +174,14 @@ const LandingPageItriLiving = () => {
           >
       <Stays />
       </div>
-      
+      <div
+            ref={ConsultationRef}
+            className={`${
+              isConsultationVisible ? styles.slideInFromBottom : styles.hidden
+            }`}
+          >
       <Consultation />
+      </div>
       <Spaces />
       <FrameComponent2 />
       <FrameComponent3 />
