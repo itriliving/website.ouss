@@ -25,9 +25,11 @@ const LandingPageItriLiving = () => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
   const [isMembersVisible, setIsMembersVisible] = useState(false); 
   const [isLayoutVisible, setIsLayoutVisible] = useState(false);
+  const [isStayVisible, setIsStayVisible] = useState(false);
   const newsletterRef = useRef(null);
   const membersRef = useRef(null); 
   const LayoutRef = useRef(null); 
+  const StayRef = useRef(null); 
 
   useEffect(() => {
     const newsletterObserver = new IntersectionObserver(
@@ -51,6 +53,7 @@ const LandingPageItriLiving = () => {
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
+
     const LayoutObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -61,6 +64,21 @@ const LandingPageItriLiving = () => {
       },
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
+
+    const StayObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsStayVisible(true);
+          StayObserver.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+
+    if (StayRef.current) {
+      StayObserver.observe(StayRef.current);
+    }
 
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
@@ -133,8 +151,14 @@ const LandingPageItriLiving = () => {
           </div>
         </div>
       </section>
+      <div
+            ref={StayRef}
+            className={`${
+              isStayVisible ? styles.slideInFromLeft : styles.hidden
+            }`}
+          >
       <Stays />
-      
+      </div>
       <Consultation />
       <Spaces />
       <FrameComponent2 />
