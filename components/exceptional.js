@@ -19,16 +19,35 @@ const Exceptional = ({ className = "" }) => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Trigger the animation when visible
+          observer.disconnect(); // Stop observing after it's triggered
+        }
+      },
+      { threshold: 0.2 } // 10% of the element should be visible before animation
+    );
+  
+    const section = document.querySelector(`.${styles.exceptional}`);
+    if (section) {
+      observer.observe(section);
+    }
+  
+    return () => observer.disconnect(); // Cleanup
+  }, []);
+  
+
   return (
     <section className={[styles.exceptional, className].join(" ")}>
       <div className={styles.exceptionalContentParent}>
         <div className={styles.exceptionalContent}>
-          <h1 className={styles.mediumLengthHeroContainer}>
-            <span
-              className={styles.benefitsToBe}
-            >{data.b1}</span>
-            <i className={styles.customResorts}>{data.b2}</i>
-          </h1>
+        <h1 className={`${styles.mediumLengthHeroContainer} ${!isVisible ? styles.hidden : styles.slideInFromLeft}`}>
+  <span className={styles.benefitsToBe}>{data.b1}</span>
+  <i className={styles.customResorts}>{data.b2}</i>
+</h1>
           <div className={styles.actions}>
             <div className={styles.stylesecondarySmallfalse}>
             <div className={styles.contactUsFor}>
