@@ -31,6 +31,8 @@ const LandingPageItriLiving = () => {
   const [isFrame2Visible, setIsFrame2Visible] = useState(false);
   const [isFrame3Visible, setIsFrame3Visible] = useState(false);
   const [isFrame4Visible, setIsFrame4Visible] = useState(false);
+  const [isFrame5Visible, setIsFrame5Visible] = useState(false);
+  const Frame5Ref = useRef(null); 
   const Frame4Ref = useRef(null); 
   const Frame3Ref = useRef(null); 
   const Frame2Ref = useRef(null); 
@@ -42,6 +44,17 @@ const LandingPageItriLiving = () => {
   const StayRef = useRef(null); 
 
   useEffect(() => {
+    const Frame5Observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsFrame5Visible(true);
+          Frame5Observer.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.05 } // Trigger when 5% of the element is visible
+    );
+
     const Frame4Observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -159,6 +172,9 @@ const LandingPageItriLiving = () => {
       Frame4Observer.observe(Frame4Ref.current);
     }
 
+    if (Frame5Ref.current) {
+      Frame5Observer.observe(Frame5Ref.current);
+    }
 
     if (LayoutRef.current) {
       LayoutObserver.observe(LayoutRef.current);
@@ -184,6 +200,7 @@ const LandingPageItriLiving = () => {
       Frame2Observer.disconnect();
       Frame3Observer.disconnect();
       Frame4Observer.disconnect();
+      Frame5Observer.disconnect();
       StayObserver.disconnect();
       LayoutObserver.disconnect();
     };
@@ -290,8 +307,15 @@ const LandingPageItriLiving = () => {
           >
       <FrameComponent4 />
       </div>
+
+      <div
+            ref={Frame5Ref}
+            className={`${
+              isFrame5Visible ? styles.slideInFromBottom: styles.hidden
+            }`}
+          >
       <FrameComponent5 />
-    
+      </div>
         <Newsletter1 />
       
       <Membership />
