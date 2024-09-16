@@ -69,16 +69,7 @@ const LandingPageItriLiving = () => {
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
 
-    const SpaceObserver = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsSpaceVisible(true);
-          SpaceObserver.disconnect(); // Stop observing after the animation is triggered
-        }
-      },
-      { threshold: 0.05 } // Trigger when 5% of the element is visible
-    );
+
     const ConsultationObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
