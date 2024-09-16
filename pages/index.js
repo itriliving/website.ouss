@@ -101,7 +101,7 @@ const LandingPageItriLiving = () => {
         <div
         ref={newsletterRef}
         className={`${styles.newsletterWrapper} ${
-          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+          isNewsletterVisible ? styles.slideInFromRight : styles.hidden
         }`}
       >
           <Wrapper />

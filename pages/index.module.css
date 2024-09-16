@@ -1,14 +1,4 @@
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20%); /* Start off-screen at the bottom */
-    opacity: 0; /* Optionally, fade in */
-  }
-  to {
-    transform: translateY(0); /* End at the original position */
-    opacity: 1;
-  }
-}
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -28,7 +18,40 @@
     visibility: visible;
   }
 }
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
+/* Slide from the right */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slideInFromLeft {
+  animation: slideInFromLeft 2s ease-out forwards;
+}
+
+.slideInFromRight {
+  animation: slideInFromRight 2s ease-out forwards;
+}
 .slideInFromBottom {
   animation: slideInFromBottom 2s ease-out forwards;
 }
