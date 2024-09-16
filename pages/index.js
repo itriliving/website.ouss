@@ -34,7 +34,7 @@ const LandingPageItriLiving = () => {
           observer.disconnect(); // Stop observing after the animation is triggered
         }
       },
-      { threshold: 0.1 } // Trigger when 20% of the element is visible
+      { threshold: 0.05 } // Trigger when 20% of the element is visible
     );
 
     if (newsletterRef.current) {
