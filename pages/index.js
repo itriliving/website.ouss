@@ -123,14 +123,8 @@ const LandingPageItriLiving = () => {
           <Wrapper />
           </div>
 
-          <div
-            ref={membersRef}
-            className={`${styles.membersWrapper} ${
-              isLayoutVisible ? styles.slideInFromBottom : styles.hidden
-            }`}
-          >
+          
           <Layout />
-          </div>
         </div>
       </section>
       <Stays />
