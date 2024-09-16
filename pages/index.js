@@ -104,7 +104,7 @@ const LandingPageItriLiving = () => {
          
           <div
             ref={membersRef}
-            className={`${styles.membersWrapper} ${
+            className={`${
               isMembersVisible ? styles.slideInFromBottom : styles.hidden
             }`}
           >
@@ -116,15 +116,21 @@ const LandingPageItriLiving = () => {
         <div className={styles.container}>
         <div
         ref={newsletterRef}
-        className={`${styles.newsletterWrapper} ${
+        className={`${
           isNewsletterVisible ? styles.slideInFromLeft : styles.hidden
         }`}
       >
           <Wrapper />
           </div>
 
-          
+          <div
+            ref={LayoutRef}
+            className={`${
+              isLayoutVisible ? styles.slideInFromBottom : styles.hidden
+            }`}
+          >
           <Layout />
+          </div>
         </div>
       </section>
       <Stays />
