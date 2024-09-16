@@ -25,7 +25,7 @@ const Consultation = ({ className = "" }) => {
     rel="noopener noreferrer"
     className={styles.noUnderline}
   >
-    Consultation
+    Request a call
   </a>
 </div>
                     <img className={styles.icon} alt="" src="/vector-8.svg" />

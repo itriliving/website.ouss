@@ -31,7 +31,7 @@ const FrameComponent5 = ({ className = "" }) => {
     rel="noopener noreferrer"
     className={styles.noUnderline}
   >
-    Consultation
+    Request a call
   </a>
 </div>
                         <img
