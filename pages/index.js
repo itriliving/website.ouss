@@ -85,7 +85,7 @@ const LandingPageItriLiving = () => {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setIsStayVisible(true);
+          setIsSpaceVisible(true);
           StayObserver.disconnect(); // Stop observing after the animation is triggered
         }
       },
