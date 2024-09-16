@@ -9,6 +9,7 @@
   opacity: 0;
   visibility: hidden;
 }
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -25,8 +26,6 @@
 .slideInFromLeft {
   animation: slideInFromLeft 4s ease-out forwards;
 }
-
-
 .mediumLengthHeroContainer {
   margin: 0;
   align-self: stretch;
