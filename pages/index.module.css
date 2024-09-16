@@ -46,14 +46,14 @@
 }
 
 .slideInFromLeft {
-  animation: slideInFromLeft 2s ease-out forwards;
+  animation: slideInFromLeft 1s ease-out forwards;
 }
 
 .slideInFromRight {
-  animation: slideInFromRight 2s ease-out forwards;
+  animation: slideInFromRight 1s ease-out forwards;
 }
 .slideInFromBottom {
-  animation: slideInFromBottom 2s ease-out forwards;
+  animation: slideInFromBottom 1s ease-out forwards;
 }
 .amalfi201204112801Icon {
   width: 1260px;
