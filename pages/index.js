@@ -258,13 +258,14 @@ const LandingPageItriLiving = () => {
       <FrameComponent2 />
       </div>
     <div
-            ref={Frame2Ref}
+            ref={Frame3Ref}
             className={`${
-              isFrame2Visible ? styles.slideInFromLeft : styles.hidden
+              isFrame3Visible ? styles.slideInFromLeft : styles.hidden
             }`}
           >
       <FrameComponent3 />
       </div>
+
       <FrameComponent4 />
       <FrameComponent5 />
     
