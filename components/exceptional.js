@@ -41,7 +41,7 @@ const Exceptional = ({ className = "" }) => {
     <section className={[styles.exceptional, className].join(" ")}>
       <div className={styles.exceptionalContentParent}>
         <div className={styles.exceptionalContent}>
-          <h1 className={`${styles.mediumLengthHeroContainer} ${!isVisible ? styles.hidden :  styles.slideInFromLeft}`}>
+          <h1 className={styles.mediumLengthHeroContainer}>
             <span
               className={styles.benefitsToBe}
             >{data.b1}</span>
