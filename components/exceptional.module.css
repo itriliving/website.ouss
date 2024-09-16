@@ -14,68 +14,6 @@
   display: inline-block;
   font-family: inherit;
 }
-
-.hidden {
-  opacity: 0;
-  visibility: hidden; /* Ensures it's completely hidden */
-  transform: translateX(0); /* Or translateY(0), depending on the animation */
-}
-
-/* Slide from the bottom animation */
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.slideInFromBottom {
-  animation: slideInFromBottom 1.5s ease-out forwards;
-}
-
-/* Slide from the left animation */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.slideInFromLeft {
-  animation: slideInFromLeft 4s ease-out forwards;
-}
-
-/* Slide from the right animation */
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.slideInFromRight {
-  animation: slideInFromRight 4s ease-out forwards;
-}
-
-
 .noUnderline {
   text-decoration: none;
   color: inherit; /* Keeps the color from the parent */
