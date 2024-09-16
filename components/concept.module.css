@@ -91,6 +91,8 @@
   transform: translateX(100%); /* Initially off-screen to the right */
   transition: transform 1s ease-out, opacity 1s ease-out; 
 }
+
+
 .slideInFromLeft {
   opacity: 1;
   transform: translateX(0); /* Slide in to the final position */
@@ -101,7 +103,7 @@
   transform: translateX(0); /* Slide in to the final position */
 }
 
-/* Keyframes for sliding in from left */
+
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
