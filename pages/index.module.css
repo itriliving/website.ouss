@@ -1,7 +1,7 @@
 
 @keyframes slideUp {
   from {
-    transform: translateY(100%); /* Start off-screen at the bottom */
+    transform: translateY(20%); /* Start off-screen at the bottom */
     opacity: 0; /* Optionally, fade in */
   }
   to {
