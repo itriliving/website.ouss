@@ -10,29 +10,30 @@ const Exceptional = ({ className = "" }) => {
     b4: "",
     b5: ""
   });
-  const [isVisible, setIsVisible] = useState(false); // State to track visibility
+  const [isVisible, setIsVisible] = useState(false); 
   const sectionRef = useRef(null); 
   useEffect(() => {
-    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
+    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; 
     fetch(`${baseURL}/get_data3`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setIsVisible(true); // Trigger the animation when it's visible
-          observer.disconnect(); // Stop observing after it's visible
+          setIsVisible(true); 
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.1 } // Change this threshold to 30% visibility
+      { threshold: 0.1 } 
     );
   
     if (sectionRef.current) {
-      observer.observe(sectionRef.current); // Start observing
+      observer.observe(sectionRef.current); 
     }
   
     return () => observer.disconnect(); 
@@ -54,7 +55,7 @@ const Exceptional = ({ className = "" }) => {
                       href="https://calendly.com/admin-itri/itri-living-concept-explained" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                           className={styles.noUnderline} // Ensure there's no underline
+                           className={styles.noUnderline} 
                                 >
                                      Express your interest
                                           </a>
