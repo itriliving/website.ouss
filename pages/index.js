@@ -19,8 +19,34 @@ import Membership from "../components/membership";
 import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
+import React, { useState, useEffect, useRef } from "react";
 
 const LandingPageItriLiving = () => {
+  const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
+  const newsletterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsNewsletterVisible(true);
+          observer.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    if (newsletterRef.current) {
+      observer.observe(newsletterRef.current);
+    }
+
+    return () => {
+      if (newsletterRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
   return (
     <div className={styles.landingPageItriLiving}>
       <Hero />
@@ -57,7 +83,14 @@ const LandingPageItriLiving = () => {
       <FrameComponent3 />
       <FrameComponent4 />
       <FrameComponent5 />
-      <Newsletter1 />
+      <div
+        ref={newsletterRef}
+        className={`${styles.newsletterWrapper} ${
+          isNewsletterVisible ? styles.slideInFromBottom : styles.hidden
+        }`}
+      >
+        <Newsletter1 />
+      </div>
       <Membership />
       <footer className={styles.card}>
         <div className={styles.spacesImage}>

@@ -9,7 +9,29 @@
     opacity: 1;
   }
 }
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+}
 
+/* Slide up animation */
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slideInFromBottom {
+  animation: slideInFromBottom 2s ease-out forwards;
+}
 .amalfi201204112801Icon {
   width: 1260px;
   position: relative;
