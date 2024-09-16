@@ -177,7 +177,7 @@ const LandingPageItriLiving = () => {
       <div
             ref={ConsultationRef}
             className={`${
-              isConsultationVisible ? styles.slideInFromBottom : styles.hidden
+              isConsultationVisible ? styles.slideInFromLeft : styles.hidden
             }`}
           >
       <Consultation />
