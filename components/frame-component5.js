@@ -53,6 +53,9 @@ const FrameComponent5 = ({ className = "" }) => {
               <div
                 className={styles.whatIsItriliving}
               >{`What is Itri.Living? `}</div>
+              <div
+                className={styles.whatIsItriliving}
+              >{`What is Itri.Living? `}</div>
               <div className={styles.imageContainer}>
                 <img className={styles.imgIcon} alt="" src="/img-1.svg" />
               </div>
