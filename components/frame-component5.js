@@ -52,7 +52,7 @@ const FrameComponent5 = ({ className = "" }) => {
             <div className={styles.fAQItem}>
               <div
                 className={styles.whatIsItriliving}
-              >{`What is Itri.Living? `} <p>{`What is Itri.Living? `}</p></div>
+              >{`What is Itri.Living? `} <br></br> <p>{`What is Itri.Living? `}</p></div>
              
               <div className={styles.imageContainer}>
                 <img className={styles.imgIcon} alt="" src="/img-1.svg" />
