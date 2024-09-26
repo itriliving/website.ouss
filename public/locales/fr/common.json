@@ -15,7 +15,7 @@
     "title2": "Concept"
   },
   "get_data2": {
-    "p1": "Chez Itri.Living, les droits d'hébergement dans notre portefeuille de complexes sont représentés numériquement sous forme de Tokens ERC-21.",
+    "p1": "Chez Itri.Living, les droits d'hébergement dans notre portefeuille de complexes sont représentés numériquement sous forme de Tokens ERC-721.",
     "p10": "Cela permet un volume de transactions maximal pour le Token Itri,",
     "p11": "\ud83d\udd38",
     "p12": "Frais :",
@@ -86,9 +86,9 @@
     "f3": "Itri.living a développé un partenariat stratégique avec le projet Itri NFT et son club numérique. Ce partenariat offre aux détenteurs de NFT Itri les avantages suivants :",
     "f4": "Chaque détenteur de NFT Itri/membre du club numérique pourra acheter 30 tokens (émis par Itri.living) par an au prix de 35 Sfr/token.",
     "f5": "Cela signifie que les détenteurs de NFT Itri bénéficieront de 30 jours chaque année dans l'un de nos complexes exclusifs au coût de 35 Sfr/jour. Bien entendu, s'ils le souhaitent, ils peuvent également échanger leurs tokens Itri sur le Marché.",
-    "f6": "Engagement de Itri.Living",
-    "f7": "envers les Membres du Club Itri NFT :",
-    "f8": "Nous sommes déterminés à faire en sorte que la possession de votre NFT Itri Living vous apporte une valeur exceptionnelle et des opportunités exclusives.",
+    "f6": "Itri.Living",
+    "f7": "engagement",
+    "f8": "Aux membres du club Itri NFT:",
     "f9": "Nous nous engageons à vous offrir une expérience unique et une valeur exceptionnelle."
   },
   "get_data8": [

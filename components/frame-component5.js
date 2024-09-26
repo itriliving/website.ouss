@@ -38,7 +38,7 @@ const FrameComponent5 = ({ className = "" }) => {
                     <div className={styles.questionInfo}>
                         <h1 className={styles.heading2Container}>
                             <b>{faqHeader.title.prefix}</b>
-                            <i className={styles.itrilivingClub}>{faqHeader.title.highlight}</i>
+                            <i style={ { margin : "10px"}} className={styles.itrilivingClub}>{faqHeader.title.highlight}</i>
                         </h1>
                         <div className={styles.ifOurMembershipFaqsAreNotWrapper}>
                             <div className={styles.ifOurMembership}>

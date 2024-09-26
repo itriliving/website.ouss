@@ -321,6 +321,9 @@
 
 /* Téléphones portables en mode portrait et paysage */
 @media (max-width: 800px) {
+
+
+
   /* Votre CSS ici pour les petits écrans */.commitment
 {
   height: 80px;
@@ -354,3 +357,11 @@
 .slideInLeft {
   animation: slideInLeft 3s ease-out;
 }
+
+
+/* style for frensh */
+
+
+
+
+/* style for frensh */

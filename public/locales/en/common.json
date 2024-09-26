@@ -15,7 +15,7 @@
     "title2": "Concept"
   },
   "get_data2": {
-    "p1": "At Itri.Living, accommodations rights to our resorts portfolio are digitally represented as ERC-21 Tokens.",
+    "p1": "At Itri.Living, accommodations rights to our resorts portfolio are digitally represented as ERC-721 Tokens.",
     "p10": "This allows for maximum transaction volume for the Itri Token,",
     "p11": "\ud83d\udd38",
     "p12": "Fees:",
@@ -94,24 +94,25 @@
   },
   "get_data8": [
     {
-      "title": "Communauté"
+      "title": "Community"
     },
     {
-      "title": "Famille"
+      "title": "Family"
     },
     {
       "title": "Sport"
     },
     {
-      "title": "Bien-être"
+      "title": "Well-being"
     },
     {
-      "title": "Écologie"
+      "title": "Ecology"
     },
     {
       "title": "Nature"
     }
   ],
+
   "get_data9": [
     {
       "title": "Wellness center",

@@ -64,7 +64,7 @@ const Concept = forwardRef(({ className = "" }, ref) => {
           <h1 className={"test"}>
           <span className={styles.itriLivingConceptContainer1}>
             <span className={styles.itriLiving}>{data.title}</span>
-            <i className={styles.concept1}>{data.title2}</i>
+            <i style={{ margin : "3px"}} className={styles.concept1}>{data.title2}</i>
           </span>
           </h1>
           <div className={styles.conceptContent}>
