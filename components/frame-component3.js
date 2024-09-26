@@ -1,114 +1,57 @@
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./frame-component3.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useLanguage } from "./LanguageContext"; // Assuming you have a language context
+
+import englishData from '../public/locales/en/common.json';
+import frenchData from '../public/locales/fr/common.json';
+import germanData from '../public/locales/de/common.json';
 
 const FrameComponent3 = ({ className = "" }) => {
+  const { language } = useLanguage(); // Get the current language
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    // Load the appropriate language data
+    let selectedData;
+    if (language === 'English') {
+      selectedData = englishData.dataBlog;
+    } else if (language === 'Français') {
+      selectedData = frenchData.dataBlog;
+    } else if (language === 'Deutsch') {
+      selectedData = germanData.dataBlog;
+    }
+    setData(selectedData);
+  }, [language]);
+
   return (
-    <section className={[styles.blogWrapper, className].join(" ")}>
-      <div className={styles.blog}>
-        <h1 className={styles.heading2}>From our blog</h1>
-        <div className={styles.blogPostContainer}>
-          <div className={styles.blogPostList}>
-            <div className={styles.postList}>
-              <div className={styles.postItem}>
-                <img
-                  className={styles.imageIcon}
-                  alt=""
-                  src="/image-1@2x.png"
-                />
-                <img
-                  className={styles.gradientIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/gradient@2x.png"
-                />
-              </div>
-              <div className={styles.border}>
-                <a className={styles.news}>News</a>
-              </div>
-            </div>
-            <div className={styles.postList1}>
-              <img
-                className={styles.gradientIcon1}
-                alt=""
-                src="/gradient1@2x.png"
-              />
-              <div className={styles.border1}>
-                <div className={styles.location}>Location</div>
-              </div>
-            </div>
-            <div className={styles.postList2}>
-              <img
-                className={styles.gradientIcon2}
-                alt=""
-                src="/gradient2@2x.png"
-              />
-              <div className={styles.border2}>
-                <div className={styles.location}>Community</div>
-              </div>
-            </div>
-            <div className={styles.postList3}>
-              <img
-                className={styles.gradientIcon1}
-                alt=""
-                src="/gradient3@2x.png"
-              />
-              <div className={styles.border3}>
-                <a className={styles.news}>News</a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.postPreview}>
-            <div className={styles.previewContent}>
-              <div className={styles.feb282024}>Feb 28, 2024</div>
-              <div className={styles.embracingAuthenticityWith}>
-                Embracing Authenticity with Itri Residences
-              </div>
-              <div className={styles.discoverTheTrue}>
-                Discover the true essence of authenticity at Itri Residences,
-                where every stay feels like a genuine cultural immersion...…
-              </div>
-            </div>
-            <div className={styles.travelGuide}>
-              <div className={styles.monthContainer}>
-                <div className={styles.may242024}>May 24, 2024</div>
-              </div>
-              <div
-                className={styles.yourAuthenticTravel}
-              >{`Your Authentic Travel Guide: Beach & Spa Edition`}</div>
-              <div className={styles.guideDescription}>
-                <div className={styles.exploreOurGuide}>
-                  Explore our guide to experiencing the best beach and spa
-                  retreats with a touch of authenticity at Itri Residences
+      <section className={`container ${className}`}>
+        <div className="text-center my-4">
+          <h1 className="display-5 fw-bold ">{data.sectionTitle}</h1>
+        </div>
+        <div className="row">
+          {data.newsItems?.map((item, index) => (
+              <div key={index} className="col-md-6 mb-3"> {/* Adjusted column size to 6 for two cards per row */}
+                <div className="card h-100" style={{ minHeight: "350px" }}>
+                  <img
+                      className="card-img-top"
+                      alt=""
+                      src={`/gradient${index + 1}@2x.png`}
+                      style={{ maxHeight: "150px", objectFit: "cover" }}
+                  />
+                  <div className="card-body p-3 d-flex flex-column">
+                    <h6 className="text-muted mb-2">{item.date}</h6>
+                    <h5 className="mb-2">{item.title}</h5>
+                    <p className="flex-grow-1 mb-2">{item.description}</p>
+                    <a href="#" className="btn mt-2" style={{ backgroundColor : "var(--color-tan)"}}>
+                      {data.readMoreText}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.previewContent1}>
-              <div className={styles.aug212024}>Aug 21, 2024</div>
-              <div className={styles.embracingAuthenticityWith}>
-                Itri’s Eco-Friendly Practices
-              </div>
-              <div className={styles.learnHowItriContainer}>
-                <p className={styles.learnHowItri}>
-                  Learn how Itri Residences is committed to sustainable living
-                  and authentic, eco-friendly
-                </p>
-                <p className={styles.learnHowItri}> travel experiences…</p>
-              </div>
-            </div>
-            <div className={styles.communityPost}>
-              <div className={styles.sep272024}>Sep 27, 2024</div>
-              <div className={styles.embracingAuthenticityWith}>
-                Itri Residences Partners with Local Communities
-              </div>
-              <div className={styles.discoverOurCollaboration}>
-                Discover our collaboration with local communities to offer
-                authentic cultural experiences to our guests
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

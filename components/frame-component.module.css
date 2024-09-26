@@ -89,6 +89,7 @@
   color: inherit;         /* Keeps color on hover */
 }
 .tokenisedAccomodationRights {
+
   font-weight: 600;
 }
 .itriToken {
@@ -122,6 +123,8 @@
   object-fit: cover;
   min-width: 416px;
   z-index: 1;
+  height: 37em;
+  width: 10px;
 }
 .atItrilivingAccomodations {
   margin: 0;
@@ -203,6 +206,8 @@
   max-width: 100%;
 }
 .value {
+
+  margin: 10px;
   font-weight: 700;
   font-family: var(--font-inria-serif);
 }
@@ -448,6 +453,7 @@
   .leonardoPhoenixAHighlyDetaIcon,
   .tokenDescription {
     min-width: 100%;
+    height: 40%;
   }
   .memberToken {
     gap: var(--gap-18xl);
@@ -485,6 +491,11 @@
   }
 }
 @media screen and (max-width: 450px) {
+  .leonardoPhoenixAHighlyDetaIcon
+  {
+    visibility: hidden;
+  }
+
   .heading2Container {
     font-size: var(--font-size-19xl);
   }
@@ -500,6 +511,7 @@
   }
   .mediumLengthHeroContainer {
     font-size: var(--font-size-10xl);
+    height: 50%;
   }
   .theseAreWhat {
     font-size: var(--text-medium-normal-size);
@@ -512,3 +524,85 @@
     gap: var(--gap-5xl);
   }
 }
+@media screen and (max-width: 768px) {
+  .contentContainer {
+    flex-direction: column;
+    padding: var(--padding-5xl);
+  }
+
+  .heading2Container {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    height: 5%;
+  }
+  .mt1 {
+    margin-top: 20px; /* Equivalent to Bootstrap's mt-1 (4px if you follow a 16px base) */
+  }
+
+  .valuableContainer {
+    padding: var(--padding-10xl);
+  }
+
+  .image5Parent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tokenDescription {
+    width: 100%;
+  }
+
+  .valuableContent {
+    padding: 0;
+    width: 100%;
+  }
+
+  .stylesecondarySmallfalse {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image5Icon {
+    width: 100%;
+    height: auto;
+  }
+
+  .valuableContent {
+    gap: var(--gap-base);
+  }
+}
+@media (max-width: 450px) {
+  /* Apply styles to paragraphs except p1 and p2 */
+  .atItrilivingAccomodationsContainer p:nth-child(n+3),
+  .blankLine p:nth-child(n+3),
+  .asItriTokensItriTokensHa p:nth-child(n+3) {
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Remove any left margin */
+    padding-left: 0; /* Remove any left padding */
+  }
+
+  /* Ensure containers are properly aligned */
+
+  .blankLine,
+  .asItriTokensItriTokensHa {
+    text-align: left; /* Ensure container elements are aligned to the left */
+    margin-left: 0; /* Ensure containers have no left margin */
+    padding-left: 0; /* Ensure containers have no left padding */
+  }
+}
+
+
+/* some style for germany  */
+
+
+.germanStyle {
+  font-size: 30px;
+
+}
+
+
+
+/*  end of style */

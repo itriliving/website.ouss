@@ -3,9 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap");
+
+
 body {
   margin: 0;
   line-height: normal;
+  background-color: var(--color-azure);
 }
 :root {
   /* fonts */
@@ -252,4 +255,66 @@ body {
   --br-81xl: 100px;
   --br-90xl: 109px;
   --br-99xl: 118px;
+}
+
+/* Responsive styles */
+
+/* For small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size-sm: 12px;
+    --font-size-mid-7: 15px;
+    --font-size-9xl: 24px;
+    --font-size-3xl: 18px;
+    --font-size-29xl: 36px;
+    --font-size-19xl: 30px;
+    --font-size-5xl: 20px;
+    --font-size-13xl: 28px;
+    --font-size-45xl: 48px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  :root {
+    --font-size-sm: 13px;
+    --font-size-mid-7: 16px;
+    --font-size-9xl: 26px;
+    --font-size-3xl: 20px;
+    --font-size-29xl: 42px;
+    --font-size-19xl: 34px;
+    --font-size-5xl: 22px;
+    --font-size-13xl: 30px;
+    --font-size-45xl: 56px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For large devices (desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+  :root {
+    --font-size-sm: 14px;
+    --font-size-mid-7: 17.7px;
+    --font-size-9xl: 28px;
+    --font-size-3xl: 22px;
+    --font-size-29xl: 48px;
+    --font-size-19xl: 38px;
+    --font-size-5xl: 24px;
+    --font-size-13xl: 32px;
+    --font-size-45xl: 64px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }

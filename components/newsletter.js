@@ -17,43 +17,27 @@ const Newsletter = ({ className = "" }) => {
             </span>
           </div>
           <div className={styles.form}>
-            <div className={styles.input}>
-              <div className={styles.nameemailcom}>name@email.com</div>
+            <div className={styles.inputWithButton}>
+              <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="name@email.com"
+              />
+              <button className={styles.buttonIconWrapper}>
+                <img
+                    className={styles.buttonIcon}
+                    loading="lazy"
+                    alt="Submit"
+                    src="/button.svg"
+                />
+              </button>
             </div>
-            <img
-              className={styles.buttonIcon}
-              loading="lazy"
-              alt=""
-              src="/button.svg"
-            />
           </div>
+
         </div>
         <div className={styles.verticalborder}>
-          <div className={styles.downloadTheItriAppNowWrapper}>
-            <div className={styles.downloadTheItri}>
-              Download the Itri App Now
-            </div>
-          </div>
-          <div className={styles.appStoreButtons}>
-            <img
-              className={styles.linkAppStoreButton667a53}
-              loading="lazy"
-              alt=""
-              src="/link--appstorebutton667a5374svg.svg"
-            />
-            <img
-              className={styles.linkGooglePlayButton0e48}
-              loading="lazy"
-              alt=""
-              src="/link--googleplaybutton0e482296svg.svg"
-            />
-          </div>
-          <img
-            className={styles.removalai121894cdCd9e424bIcon}
-            loading="lazy"
-            alt=""
-            src="/removalai-121894cdcd9e424baed2259dea93b24e-graident-ai-robot-1@2x.png"
-          />
+
+
         </div>
       </div>
     </div>

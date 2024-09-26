@@ -1,8 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, forwardRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./concept.module.css";
+import { useLanguage } from "./LanguageContext"; // Correct import
 
-const Concept = ({ className = "" }) => {
+import englishData from '../public/locales/en/common.json';
+import frenchData from '../public/locales/fr/common.json';
+import germanData from '../public/locales/de/common.json';
+
+const Concept = forwardRef(({ className = "" }, ref) => {
   const [data, setData] = useState({
     title: "",
     title2: "",
@@ -13,28 +18,37 @@ const Concept = ({ className = "" }) => {
   });
 
   const [isVisible, setIsVisible] = useState(false); // State to track visibility
-  const sectionRef = useRef(null); // Ref for the section to observe
+  const sectionRef = ref || useRef(null); // Use the forwarded ref or create a new ref
+  const { language } = useLanguage(); // Get the current language from the context
 
-  // Fetch data from the API when the component mounts
   useEffect(() => {
-    const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL; // Fetch the base URL from env variables
-    fetch(`${baseURL}/get_data1`)
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+    console.log("language changed in component concept.js", language);
+
+    // Load data from the correct JSON file based on the selected language
+    let selectedData;
+    if (language === 'English') {
+      selectedData = englishData.get_data1;
+    } else if (language === 'Français') {
+      selectedData = frenchData.get_data1;
+    } else if (language === 'Deutsch') {
+      selectedData = germanData.get_data1;
+    }
+
+    // Set the selected data to state
+    setData(selectedData);
+  }, [language]);
 
   // Intersection Observer to trigger animation when visible
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible(true); // Trigger the animation when visible
-          observer.disconnect(); // Disconnect the observer once triggered
-        }
-      },
-      { threshold: 0.8 } // Adjust as necessary, 10% visibility
+        (entries) => {
+          const entry = entries[0];
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Trigger the animation when visible
+            observer.disconnect(); // Disconnect the observer once triggered
+          }
+        },
+        { threshold: 0.8 } // Adjust as necessary, 80% visibility
     );
 
     if (sectionRef.current) {
@@ -42,69 +56,59 @@ const Concept = ({ className = "" }) => {
     }
 
     return () => observer.disconnect(); // Cleanup the observer
-  }, []);
+  }, [sectionRef]);
 
   return (
-    <section ref={sectionRef} className={[styles.concept, className].join(" ")}>
-      <div className={styles.itriLivingConceptParent}>
-        <h1
-          className={`${styles.itriLivingConceptContainer} ${
-            isVisible ? styles.slideInFromLeft : ""
-          }`}
-        >
+      <section ref={sectionRef} className={[styles.concept, className].join(" ")} id={"concept"}>
+        <div className={styles.itriLivingConceptParent}>
+          <h1 className={"test"}>
           <span className={styles.itriLivingConceptContainer1}>
             <span className={styles.itriLiving}>{data.title}</span>
             <i className={styles.concept1}>{data.title2}</i>
           </span>
-        </h1>
-        <div className={styles.conceptContent}>
-          <div className={styles.contentContainerWrapper}>
-            <div
-              className={`${styles.contentContainer} ${
-                isVisible ? styles.slideInFromLeft : ""
-              }`}
-            >
-              <div className={styles.itrilivingIsAContainer}>
-                <p className={styles.itrilivingIsA}>{data.p1}</p>
-                <p className={styles.itrilivingIsA}>&nbsp;</p>
-                <p className={styles.itrilivingIsA}>{data.p2}</p>
-                <p className={styles.itrilivingIsA}>&nbsp;</p>
-                <p className={styles.itrilivingIsA}>{data.p3}</p>
-                <p className={styles.itrilivingIsA}>&nbsp;</p>
-                <p className={styles.itrilivingIsA}>{data.p4}</p>
-              </div>
-              <div className={styles.requestCall}>
-                <b className={styles.requestACallContainer}>
-                <a 
-    href="https://calendly.com/admin-itri/itri-living-concept-explained" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className={styles.buttonContainer}
-    style={{ textDecoration: 'none' }} // Inline style as an option
-  >
-    <b className={styles.requestACallContainer}>
-      
-      <span className={styles.aCall}>Request a Call</span>
-    </b>
-  </a>
-                </b>
+          </h1>
+          <div className={styles.conceptContent}>
+            <div className={styles.contentContainerWrapper}>
+              <div
+                  className={`${styles.contentContainer} ${isVisible ? styles.slideInFromLeft : ""}`}
+              >
+                <div className={styles.itrilivingIsAContainer}>
+                  <p className={styles.itrilivingIsA}>{data.p1}</p>
+                  <p className={styles.itrilivingIsA}>&nbsp;</p>
+                  <p className={styles.itrilivingIsA}>{data.p2}</p>
+                  <p className={styles.itrilivingIsA}>&nbsp;</p>
+                  <p className={styles.itrilivingIsA}>{data.p3}</p>
+                  <p className={styles.itrilivingIsA}>&nbsp;</p>
+                  <p className={styles.itrilivingIsA}>{data.p4}</p>
+                </div>
+                <div className={styles.requestCall}>
+                  <b className={styles.requestACallContainer}>
+                    <a
+                        href="https://calendly.com/admin-itri/itri-living-concept-explained"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.buttonContainer}
+                        style={{ textDecoration: 'none' }} // Inline style as an option
+                    >
+                      <b className={styles.requestACallContainer}>
+                        <span className={styles.aCall}>Request a Call</span>
+                      </b>
+                    </a>
+                  </b>
+                </div>
               </div>
             </div>
+            <img
+                className={`${styles.sea815134012801Icon} ${isVisible ? styles.slideInFromRightToLeft : ""}`}
+                loading="lazy"
+                alt=""
+                src="/sea8151340-1280-1@2x.png"
+            />
           </div>
-         
-          <img
-            className={`${styles.sea815134012801Icon} ${
-              isVisible ? styles.slideInFromRight : ""
-            }`}
-            loading="lazy"
-            alt=""
-            src="/sea8151340-1280-1@2x.png"
-          />
         </div>
-      </div>
-    </section>
+      </section>
   );
-};
+});
 
 Concept.propTypes = {
   className: PropTypes.string,

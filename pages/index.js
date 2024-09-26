@@ -3,7 +3,8 @@ import Concept from "../components/concept";
 import FrameComponent from "../components/frame-component";
 import FrameComponent1 from "../components/frame-component1";
 import Exceptional from "../components/exceptional";
-import ContentContainer from "../components/content-container";
+
+// import ContentContainer from "../components/content-container";
 import Members from "../components/members";
 import Wrapper from "../components/wrapper";
 import Layout from "../components/layout";
@@ -20,10 +21,13 @@ import FooterLinksContainer from "../components/footer-links-container";
 import Newsletter from "../components/newsletter";
 import styles from "./index.module.css";
 import React, { useState, useEffect, useRef } from "react";
+import Exceptional2 from "../components/Exceptional2";
+import FrameComponents from "../components/content-container";
+import Header from "../components/Header";
 
-const LandingPageItriLiving = () => {
+const LandingPageItriLiving = ( ) => {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
-  const [isMembersVisible, setIsMembersVisible] = useState(false); 
+  const [isMembersVisible, setIsMembersVisible] = useState(false);
   const [isLayoutVisible, setIsLayoutVisible] = useState(false);
   const [isStayVisible, setIsStayVisible] = useState(false);
   const [isConsultationVisible, setIsConsultationVisible] = useState(false);
@@ -33,17 +37,17 @@ const LandingPageItriLiving = () => {
   const [isFrame4Visible, setIsFrame4Visible] = useState(false);
   const [isFrame5Visible, setIsFrame5Visible] = useState(false);
   const [isNewVisible, setIsNewVisible] = useState(false);
-  const NewRef = useRef(null); 
-  const Frame5Ref = useRef(null); 
-  const Frame4Ref = useRef(null); 
-  const Frame3Ref = useRef(null); 
-  const Frame2Ref = useRef(null); 
-  const SpaceRef = useRef(null); 
+  const NewRef = useRef(null);
+  const Frame5Ref = useRef(null);
+  const Frame4Ref = useRef(null);
+  const Frame3Ref = useRef(null);
+  const Frame2Ref = useRef(null);
+  const SpaceRef = useRef(null);
   const ConsultationRef = useRef(null);
   const newsletterRef = useRef(null);
-  const membersRef = useRef(null); 
-  const LayoutRef = useRef(null); 
-  const StayRef = useRef(null); 
+  const membersRef = useRef(null);
+  const LayoutRef = useRef(null);
+  const StayRef = useRef(null);
 
   useEffect(() => {
     const NewObserver = new IntersectionObserver(
@@ -67,16 +71,6 @@ const LandingPageItriLiving = () => {
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
 
-    const Frame4Observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsFrame4Visible(true);
-          Frame4Observer.disconnect(); // Stop observing after the animation is triggered
-        }
-      },
-      { threshold: 0.05 } // Trigger when 5% of the element is visible
-    );
     const Frame3Observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -132,6 +126,17 @@ const LandingPageItriLiving = () => {
     );
 
 
+      const StayObserver = new IntersectionObserver(
+          (entries) => {
+              const entry = entries[0];
+              if (entry.isIntersecting) {
+                  setIsStayVisible(true);
+                  StayObserver.disconnect(); // Stop observing after the animation is triggered
+              }
+          },
+          { threshold: 0.05 } // Trigger when 5% of the element is visible
+      );
+
     const ConsultationObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -143,17 +148,6 @@ const LandingPageItriLiving = () => {
       { threshold: 0.05 } // Trigger when 5% of the element is visible
     );
 
-    const StayObserver = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsStayVisible(true);
-          StayObserver.disconnect(); // Stop observing after the animation is triggered
-        }
-      },
-      { threshold: 0.05 } // Trigger when 5% of the element is visible
-    );
-    
     const SpaceObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -180,9 +174,7 @@ const LandingPageItriLiving = () => {
     if (Frame3Ref.current) {
       Frame3Observer.observe(Frame3Ref.current);
     }
-    if (Frame4Ref.current) {
-      Frame4Observer.observe(Frame4Ref.current);
-    }
+
 
     if (Frame5Ref.current) {
       Frame5Observer.observe(Frame5Ref.current);
@@ -205,7 +197,20 @@ const LandingPageItriLiving = () => {
     if (membersRef.current) {
       membersObserver.observe(membersRef.current);
     }
+      const Frame4Observer = new IntersectionObserver(
+          (entries) => {
+              const entry = entries[0];
+              if (entry.isIntersecting) {
+                  setIsFrame4Visible(true);
+                  Frame4Observer.disconnect(); // Stop observing after the animation is triggered
+              }
+          },
+          { threshold: 0.05 } // Trigger when 5% of the element is visible
+      );
 
+      if (Frame4Ref.current) {
+          Frame4Observer.observe(Frame4Ref.current);
+      }
     return () => {
       newsletterObserver.disconnect();
       membersObserver.disconnect();
@@ -221,152 +226,116 @@ const LandingPageItriLiving = () => {
     };
   }, []);
   return (
-    <div className={styles.landingPageItriLiving}>
-      <Hero />
-      <section className={styles.amalfi}>
-        <img
-          className={styles.amalfi201204112801Icon}
-          loading="lazy"
-          alt=""
-          src="/amalfi2012041-1280-1@2x.png"
-        />
-      </section>
-      <Concept />
-      <section className={styles.whyMember}>
-        <FrameComponent />
-        <FrameComponent1 />
-      </section>
 
-      <Exceptional />
-      <section className={styles.landingPageItriLivingInner}>
-        <div className={styles.contentContainerParent}>
-    
-        <div
-            ref={membersRef}
-            className={`${
-              isMembersVisible ? styles.slideInFromBottom : styles.hidden
-            }`}
-          >
-          <ContentContainer />
-         
-   
-            <Members />
-          </div>
-        </div>
-      </section>
-      <section className={styles.content}>
-        <div className={styles.container}>
-        <div
-        ref={newsletterRef}
-        className={`${
-          isNewsletterVisible ? styles.slideInFromLeft : styles.hidden
-        }`}
-      >
-          <Wrapper />
-          </div>
+      <div className={styles.landingPageItriLiving}>
+          <Hero/> {/* navbar    */}
+          <section className={styles.amalfi}>
+
+              <img
+                  className={styles.amalfi201204112801Icon}
+                  loading="lazy"
+                  alt=""
+                  src="/amalfi2012041-1280-1@2x.png"
+              />
+
+
+          </section>
+
+
+          <Concept/> {/* Itri Living Concept vvvvvvvvvvvv */}
+
+          <FrameComponent/> { /* gold picture ...  vvvvvvvvvvvv*/}
+
+          <Exceptional2/> { /*  Everything   vvvvv */}
+
+          <FrameComponent1/> {/*  first  album    vvvv*/}
+
+
+          <Exceptional/> {/* Benefits  vvvvvv */}
+
+          <FrameComponents/> {/* second album vvvvvvvvvvvvvvvvv */}
+
+          <Members/> {/* What makes our resorts  vvvvvvvvvvv */}
+          <section className={styles.content}>
+              <div className={styles.container}>
+                  <div
+                      ref={newsletterRef}
+                      className={`${
+                          isNewsletterVisible ? styles.slideInFromRight : styles.hidden
+                      }`}
+                  >
+                      <Wrapper/> {/* Exceptionnel  value  vvvvvvvvvvvv*/}
+                  </div>
+
+                  <div
+                      ref={LayoutRef}
+                      className={`${
+                          isLayoutVisible ? styles.slideInFromBottom : styles.hidden
+                      }`}
+                  >
+                      <Layout/> {/*  Save up 80%   vvvvvvvvvvvvv*/}
+                  </div>
+
+              </div>
+          </section>
 
           <div
-            ref={LayoutRef}
-            className={`${
-              isLayoutVisible ? styles.slideInFromBottom : styles.hidden
-            }`}
+              ref={StayRef}
+              className={`${
+                  isStayVisible ? styles.slideInFromRight : styles.hidden
+              }`}
           >
-          <Layout />
-          </div>
-        </div>
-      </section>
-      <div
-            ref={StayRef}
-            className={`${
-              isStayVisible ? styles.slideInFromLeft : styles.hidden
-            }`}
-          >
-      <Stays />
-      </div>
-      <div
-            ref={ConsultationRef}
-            className={`${
-              isConsultationVisible ? styles.slideInFromLeft : styles.hidden
-            }`}
-          >
-      <Consultation />
-      </div>
-      <div
-            ref={SpaceRef}
-            className={`${
-              isSpaceVisible ? styles.slideInFromLeft : styles.hidden
-            }`}
-          >
-      <Spaces />
-      </div>
-      <div
-            ref={Frame2Ref}
-            className={`${
-              isFrame2Visible ? styles.slideInFromLeft : styles.hidden
-            }`}
-          >
-      <FrameComponent2 />
-      </div>
-    <div
-            ref={Frame3Ref}
-            className={`${
-              isFrame3Visible ? styles.slideInFromLeft : styles.hidden
-            }`}
-          >
-      <FrameComponent3 />
-      </div>
-      <div
-            ref={Frame4Ref}
-            className={`${
-              isFrame4Visible ? styles.slideInFromRight: styles.hidden
-            }`}
-          >
-      <FrameComponent4 />
-      </div>
+              <Stays/> {/*  Stay with
 
-      <div
-            ref={Frame5Ref}
-            className={`${
-              isFrame5Visible ? styles.slideInFromBottom: styles.hidden
-            }`}
-          >
-      <FrameComponent5 />
+Itri Living vvvvvvvvvvvv  */}
+          </div>
+          <Consultation/> {/* cards vvvvvvvvvvvvv */}
+
+          <div id="spaces">
+              <Spaces/> {/*  villes  vvvvvvvvvvvvvvvv*/}
+
+          </div>
+
+
+          <FrameComponent2/> {/* Remender  vvvvvvvvvvvvvvvvv*/}
+
+
+          <FrameComponent3/>
+
+
+          <FrameComponent4/> {/* Itri.nft Partnership with vvvvvvvvvvvvvv */}
+
+
+          <FrameComponent5/> {/*  faqs vvvvvvvvvvvvvvvvvv */}
+
+
+          <Newsletter1/> {/* signup    vvvvv*/}
+
+          <footer className={styles.card}>
+              <div className={styles.spacesImage}>
+                  <img
+                      className={styles.captureDEcran20240628AIcon}
+                      loading="lazy"
+                      alt=""
+                      src="/capture-d-ecran-20240628-a-193249removebgpreview-1@2x.png"
+                  />
+              </div>
+              <div className={styles.spacesDescription}>
+                  <div className={styles.discoverDynamicSpaces}>
+                      {" "}
+                      Discover dynamic spaces, engaging events, and an interactive online
+                      Member Hub.
+                  </div>
+              </div>
+              <FooterLinksContainer/>
+              <Newsletter/>
+              <div className={styles.horizontalborder}>
+                  <div className={styles.itriLivingAll}>
+                      © 2024 Itri Living. All rights reserved.
+                  </div>
+              </div>
+          </footer>
       </div>
-      <div
-            ref={NewRef}
-            className={`${
-              isNewVisible ? styles.slideInFromBottom: styles.hidden
-            }`}
-          >
-        <Newsletter1 />
-        </div>
-      
-      <Membership />
-      <footer className={styles.card}>
-        <div className={styles.spacesImage}>
-          <img
-            className={styles.captureDEcran20240628AIcon}
-            loading="lazy"
-            alt=""
-            src="/capture-d-ecran-20240628-a-193249removebgpreview-1@2x.png"
-          />
-        </div>
-        <div className={styles.spacesDescription}>
-          <div className={styles.discoverDynamicSpaces}>
-            {" "}
-            Discover dynamic spaces, engaging events, and an interactive online
-            Member Hub.
-          </div>
-        </div>
-        <FooterLinksContainer />
-        <Newsletter />
-        <div className={styles.horizontalborder}>
-          <div className={styles.itriLivingAll}>
-            © 2024 Itri Living. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
   );
 };
 

@@ -11,6 +11,7 @@
 }
 .pleaseNoteThat {
   margin: 0;
+
 }
 .howeverWeHave {
   margin: 0;
@@ -66,9 +67,14 @@
   flex-direction: row;
   justify-content: flex-start;
   padding: var(--padding-58xl) var(--padding-19xl) var(--padding-58xl)
-    var(--padding-20xl);
+  var(--padding-20xl);
   box-sizing: border-box;
   z-index: 1;
+}
+
+.commitment
+{
+
 }
 .commitment,
 .content,
@@ -85,8 +91,13 @@
   padding: var(--padding-9xs) 0 0;
   box-sizing: border-box;
   min-width: 413px;
-  font-size: var(--font-size-21xl);
   color: var(--color-darkslategray-200);
+
+
+}
+.weAreCommittedContainer  i
+{
+  margin: 5px;
 }
 .content,
 .contentWrapper {
@@ -125,10 +136,28 @@
 }
 @media screen and (max-width: 450px) {
   .reminder {
-    font-size: var(--font-size-lgi);
     line-height: 24px;
   }
   .weAreCommittedContainer {
     font-size: var(--font-size-5xl);
+    height: 10%;
   }
+
+ .content
+
+ {
+   display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+     }
+
+ .pleaseNoteThatContainer
+ {
+   justify-content: center;
+    font-size: small;
+   align-content: center;
+
+   text-align: center;
+ }
 }

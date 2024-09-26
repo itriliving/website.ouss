@@ -91,6 +91,79 @@
   background-position: top;
   min-width: 327px;
 }
+.checkbox2, .checkbox3, .checkbox, .checkbox4, .checkbox5, .checkbox6 {
+  transition: transform 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.checkbox2:hover, .checkbox3:hover, .checkbox:hover, .checkbox4:hover, .checkbox5:hover, .checkbox6:hover {
+  transform: scale(5); /* Scale up slightly on hover */
+}
+/*  for charming terrace */
+.checkbox2 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  justify-content: center;
+  padding: var(--padding-107xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/tooltip@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 327px;
+}
+/*  for authentic bedroom */
+.checkbox3 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  justify-content: center;
+  padding: var(--padding-107xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/tooltip-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 327px;
+}
+/*  for Warm living room*/
+.checkbox4 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  justify-content: center;
+  padding: var(--padding-107xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/tooltip1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 327px;
+}
+/*  for Elegant lounge*/
+.checkbox5 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  justify-content: center;
+  padding: var(--padding-107xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/tooltip2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 327px;
+}
+/*  for Cozy bedroom*/
+.checkbox6 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  justify-content: center;
+  padding: var(--padding-107xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/tooltip3@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 327px;
+}
 .amenities {
   align-self: stretch;
   justify-content: flex-start;
@@ -491,8 +564,9 @@
     gap: var(--gap-base);
   }
   .locationsUnderConsideration {
+    display: flex;
+    justify-content: center;
     font-size: var(--font-size-7xl);
-    line-height: 31px;
   }
   .makeItriResidencesContainer {
     font-size: var(--font-size-19xl);
@@ -503,37 +577,60 @@
   .location1 {
     min-width: 100%;
   }
+}@media screen and (max-width: 450px) {
+  .exploreItrilivingSpaces{
+    text-align: center;
+    margin: auto;
+    height: 0;
+  }
+
+  .amenities {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .checkbox, .checkbox2, .checkbox3, .checkbox4, .checkbox5, .checkbox6 {
+    width: 100%;
+    margin-bottom: 16px;
+    background-position: center;
+  }
+
+  /* Styles for exploreItrilivingSpacesParent */
+  .exploreItrilivingSpacesParent
+ {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .makeItriResidencesContainer
+  {
+    height: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 15.5px;
+    word-wrap: break-word; /* Ensure long words break properly on smaller screens */
+  }
+  .exploreItrilivingSpacesParent h1 {
+    font-size: 17px;
+  }
+
+  .aPlaceTo  {
+    font-size: 12.2px;
+   display: flex;
+  justify-content: center;
+    align-content: center;
+    margin: auto;
+    line-break: auto;
+  }
+
+
+.booking
+{
+height: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-@media screen and (max-width: 450px) {
-  .exploreItrilivingSpaces {
-    font-size: var(--font-size-10xl);
-  }
-  .toBeFound {
-    font-size: var(--font-size-lgi);
-    line-height: 24px;
-  }
-  .aPlaceTo {
-    font-size: var(--text-medium-normal-size);
-    line-height: 22px;
-  }
-  .authenticPool {
-    font-size: var(--font-size-3xl);
-  }
-  .tooltip1,
-  .tooltip2 {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
-    box-sizing: border-box;
-  }
-  .locationsUnderConsideration {
-    font-size: var(--font-size-lgi);
-    line-height: 24px;
-  }
-  .makeItriResidencesContainer {
-    font-size: var(--font-size-10xl);
-  }
-  .spaces {
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
-  }
 }

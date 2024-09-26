@@ -1,3 +1,4 @@
+/* Base styles */
 .heading1 {
   margin: 0;
   width: 654px;
@@ -338,7 +339,7 @@
   background-color: var(--color-royalblue-300);
   padding: var(--padding-3xs) var(--padding-xs);
   box-sizing: border-box;
-  color: var(--color-royalblue-200);
+  color: var (--color-royalblue-200);
 }
 .previousMonthButtons {
   height: 96px;
@@ -525,12 +526,18 @@
   color: var(--color-darkslategray-300);
   font-family: var(--font-inter);
 }
+
+/* Responsive adjustments */
+
+/* For screens smaller than 1200px */
 @media screen and (max-width: 1200px) {
   .membership {
     padding-bottom: var(--padding-32xl);
     box-sizing: border-box;
   }
 }
+
+/* For screens smaller than 825px */
 @media screen and (max-width: 825px) {
   .heading1 {
     font-size: var(--font-size-19xl);
@@ -545,6 +552,8 @@
     justify-content: center;
   }
 }
+
+/* For screens smaller than 450px */
 @media screen and (max-width: 450px) {
   .heading1 {
     font-size: var(--font-size-10xl);

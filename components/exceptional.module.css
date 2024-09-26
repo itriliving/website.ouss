@@ -2,6 +2,7 @@
   font-weight: 600;
 }
 .customResorts {
+  margin: 4px;
   font-weight: 700;
   font-family: var(--font-inria-serif);
 }
@@ -19,6 +20,16 @@
   color: inherit; /* Keeps the color from the parent */
 }
 
+.theseAreWhat {
+  margin: 0;
+  width: 371px;
+  height: 66px;
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  font-family: var(--text-tiny-normal);
+  display: inline-block;
+  max-width: 100%;
+}
 .noUnderline:hover {
    text-decoration: none;
   color: #ffffff; /* Optionally, you can set hover color */
@@ -122,7 +133,7 @@
 }
 @media screen and (max-width: 825px) {
   .mediumLengthHeroContainer {
-    font-size: var(--font-size-19xl);
+    font-size: 40%;
   }
   .exceptionalContent,
   .exceptionalContentParent {
@@ -134,8 +145,16 @@
   }
 }
 @media screen and (max-width: 450px) {
+  .exceptionalLocationBeachfro {
+    margin: 0 auto; /* Centers the element horizontally */
+    white-space: pre-wrap;
+    color: var(--color-darkslategray-100);
+    font-family: var(--font-inria-serif);
+    text-align: center; /* Centers the text within the element */
+  }
   .mediumLengthHeroContainer {
     font-size: var(--font-size-10xl);
+    height: 50%;
   }
   .exceptionalContent {
     gap: var(--gap-base);
@@ -143,6 +162,12 @@
   .exceptionalLocationBeachfroContainer {
     font-size: var(--text-medium-normal-size);
   }
+  .authenticAccommodationFor ,
+  .stateOfTheArtFacilities
+  {
+    font-size: calc(var(--text-medium-normal-size) * 0.8); /* Reduce the size by 20% */
+  }
+
   .exceptionalContentParent {
     gap: var(--gap-base);
   }

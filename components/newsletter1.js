@@ -1,51 +1,75 @@
 import PropTypes from "prop-types";
-import styles from "./newsletter1.module.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLanguage } from "./LanguageContext"; // Use your existing language context
+import englishData from '../public/locales/en/common.json';
+import frenchData from '../public/locales/fr/common.json';
+import germanData from '../public/locales/de/common.json';
 
 const Newsletter1 = ({ className = "" }) => {
+  const { language } = useLanguage(); // Get the current language from the context
+  let data = {};
+
+  // Select the appropriate language data
+  if (language === 'English') {
+    data = englishData.dataNewsletter;
+  } else if (language === 'Français') {
+    data = frenchData.dataNewsletter;
+  } else if (language === 'Deutsch') {
+    data = germanData.dataNewsletter;
+  }
+
   return (
-    <section className={[styles.newsletter, className].join(" ")}>
-      <div className={styles.card}>
-        <div className={styles.newsletterContent}>
-          <h1 className={styles.heading}>
-            <span>{`Get Early Access to Sign-up to your `}</span>
-            <i className={styles.itrilivingAccount}>Itri.living account</i>
-          </h1>
-          <div className={styles.description}>
-            Be the first to experience our latest innovative Hospitality
-            technologies.
+      <section className={`d-flex justify-content-center align-items-center ${className}`} id={"SignUp"}>
+        <div className="card p-4 p-md-5" style={{ backgroundColor: '#4b3621', color: '#d1e7dd', maxWidth: '500px', width: '100%' }}>
+          <div className="text-center mb-4">
+            <h1 className="display-6">
+              {data.title}
+              <i className="d-block fw-bold">{data.subtitle}</i>
+            </h1>
+            <p className="mt-3">
+              {data.description}
+            </p>
           </div>
-        </div>
-        <div className={styles.emailForm}>
-          <div className={styles.formContainer}>
-            <div className={styles.form}>
-              <div className={styles.typedefault}>
-                <div className={styles.yourEmail}>Your email</div>
-              </div>
-              <div className={styles.styleprimarySmallfalseDa}>
-                <div className={styles.go}>Go</div>
-              </div>
+          <div className="mb-4">
+            <div className="input-group">
+              <input
+                  type="text"
+                  className="form-control form-control-lg"
+                  placeholder={data.placeholder}
+              />
+              <button
+                  className="btn btn-lg"
+                  style={{ backgroundColor: '#b08d5b', color: '#fff' }}
+              >
+                {data.buttonText}
+              </button>
             </div>
-            <div className={styles.byClickingSign}>
-              By joining, you agree to our Terms and Conditions.
-            </div>
-            <div className={styles.socialLogin}>
-              <div className={styles.button}>
-                <img className={styles.icon} alt="" src="/icon.svg" />
-                <div className={styles.socialLabels}>Sign In with Google</div>
-              </div>
-              <div className={styles.button1}>
-                <img
-                  className={styles.icon}
-                  alt=""
+          </div>
+          <p className="text-center small">
+            {data.terms}
+          </p>
+          <div className="d-flex justify-content-center gap-2 mt-4">
+            <button className="btn btn-outline-light d-flex align-items-center" style={{ fontSize: '0.875rem' }}>
+              <img
+                  src="/icon.svg"
+                  alt="Google Icon"
+                  className="me-2"
+                  style={{ height: '20px' }}
+              />
+              {data.googleSignIn}
+            </button>
+            <button className="btn btn-outline-light d-flex align-items-center" style={{ fontSize: '0.875rem' }}>
+              <img
                   src="/facebook--original.svg"
-                />
-                <div className={styles.socialLabels}>Sign In with Facebook</div>
-              </div>
-            </div>
+                  alt="Facebook Icon"
+                  className="me-2"
+                  style={{ height: '20px' }}
+              />
+              {data.facebookSignIn}
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

@@ -1,143 +1,7 @@
-.keepUpWith {
-  margin: 0;
-}
-.keepUpWithContainer,
-.nameemailcom {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.keepUpWithContainer {
-  height: 56px;
-  line-height: 28px;
-  font-weight: 500;
-}
-.nameemailcom {
-  width: 241px;
-  white-space: nowrap;
-}
-.input {
-  flex: 1;
-  box-shadow: 0 0 0#fff inset, 0 0 0 1px #fcfbf8 inset;
-  border-radius: var(--br-9980xl) 0 0 var(--br-9980xl);
-  background-color: var(--color-floralwhite);
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-2xs-1) var(--padding-base) var(--padding-3xs-9);
-  box-sizing: border-box;
-  min-width: 236px;
-  max-width: 100%;
-}
-.buttonIcon {
-  height: 36px;
-  width: 38px;
-  position: relative;
-  border-radius: 0 var(--br-9980xl) var(--br-9980xl) 0;
-  overflow: hidden;
-  flex-shrink: 0;
-  min-height: 36px;
-  z-index: 1;
-  margin-left: -1px;
-}
-.form,
-.newsletterForm {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.form {
-  align-self: stretch;
-  border-radius: var(--br-9980xl);
-  flex-direction: row;
-  row-gap: 20px;
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-300);
-}
-.newsletterForm {
-  width: 400px;
-  flex-direction: column;
-  gap: var(--gap-base-5);
-  min-width: 400px;
-}
-.downloadTheItri {
-  flex: 1;
-  position: relative;
-  line-height: 28px;
-  font-weight: 500;
-}
-.downloadTheItriAppNowWrapper {
-  width: 287.8px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-2xs);
-  box-sizing: border-box;
-}
-.linkAppStoreButton667a53,
-.linkGooglePlayButton0e48 {
-  align-self: stretch;
-  width: 136px;
-  position: relative;
-  max-height: 100%;
-  overflow: hidden;
-  flex-shrink: 0;
-  min-height: 41px;
-}
-.linkGooglePlayButton0e48 {
-  width: 121px;
-}
-.appStoreButtons {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-base);
-}
-.removalai121894cdCd9e424bIcon {
-  width: 155px;
-  height: 126px;
-  position: absolute;
-  margin: 0 !important;
-  right: -4.5px;
-  bottom: -29px;
-  object-fit: cover;
-  z-index: 1;
-}
-.verticalborder {
-  width: 732px;
-  border-left: 1px solid var(--color-snow-300);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-base-5) var(--padding-197xl);
-  position: relative;
-  gap: var(--gap-5xs);
-  min-width: 732px;
-  max-width: 100%;
-  font-size: var(--font-size-mid-7);
-}
-.newsletter,
-.newsletterContent {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-}
-.newsletterContent {
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
+/* Base styles */
 .newsletter {
-  width: 1396px;
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 0 var(--padding-36xl);
@@ -146,48 +10,218 @@
   font-size: var(--font-size-mid-4);
   color: var(--color-snow-100);
   font-family: var(--font-inter);
+  width: 100%;
+  max-width: 1396px;
 }
-@media screen and (max-width: 1425px) {
-  .newsletterForm,
-  .verticalborder {
-    flex: 1;
-  }
-  .newsletterContent {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+
+.newsletterContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+
+.newsletterForm {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base-5);
+  min-width: 400px;
+}
+
+.keepUpWithContainer {
+  height: 56px;
+  line-height: 28px;
+  font-weight: 500;
+  display: flex; /* Ensure content is centered in the container */
+  justify-content: center;
+  align-items: center;
+}
+
+.keepUpWith {
+  margin: 0;
+}
+
+.form {
+  width: 100%; /* Full width for the form */
+  display: flex;
+  justify-content: center; /* Center the form */
+  align-items: center; /* Center align items vertically */
+}
+
+.inputWithButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 300px; /* Set a max-width for the input with button */
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  padding: var(--padding-2xs) var(--padding-xs);
+  padding-right: 50px; /* Add padding to the right to make room for the button */
+  box-sizing: border-box;
+  border-radius: 50px 0 0 50px; /* Rounded corners with no right border-radius */
+  border: 1px solid #ccc; /* Border for the input */
+  background-color: var(--color-floralwhite);
+  font-size: var(--font-size-sm);
+}
+
+.buttonIconWrapper {
+  position: absolute;
+  right: -40px; /* Position button outside the input field */
+  top: 50%;
+  transform: translateY(-50%); /* Center the button vertically */
+  border: none; /* Remove default button border */
+  background: none; /* Remove default button background */
+  padding: 0; /* Remove default button padding */
+  cursor: pointer;
+  border-radius: 0 50px 50px 0; /* Rounded corners on the left side */
+  overflow: hidden;
+}
+
+.buttonIcon {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+/* Responsive adjustments */
+
+/* Mobile screens */
+@media (max-width: 450px) {
   .newsletter {
-    padding-left: var(--padding-8xl);
-    padding-right: var(--padding-8xl);
-    box-sizing: border-box;
+    flex-direction: column;
+    padding: 0 var(--padding-xs);
+    align-items: center;
   }
-}
-@media screen and (max-width: 1200px) {
-  .verticalborder {
-    min-width: 100%;
+
+  .newsletterContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap-base);
   }
-}
-@media screen and (max-width: 825px) {
+
   .newsletterForm {
+    width: 100%;
     min-width: 100%;
+    gap: var(--gap-base);
+    align-items: center;
   }
-  .verticalborder {
-    padding-left: var(--padding-89xl);
-    padding-right: var(--padding-89xl);
-    box-sizing: border-box;
+
+  .keepUpWithContainer {
+    height: auto;
+    font-size: var(--font-size-sm);
+    line-height: normal;
+    text-align: center;
+    padding: var(--padding-xs);
+  }
+
+  .form {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center;
+  }
+
+  .inputWithButton {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  .input {
+    margin-left: 6em;
+    border-radius: 50px; /* Full rounding on smaller screens */
+    padding-right: 10px; /* Adjust padding for smaller screens */
+    margin-bottom: var(--margin-xs); /* Space between input and button */
+  }
+
+  .buttonIconWrapper {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none; /* No need to center */
+    border-radius: 50px; /* Rounded corners for standalone button */
+    margin-top: var(--margin-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Button takes full width */
+  }
+
+  .buttonIcon {
+    margin-right: 3em;
+    width: 36px;
+    height: 36px;
   }
 }
-@media screen and (max-width: 450px) {
-  .buttonIcon {
-    margin-left: 0;
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 0 var(--padding-md);
   }
-  .appStoreButtons,
-  .form {
-    flex-wrap: wrap;
+
+  .newsletterContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
   .verticalborder {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
-    box-sizing: border-box;
+    width: 100%;
+    padding: var(--padding-lg) var(--padding-md);
+    border-left: none;
+    border-top: 1px solid var(--color-snow-300);
+  }
+
+  .keepUpWithContainer {
+    text-align: center;
+  }
+
+  .nameemailcom {
+    width: 100%;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small Laptops */
+@media (max-width: 1024px) {
+  .newsletter {
+    padding: 0 var(--padding-lg);
+  }
+
+  .newsletterContent {
+    gap: var(--gap-lg);
+  }
+
+  .verticalborder {
+    width: 100%;
+    padding: var(--padding-xl) var(--padding-lg);
+  }
+
+  .input {
+    padding: var(--padding-sm) var(--padding-md);
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  .newsletter {
+    padding: 0 var(--padding-36xl);
+  }
+
+  .verticalborder {
+    width: 732px;
+  }
+
+  .input {
+    min-width: 236px;
+    padding: var(--padding-2xs-1) var(--padding-base) var(--padding-3xs-9);
   }
 }

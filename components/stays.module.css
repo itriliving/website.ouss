@@ -14,6 +14,25 @@
   color: inherit;         /* Keep the color from the parent element */
 }
 
+.stylesecondarySmallfalse {
+  background-color: #6c757d; /* Default gray color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.stylesecondarySmallfalse:hover {
+  background-color: #5a6268; /* Slightly darker gray on hover */
+}
+
+.disabledButton {
+  background-color: #343a40; /* Even darker gray when disabled */
+  cursor: not-allowed;
+}
 .noUnderline:hover {
   text-decoration: none;  /* Ensure underline does not appear on hover */
   color: inherit;         /* Keeps color on hover */
@@ -145,5 +164,98 @@
   }
   .wrapper {
     gap: var(--gap-8xl);
+  }
+}
+
+/* Base styles remain unchanged */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex: 1;
+    width: 100%; /* Ensure the container takes full width on smaller screens */
+  }
+  .wrapper {
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    gap: var(--gap-44xl); /* Adjust gap for better spacing */
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .stayWithItriContainer {
+    font-size: var(--font-size-32xl); /* Adjust font size for readability */
+    line-height: 58px; /* Adjust line height */
+    width: 100%; /* Ensure full width */
+    height: auto; /* Adjust height based on content */
+  }
+  .experience {
+    gap: var(--gap-7xl); /* Adjust gap between elements */
+    width: 100%; /* Ensure full width */
+  }
+  .container,
+  .sea815134012802Icon {
+    min-width: 100%; /* Ensure full width for images and containers */
+    height: auto; /* Adjust height for better fit */
+  }
+  .wrapper {
+    gap: var(--gap-34xl); /* Reduce gap for smaller screens */
+    flex-wrap: wrap; /* Allow wrapping for better fit */
+  }
+  .stays {
+    padding-bottom: var(--padding-51xl);
+    box-sizing: border-box;
+    width: 100%; /* Ensure full width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stayWithItriContainer {
+    font-size: var(--font-size-28xl); /* Further reduce font size */
+    line-height: 52px; /* Adjust line height */
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically */
+  }
+  .experience {
+    gap: var(--gap-5xl); /* Further reduce gap */
+    width: 100%; /* Ensure full width */
+  }
+  .container,
+  .sea815134012802Icon {
+    width: 100%; /* Ensure containers and images are responsive */
+    height: auto; /* Adjust height to fit content */
+  }
+  .wrapper {
+    gap: var(--gap-24xl); /* Adjust gap for smaller screens */
+    flex-wrap: wrap; /* Ensure wrapping for elements */
+  }
+  .stays {
+    padding-bottom: var(--padding-41xl); /* Adjust padding for better fit */
+    width: 100%; /* Full width */
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .stayWithItriContainer {
+    font-size: var(--font-size-19xl); /* Smaller font size for readability */
+    line-height: 43px; /* Adjust line height for small screens */
+    width: 100%; /* Full width */
+    height: auto;
+  }
+  .eachStayIsContainer {
+    font-size: var(--text-medium-normal-size); /* Adjust font size for readability */
+    width: 100%; /* Full width */
+  }
+  .wrapper {
+    gap: var(--gap-8xl); /* Minimize gap for very small screens */
+    flex-wrap: wrap; /* Stack elements vertically */
+    width: 100%; /* Full width */
+  }
+  .container,
+  .sea815134012802Icon {
+    width: 100%; /* Full width for containers and images */
+    height: auto; /* Adjust height to fit content */
+  }
+  .stays {
+    padding-bottom: var(--padding-3xl); /* Adjust padding for better fit */
+    width: 100%; /* Full width */
   }
 }

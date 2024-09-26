@@ -46,14 +46,14 @@
 }
 
 .slideInFromLeft {
-  animation: slideInFromLeft 1s ease-out forwards;
+  animation: slideInFromLeft 2s ease-out forwards;
 }
 
 .slideInFromRight {
-  animation: slideInFromRight 1s ease-out forwards;
+  animation: slideInFromRight 2s ease-out forwards;
 }
 .slideInFromBottom {
-  animation: slideInFromBottom 1s ease-out forwards;
+  animation: slideInFromBottom 2s ease-out forwards;
 }
 .amalfi201204112801Icon {
   width: 1260px;
@@ -73,7 +73,7 @@
   padding: 0 var(--padding-xl);
   box-sizing: border-box;
   max-width: 100%;
-  animation: slideUp 2s ease-out forwards;
+  animation: slideUp 0.5s ease-out forwards;
 }
 .contentContainerParent,
 .whyMember {
@@ -292,5 +292,75 @@
   }
   .landingPageItriLiving {
     gap: var(--gap-5xl);
+  }
+}
+@media screen and (max-width: 450px) {
+
+  .card
+  {
+    margin: 0;
+  }
+  .whyMember {
+    gap: var(--gap-2xl);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding-md);
+  }
+
+  .contentContainerParent {
+    gap: var(--gap-xl);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    gap: var(--gap-8xl);
+    padding: 0 var(--padding-md);
+  }
+
+
+
+  .landingPageItriLiving {
+    gap: var(--gap-5xl);
+    padding: 0 var(--padding-md);
+  }
+
+  .amalfi201204112801Icon {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .amalfi {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--padding-md);
+  }
+
+  .spacesImage {
+    padding: 0 var(--padding-md);
+
+  }
+
+  .discoverDynamicSpaces {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .spacesDescription {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--padding-md);
+    text-align: center;
+  }
+
+  .horizontalborder {
+    padding: var(--padding-md) 0;
+    border-top: 1px solid var(--color-snow-300);
+    border-left: none;
   }
 }

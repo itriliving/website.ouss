@@ -1,52 +1,94 @@
-.communityContent,
 .communityContentWrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-}
-.communityContent {
-  width: -104px;
-  height: 493px;
-  overflow: hidden;
-  flex-direction: row;
-  gap: var(--gap-97xl);
-}
-.communityContentWrapper {
-  height: 596px;
-  width: 1552px;
   flex-direction: column;
-  min-width: 1552px;
-  max-width: 111%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
   text-align: left;
   font-size: var(--text-regular-normal-size);
   color: var(--color-darkslategray-300);
   font-family: var(--font-inter);
+  padding: 20px; /* Add padding for better spacing */
 }
+
+.communityContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px; /* Updated gap between images */
+  flex-wrap: wrap; /* Allows wrapping to the next line on smaller screens */
+  width: 100%;
+  max-width: 1200px; /* Limit the width for better centering */
+  overflow: hidden;
+}
+
+.communityContent img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners to images */
+}
+
 @media screen and (max-width: 1425px) {
   .communityContentWrapper {
-    flex: 1;
-    min-width: 100%;
+    padding: 15px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .communityContentWrapper {
-    min-width: 100%;
+    padding: 10px;
+  }
+  .communityContent {
+    gap: 15px;
   }
 }
+
 @media screen and (max-width: 825px) {
   .communityContent {
-    gap: var(--gap-39xl);
-  }
-  .communityContentWrapper {
-    min-width: 100%;
+    gap: 10px;
   }
 }
+
 @media screen and (max-width: 450px) {
   .communityContent {
-    gap: var(--gap-10xl);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  .communityContentWrapper {
-    min-width: 100%;
-  }
+}
+.communityContentWrapper {
+  /* Adjust the width and margin to control the size of the carousel */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel {
+  /* Set a max-height to restrict the height of the carousel */
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  /* Ensure the carousel items fit within the new dimensions */
+  height: 100%;
+}
+
+.carousel-item img {
+  /* Adjust the width and height to fit within the carousel */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the space nicely */
+}
+
+.carousel-caption {
+  /* Optional: Adjust the caption size */
+  font-size: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  /* Optional: Adjust the size of the navigation controls */
+  width: 30px;
 }

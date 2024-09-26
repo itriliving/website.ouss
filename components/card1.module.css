@@ -8,6 +8,23 @@
   flex-shrink: 0;
   object-fit: cover;
 }
+.card {
+  overflow: hidden; /* Ensures content doesn't overflow */
+  transition: transform 0.5s ease; /* Smooth transition for the card */
+}
+
+.placeholderImageIcon {
+  width: 100%; /* Ensure the image fills the card */
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+.card:hover .placeholderImageIcon {
+  transform: scale(1.2); /* Zoom in on hover */
+}
+
+.name {
+  /* Add any additional styling for the text container here */
+}
 .strongCommunityAnd {
   margin: 0;
 }
@@ -43,5 +60,13 @@
   .name {
     font-size: var(--text-regular-normal-size);
     line-height: 24px;
+    height: 50%;
   }
+
+  .strongCommunityAnd
+  {
+    font-size: 10px; /* Or any other specific size */
+    margin-top: 5px;
+  }
+
 }

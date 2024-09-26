@@ -64,7 +64,7 @@
   background-color: var(--color-darkslategray-300);
   border: 1px solid var(--color-paleturquoise-200);
   padding: var(--padding-10xs) var(--padding-6xs) var(--padding-10xs)
-    var(--padding-4xs);
+  var(--padding-4xs);
   z-index: 2;
 }
 .postList {
@@ -100,7 +100,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-10xs) var(--padding-7xs) var(--padding-10xs)
-    var(--padding-6xs);
+  var(--padding-6xs);
   z-index: 1;
 }
 .gradientIcon2,
@@ -141,7 +141,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-10xs) var(--padding-9xs) var(--padding-10xs)
-    var(--padding-6xs);
+  var(--padding-6xs);
   z-index: 1;
 }
 .border2,
@@ -172,7 +172,7 @@
   background-color: var(--color-darkslategray-300);
   border: 1px solid var(--color-paleturquoise-200);
   padding: var(--padding-10xs) var(--padding-6xs) var(--padding-10xs)
-    var(--padding-4xs);
+  var(--padding-4xs);
   z-index: 1;
 }
 .blogPostList,
@@ -417,5 +417,77 @@
   .heading2 {
     font-size: var(--font-size-10xl);
     line-height: 29px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heading2 {
+    font-size: var(--font-size-10xl);
+    line-height: 29px;
+    margin-left: 1em;
+  }
+
+  .blogWrapper {
+    padding: 0 var(--padding-md) var(--padding-32xl);
+  }
+
+  .blog {
+    gap: var(--gap-lg);
+    width: 100%;
+  }
+
+  .blogPostList {
+    flex-wrap: wrap;
+    gap: var(--gap-lg);
+  }
+
+  .postList,
+  .postList1,
+  .postList2,
+  .postList3 {
+    min-width: 100%;
+    max-width: 100%;
+    padding: var(--padding-sm);
+    min-height: auto;
+    max-height: none;
+  }
+
+  .imageIcon,
+  .gradientIcon,
+  .gradientIcon1,
+  .gradientIcon2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .postPreview {
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+  }
+
+  .previewContent,
+  .previewContent1,
+  .communityPost,
+  .travelGuide {
+    min-width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .previewContent,
+  .previewContent1 {
+    padding: var(--padding-sm);
+  }
+.blogPostList{
+  margin: 1em;
+}
+
+  .border,
+  .border1,
+  .border2,
+  .border3 {
+    width: auto;
+    padding: var(--padding-10xs) var(--padding-xs);
   }
 }

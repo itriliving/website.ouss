@@ -1,5 +1,6 @@
 .itrinftPartnershipWith {
   margin: 0;
+
 }
 .itriliving1 {
   font-weight: 700;
@@ -8,16 +9,13 @@
   margin: 0;
   font-family: var(--font-inria-serif);
 }
-.itrinftPartnershipWithContainer1 {
-  width: 100%;
-}
+
 .itrinftPartnershipWithContainer {
   margin: 0 !important;
   height: 144px;
   width: 952px;
   position: absolute;
   top: 22px;
-  right: -333px;
   font-size: inherit;
   display: flex;
   align-items: center;
@@ -85,7 +83,6 @@
   align-self: stretch;
   height: 144px;
   position: relative;
-  font-size: inherit;
   letter-spacing: -1.8px;
   line-height: 72px;
   display: flex;
@@ -231,11 +228,49 @@
   }
 }
 @media screen and (max-width: 450px) {
+  .itrinftPartnershipWith {
+    margin: 0;
+
+  }
+  .weAreDedicatedContainer
+  {
+    margin-top: 15px;
+  }
+  .itrinftPartnershipWithContainer1
+  {
+    margin-top: 10px;
+  }
   .itrinftPartnershipWithContainer {
-    font-size: var(--font-size-10xl);
+  }
+  .itrilivingCommitmentToContainer
+  {
+    font-size: small;
+  }
+  .faitesVosValisesPourCesI
+  {
+    width: 530px;
+    max-height: 100%;
+    visibility: hidden;
+    }
+  .itrinftPartnershipWithContainer
+  {
+    display: flex;
+    text-align: center;
+  }
+  .itrinftPartnershipWith
+    .itrinftPartnershipWithContainer1
+  {
+
+
+
+  }
+  .itrinftPartnershipWithContainer1
+  {
+    margin-right: 2em;
   }
   .itrilivingHasDevelopedContainer {
     font-size: var(--text-regular-normal-size);
+    height: 50%;
   }
   .partnershipContent {
     gap: var(--gap-9xl);
@@ -258,4 +293,64 @@
     padding-bottom: var(--padding-27xl);
     box-sizing: border-box;
   }
+}
+@media (max-width: 600px) {
+  .partnershipContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .valentinLacosteGzu0bAe2ckUIcon {
+    margin-bottom: 120px;
+    width: 100%; /* Make sure the image fits the container */
+  }
+.commitment
+{
+  height: 10px;
+}
+
+}
+/* Téléphones portables en mode portrait et paysage */
+@media (max-width: 767px) {
+  /* Votre CSS ici pour les petits écrans */.commitment
+{
+  height: 60px;
+}
+}
+
+/* Téléphones portables en mode portrait et paysage */
+@media (max-width: 800px) {
+  /* Votre CSS ici pour les petits écrans */.commitment
+{
+  height: 80px;
+}
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slideInRight {
+  animation: slideInRight 3s ease-out;
+}
+
+.slideInLeft {
+  animation: slideInLeft 3s ease-out;
 }
