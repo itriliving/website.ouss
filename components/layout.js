@@ -59,6 +59,9 @@ const Layout = ({ className = "" }) => {
                     <h1 className="display-4">{data.title}</h1>
                     <h2 className="h4 my-3">{data.subtitle}</h2>
                     <button
+                        style={{
+                            height : "70px"
+                        }}
                         className={`btn btn-secondary btn-lg ${isDisabled ? "disabled" : ""}`}
                         onClick={handleClick}
                         disabled={isDisabled}

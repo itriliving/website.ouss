@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -26,14 +26,15 @@ const FrameComponent1 = ({ className = "" }) => {
     setTitles(selectedData);
   }, [language]);
 
-  const settings = {
+  const settings = useMemo(() => ({
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000, // Smoother transition speed
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2000, // Adjusted speed for smoother autoplay
+    pauseOnHover: true, // Pause on hover
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -68,7 +69,7 @@ const FrameComponent1 = ({ className = "" }) => {
         },
       },
     ],
-  };
+  }), []);
 
   const imageStyle = {
     width: '100%',
@@ -93,6 +94,7 @@ const FrameComponent1 = ({ className = "" }) => {
                       alt={title.title}
                       style={imageStyle}
                       className="card-img-top"
+                      loading="lazy" // Lazy loading for images
                   />
                   <div className="card-body">
                     <h5 className="card-title">{title.title}</h5>

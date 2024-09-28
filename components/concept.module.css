@@ -27,7 +27,7 @@
 }
 .itrilivingIsA {
   margin: 0;
-  font-size: medium;
+  font-size: 80%;
 }
 .itrilivingIsAContainer {
   align-self: stretch;
@@ -220,6 +220,7 @@
 
   }
   .itrilivingIsAContainer {
+
     font-size: var(--text-regular-normal-size);
     line-height: 22px;
     height: auto;

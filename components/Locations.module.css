@@ -48,7 +48,7 @@
 }
 
 .locationCard:hover .image {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(2); /* Slight zoom effect on hover */
 }
 
 @media screen and (max-width: 450px) {
