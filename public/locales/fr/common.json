@@ -7,10 +7,10 @@
     "a5": "Découvrez Itri Living"
   },
   "get_data1": {
-    "p1": "Itri.living est une société de services hôteliers suisses (en incorporation) dédiée à la fourniture de valeur imbattable et des expériences de voyage authentiques dans des endroits exotiques.",
-    "p2": "Avec une mission d'offrir une remise de prix minimale de 50% par rapport aux options similaires, ITRI.Iving se concentre sur la fourniture d'une valeur exceptionnelle sans compromettre la qualité.",
-    "p3": "Grâce à des partenariats à long terme avec des promoteurs immobiliers aux premiers stades, nous proposons des stations d'accueil sur mesure et sur mesure qui s'alignent sur nos valeurs fondamentales d'authenticité, de bien-être et de valeur exceptionnelle pour l'argent.Nous avons obtenu un partenariat avec un développeur marocain à développer pour notre gestion de la marque, d'ici l'été 2030, quatre stations exclusives, le 1er set à ouvrir la mi-2027.",
-    "p4": "Dans l'intervalle, Itri.living organisera certains logements existants dans les stations existantes, offrant une juste valeur à notre communauté pendant que nous attendons le lancement de nos destinations sur mesure.",
+    "p1": "Itri.living est une société de services hôteliers suisses (en incorporation) dédiée à la fourniture de valeur imbattable et d'expériences de voyage, tout en utilisant web3 et blockchain pour les réservations et les paiements.",
+    "p2": "Avec une mission d'offrir une remise de prix imbattable par rapport à des options similaires, ITRI.Iving se concentre sur la fourniture d'une valeur exceptionnelle sans compromettre la qualité.",
+    "p3": "Grâce à des partenariats à long terme avec des promoteurs immobiliers aux premiers stades, nous proposons des stations d'accueil sur mesure et sur mesure qui s'alignent sur nos valeurs fondamentales d'authenticité, de bien-être et de valeur exceptionnelle pour l'argent.Pour l'exemple, nous avons obtenu un partenariat avec un développeur marocain à développer pour notre gestion de la marque, d'ici l'été 2030, quatre stations exclusives, le 1er set à ouvrir la mi-2027.",
+    "p4": "Itri.living organise également des hébergements sélectionnés dans les stations et hôtels existants, offrant un excellent rapport qualité-prix à notre communauté",
     "title": "Itri Living",
     "title2": "Concept"
   },
@@ -32,7 +32,7 @@
     "p5": "Les jetons ITRI seront échangés (achetés et vendus)",
     "p6": "sur un ou des échanges sélectionnés (centralisés et / ou defi).",
     "p7": "Volume de transaction (attendu):",
-    "p8": "Un jeton ITRI est égal à une nuit d'hébergement,",
+    "p8": "Un jeton ITRI équivaut à une nuit d'hébergement,",
     "p9": "dans n'importe quel complexe ITRI.",
     "title": "Droits d'accommodement tokenisés:",
     "title2": "Jeton ITRI"
@@ -65,13 +65,13 @@
   },
   "get_data6": {
     "e1": "Rappel",
-    "e2": "Veuillez noter que nous n'avons actuellement aucun contrat de gestion avec les stations opérationnelles.",
+    "e2": "Veuillez noter que nous n'avons actuellement aucun contrat de gestion avec des stations opérationnelles.",
     "e3": "Cependant, nous avons établi un partenariat avec un développeur pour commencer la construction dans un endroit étonnant de plage:",
     "e4": "Itri Residences Nador, situé sur la mer Méditerranée.",
     "e5": "Trois autres projets sont à l'étude pour devenir opérationnels d'ici l'été 2030.",
     "e6": "Bien que nous visions à développer un catalogue diversifié de propriétés pour la communauté ITRI, rien ne garantit que ces projets seront construits à temps, ou qu'ils seront les spécifiques mentionnés.",
     "e7": "Nous nous engageons à faire tous les efforts pour offrir une riche sélection de",
-    "e8": "Fait sur mesure",
+    "e8": "Sur mesure",
     "e9": "propriétés à nos membres."
   },
   "get_data7": {
@@ -241,7 +241,7 @@
         "description": "Découvrez comment ITRI Residences s'engage à vivre durable et aux expériences de voyage authentiques et respectueuses de l'environnement…"
       },
       {
-        "date": "27 sept. 2024",
+        "date": "27 septembre 2024",
         "title": "ITRI ​​Residences s'associe aux communautés locales",
         "description": "Découvrez notre collaboration avec les communautés locales pour offrir des expériences culturelles authentiques à nos invités"
       }
@@ -251,7 +251,7 @@
   "dataFaq": [
     {
       "question": "Qu'est-ce que itri.living?",
-      "answer": "ITRI ​​Living est une société de services hôteliers suisses (en incorporation) dédiée à la fourniture de valeur imbattable et des expériences de voyage authentiques dans des endroits exotiques.En s'associant dès le début avec des promoteurs immobiliers, nous créons des stations sur mesure qui reflètent nos valeurs de bien-être, d'authenticité et d'un grand rapport qualité-prix.Notre premier complexe exclusif ouvrira en 2027, avec trois autres d'ici 2030. En attendant, nous offrons des hébergements organisés à notre communauté."
+      "answer": "ITRI ​​Living est une société de services hôteliers suisses (en incorporation) dédiée à fournir une valeur imbattable et des expériences de voyage authentiques dans des endroits exotiques.En s'associant au début des promoteurs immobiliers, nous créons des stations sur mesure qui reflètent nos valeurs de bien-être, d'authenticité et d'un grand rapport qualité-prix.Notre première station exclusive ouvrira en 2027, avec trois autres d'ici 2030. En attendant, nous offrons des hébergements organisés à notre communauté."
     },
     {
       "question": "Comment fonctionne la vie ITRI?",
@@ -270,7 +270,7 @@
       "answer": "Notre premier complexe devrait ouvrir ses portes en 2027, avec trois autres prévus d'ici 2030. Des discussions sont en cours pour les emplacements.En attendant, nous organisons des hébergements dans les stations existantes, offrant des expériences authentiques tout en attendant le lancement de nos destinations sur mesure."
     },
     {
-      "question": "Qui sont les partenaires d'ITRI Living?",
+      "question": "Qui sont les partenaires d'Itri Living?",
       "answer": ""
     },
     {
@@ -286,7 +286,7 @@
     "description": "Si nos FAQ d'adhésion ne suffisent pas, n'hésitez pas à réserver un appel avec nous et nous serons heureux de vous aider!"
   },
   "dataNewsletter": {
-    "title": "Obtenez un accès précoce pour vous inscrire à votre",
+    "title": "Obtenez un accès anticipé à vous inscrire à votre",
     "subtitle": "Compte itri.living",
     "description": "Soyez le premier à découvrir nos dernières technologies hôtelières innovantes.",
     "placeholder": "Votre e-mail",
