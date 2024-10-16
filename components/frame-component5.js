@@ -12,6 +12,7 @@ import germanData from '../public/locales/de/common.json';
 const FrameComponent5 = ({ className = "" }) => {
     const { language } = useLanguage(); // Get the current language from the context
     const [questions, setQuestions] = useState([]);
+    const [button , setButton] =useState()
     const [faqHeader, setFaqHeader] = useState({
         title: { prefix: "", highlight: "" },
         description: ""
@@ -26,7 +27,7 @@ const FrameComponent5 = ({ className = "" }) => {
         } else if (language === 'Deutsch') {
             selectedData = germanData;
         }
-
+        setButton(selectedData.request)
         setQuestions(selectedData.dataFaq || []); // Set the selected questions
         setFaqHeader(selectedData.dataFaqHeader || faqHeader); // Set the selected header data
     }, [language]);
@@ -56,7 +57,7 @@ const FrameComponent5 = ({ className = "" }) => {
                                                 rel="noopener noreferrer"
                                                 className={styles.noUnderline}
                                             >
-                                                Request a call
+                                               {button}
                                             </a>
                                         </div>
                                         <img

@@ -18,6 +18,7 @@ const Hero = ({ className = "" }) => {
         a3: "",
         a4: "",
         a5: "",
+        a6: ""
     });
 
     useEffect(() => {
@@ -77,7 +78,13 @@ const Hero = ({ className = "" }) => {
                                     style={{ textDecoration: "none" }}
                                 >
                                     <b className={styles.requestACallContainer}>
-                                        <span className={styles.aCall}>Request a Call</span>
+                                        <span
+                                            className={styles.aCall}
+                                            style ={{fontSize:"10px"}}
+                                            
+                                        >
+                                            {data.a6}
+                                        </span>
                                     </b>
                                 </a>
                             </div>
@@ -87,6 +94,7 @@ const Hero = ({ className = "" }) => {
                                     variant="link"
                                     id="dropdown-basic"
                                     className={styles.dropdownToggle}
+                                    style={{ minWidth: '200px' }} // Adjust min-width for dropdown in case of long text
                                 >
                                     <img
                                         className={styles.backgroundborderIcon}
@@ -96,8 +104,8 @@ const Hero = ({ className = "" }) => {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="/SignIn">Sign In</Dropdown.Item>
-                                    <Dropdown.Item href="/SignIn">Create an Account</Dropdown.Item>
+                                    <Dropdown.Item href="/SignIn">{data.signIn}</Dropdown.Item>
+                                    <Dropdown.Item href="/SignIn">{data.createAccount}</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </div>

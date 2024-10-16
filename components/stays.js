@@ -13,7 +13,9 @@ const Stays = ({ className = "" }) => {
         d1: "",
         d2: "",
         d3: "",
-        d4: ""
+        d4: "",
+        d5 :"",
+        d6 :""
     });
 
     const [isDisabled, setIsDisabled] = useState(false);
@@ -61,7 +63,7 @@ const Stays = ({ className = "" }) => {
                                 onClick={handleClick}
                                 disabled={isDisabled}
                             >
-                                {isDisabled ? "Not Available Yet" : "Book a Stay"}
+                                {isDisabled ? data.d6 : data.d5}
                             </button>
                         </div>
                     </div>

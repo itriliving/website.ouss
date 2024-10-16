@@ -7,6 +7,7 @@ import { useLanguage } from "./LanguageContext"; // Import the language context
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
 import germanData from '../public/locales/de/common.json';
+import { Button } from "react-scroll";
 
 const Exceptional2 = ({ className = "" }) => {
     const { language } = useLanguage(); // Get the current language from the context
@@ -15,6 +16,7 @@ const Exceptional2 = ({ className = "" }) => {
         p17: "",
         p18: "",
         p19: "",
+        button:""
     });
 
     useEffect(() => {
@@ -62,7 +64,7 @@ const Exceptional2 = ({ className = "" }) => {
                                         rel="noopener noreferrer"
                                         className={styles.noUnderline}
                                     >
-                                        Express your interest
+                                        {data.button}
                                     </a>
                                 </div>
                             </div>

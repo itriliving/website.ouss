@@ -20,6 +20,7 @@ const Concept = forwardRef(({ className = "" }, ref) => {
   const [isVisible, setIsVisible] = useState(false); // State to track visibility
   const sectionRef = ref || useRef(null); // Use the forwarded ref or create a new ref
   const { language } = useLanguage(); // Get the current language from the context
+  const [button , setButton] =useState()
 
   useEffect(() => {
     console.log("language changed in component concept.js", language);
@@ -28,10 +29,15 @@ const Concept = forwardRef(({ className = "" }, ref) => {
     let selectedData;
     if (language === 'English') {
       selectedData = englishData.get_data1;
+      setButton(englishData.request)
     } else if (language === 'Français') {
       selectedData = frenchData.get_data1;
+      setButton(frenchData.request)
+
     } else if (language === 'Deutsch') {
       selectedData = germanData.get_data1;
+      setButton(germanData.request)
+
     }
 
     // Set the selected data to state
@@ -91,7 +97,7 @@ const Concept = forwardRef(({ className = "" }, ref) => {
                         style={{ textDecoration: 'none' }} // Inline style as an option
                     >
                       <b className={styles.requestACallContainer}>
-                        <span className={styles.aCall}>Request a Call</span>
+                        <span className={styles.aCall}>{button}</span>
                       </b>
                     </a>
                   </b>

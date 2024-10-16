@@ -8,17 +8,20 @@ import { useLanguage } from "./LanguageContext"; // Assuming you have a language
 export default function Consultation() {
   const { language } = useLanguage(); // Get the current language
   const [features, setFeatures] = useState([]);
+  const [texts, setTexts] = useState({ header: '', subheader: '', button: '' });
 
   useEffect(() => {
     let selectedData;
     if (language === 'English') {
-      selectedData = englishData.features;
+      selectedData = englishData;
     } else if (language === 'Français') {
-      selectedData = frenchData.features;
+      selectedData = frenchData;
     } else if (language === 'Deutsch') {
-      selectedData = germanData.features;
+      selectedData = germanData;
     }
-    setFeatures(selectedData);
+    
+    setFeatures(selectedData.features);
+    setTexts(selectedData.get_data14); // Set header, subheader, and button text
   }, [language]);
 
   const icons = [
@@ -37,8 +40,8 @@ export default function Consultation() {
   ];
 
   return (
-      <>
-        <style jsx>{`
+    <>
+      <style jsx>{`
         .card {
           transition: transform 0.3s ease;
         }
@@ -48,45 +51,31 @@ export default function Consultation() {
         }
       `}</style>
 
-        <style jsx>{`
-        .card {
-          transition: transform 0.3s ease;
-          margin-bottom: 1.5rem; /* Adjust this value as needed */
-        }
-
-        .card:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
-
-        <div className="container py-5">
-          <div className="row mb-4">
-            <div className="col">
-              <h1 className="display-4 fw-bold mb-3">Itri Living</h1>
-              <p className="lead mb-4">in custom resorts</p>
-              <button className="btn" style={{backgroundColor: '#c1a57b', color: 'white'}}>
-                Request a call →
-              </button>
-            </div>
-          </div>
-          <div className="row row-cols-3 row-cols-md-3 row-cols-lg-4 g-2 g-md-3">
-            {features.map((feature, index) => (
-                <div key={index} className="col">
-                  <div
-                      className="card h-100 border-0 text-center p-2 p-md-3"
-                      style={{backgroundColor: 'var(--color-lightcyan-100)'}}
-                  >
-                    <div className="card-body d-flex flex-column justify-content-center align-items-center">
-                      <div className="mb-2 mb-md-3" style={{width: '24px', height: '24px'}}>
-                        {icons[index]}
-                      </div>
-                      <p className="card-text small">{feature.text}</p>
-                    </div>
-                  </div>
-                </div>
-            ))}
+      <div className="container py-5">
+        <div className="row mb-4">
+          <div className="col">
+            <h1 className="display-4 fw-bold mb-3">{texts.a1}</h1>
+            <p className="lead mb-4">{texts.a2}</p>
+            <button className="btn" style={{backgroundColor: '#c1a57b', color: 'white'}}>
+              {texts.a3}
+            </button>
           </div>
         </div>
-      </>
+        <div className="row row-cols-3 row-cols-md-3 row-cols-lg-4 g-2 g-md-3">
+          {features.map((feature, index) => (
+            <div key={index} className="col">
+              <div className="card h-100 border-0 text-center p-2 p-md-3" style={{backgroundColor: 'var(--color-lightcyan-100)'}}>
+                <div className="card-body d-flex flex-column justify-content-center align-items-center">
+                  <div className="mb-2 mb-md-3" style={{width: '24px', height: '24px'}}>
+                    {icons[index]}
+                  </div>
+                  <p className="card-text small">{feature.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

@@ -14,7 +14,8 @@ const Exceptional = ({ className = "" }) => {
     b2: "",
     b3: "",
     b4: "",
-    b5: ""
+    b5: "",
+    button :""
   });
 
   useEffect(() => {
@@ -51,7 +52,7 @@ const Exceptional = ({ className = "" }) => {
                       rel="noopener noreferrer"
                       className={styles.noUnderline} // Ensure there's no underline
                   >
-                    Express your interest
+                   {data.button}
                   </a>
                 </div>
               </div>
