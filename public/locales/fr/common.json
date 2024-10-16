@@ -53,18 +53,19 @@
     "b5": "Installations et services de pointe sur place, y compris piscines, équipements de fitness, centre de bien-être, et plus encore."
   ,"button" :"Exprimez votre intérêt"
   },
-  "get_data4": {
-    "c1": "Valeur exceptionnelle",
-    "c10": "Chez Itri.living, notre modèle de revenus ne repose pas uniquement sur les services d'hébergement que nous offrons. Notre marge provient également des frais que nous percevons lorsque vous échangez des Tokens Itri sur les bourses.",
-    "c11": "Donc, quand vous gagnez de l'argent, nous en gagnons avec vous.",
-    "c2": "pour l'argent",
-    "c3": "Chez Itri.living, nous sommes capables d'offrir une valeur exceptionnelle pour l'argent à notre communauté grâce à une combinaison des éléments suivants :",
-    "c4": "En partenariat avec des promoteurs immobiliers ayant déjà sécurisé les terrains des complexes dès le début, à des prix raisonnables.",
-    "c5": "Tout en ne faisant aucun compromis sur la sécurité, le confort et l'authenticité, nous sommes en mesure de sécuriser les meilleurs prix de construction pour les complexes et les unités d'hébergement.",
-    "c6": "En ayant choisi un modèle entièrement numérique et en comptant sur la force de notre communauté, nous sommes en mesure d'économiser sur les coûts de marketing et d'acquisition de clients.",
-    "c7": "Pour les raisons mentionnées ci-dessus, développer des complexes sur mesure et choisir un modèle entièrement numérique nous permettent de limiter nos coûts et de répercuter les économies sur notre communauté.",
-    "c8": "Cependant, le facteur le plus important est notre stratégie de ne gagner de l'argent que lorsque vous en gagnez, alignant ainsi nos intérêts avec les vôtres, dans une philosophie gagnant-gagnant."
-  },
+"get_data4": {
+    "c1": "Exceptionnel",
+    "c10": "Chez Itri.living, notre modèle de revenu ne repose pas uniquement sur les services d'hébergement que nous offrons. Notre marge provient également des frais que nous gagnons lorsque vous échangez des tokens Itri sur les plateformes d'échange.",
+    "c11": "Ainsi, lorsque vous gagnez de l'argent, nous en gagnons avec vous.",
+    "c2": "valeur",
+    "c3": "pour l'argent",
+    "c4": "Chez Itri.living, nous sommes en mesure d'offrir une valeur exceptionnelle pour l'argent à notre communauté grâce à une combinaison des éléments suivants :",
+    "c5": "En collaborant avec des promoteurs immobiliers qui ont déjà sécurisé les terrains des complexes hôteliers à des prix raisonnables.",
+    "c6": "Tout en ne faisant aucun compromis sur la sécurité, le confort et l'authenticité, nous sommes en mesure de garantir les meilleurs prix de construction pour le complexe et les unités d'hébergement.",
+    "c7": "En ayant opté pour un modèle entièrement numérique et en comptant sur la force de notre communauté, nous parvenons à économiser sur les coûts de marketing et d'acquisition de clients.",
+    "c8": "Pour ces raisons, le développement de complexes sur mesure et le choix d'un modèle entièrement numérique nous permettent de limiter nos coûts et de répercuter les économies sur notre communauté.",
+    "c9": "Cependant, le facteur le plus important est notre stratégie qui consiste à ne gagner de l'argent que lorsque vous en gagnez, alignant ainsi nos intérêts avec les vôtres dans une philosophie gagnant-gagnant."
+},
   "get_data5": {
     "d1": "Séjournez avec",
     "d2": "Itri Living",
