@@ -266,6 +266,7 @@
   .heading2Container {
     font-size: var(--font-size-10xl);
     line-height: 29px;
+    margin-top: 10%;
   }
   .ifOurMembership {
     font-size: var(--text-regular-normal-size);

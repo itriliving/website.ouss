@@ -141,6 +141,7 @@
   .weAreCommittedContainer {
     font-size: var(--font-size-5xl);
     height: 10%;
+    font-size: medium;
   }
 
  .content

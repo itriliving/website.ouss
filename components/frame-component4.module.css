@@ -244,7 +244,7 @@
   }
   .itrilivingCommitmentToContainer
   {
-    font-size: small;
+    margin-top: 5px;
   }
   .faitesVosValisesPourCesI
   {
@@ -294,6 +294,15 @@
     box-sizing: border-box;
   }
 }
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  /* Styles spécifiques pour un téléphone de 360x740 */
+  .itrilivingCommitmentToContainer
+  {
+    font-size: 50%;
+   margin-bottom: 10%;
+  }
+}
+
 @media (max-width: 600px) {
   .partnershipContent {
     display: flex;

@@ -126,15 +126,13 @@ const FrameComponent4 = ({ className = "" }) => {
                 <span>
                   <div className={styles.itrinftPartnershipWith}>
                     <i className={styles.itriliving2}>{data.f6}</i>
-                    <b>{data.f7}</b>
-                  </div>
-                  <div className={styles.itrinftPartnershipWith}>
-                    <b>{data.f8}</b>
+                    <b>{data.f7} {data.f8}</b>
                   </div>
                 </span>
                 </h1>
                 <div className={styles.weAreDedicatedContainer}>
                 <span className={styles.itrinftPartnershipWithContainer1}>
+
                   <div className={styles.itrinftPartnershipWith}>{data.f9}</div>
                   <div className={styles.itrinftPartnershipWith}>&nbsp;</div>
                   <div className={styles.itrinftPartnershipWith}>
