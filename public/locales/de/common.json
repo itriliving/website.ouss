@@ -5,7 +5,7 @@
     "a3": "Erleben",
     "a4": "anders",
     "a5": "Entdecken Sie Itri Living",
-    "a6":"Einen Anruf anfordern",
+    "a6":"Anruf anfordern",
       "signIn": "Anmelden",
     "createAccount": "Konto erstellen"
   },
@@ -104,9 +104,10 @@
     "f3": "Itri.living hat eine strategische Partnerschaft mit dem Itri NFT-Projekt und seinem digitalen Mitgliederclub entwickelt. Diese Partnerschaft bietet den Inhabern von Itri-NFTs die folgenden Vorteile:",
     "f4": "Jeder Itri-NFT-Inhaber/digitales Clubmitglied kann jedes Jahr 30 Token (ausgegeben von Itri.living) zum Preis von 35 Sfr/Token erwerben.",
     "f5": "Das bedeutet, dass die Inhaber von Itri-NFTs jedes Jahr 30 Tage in einem unserer exklusiven Resorts zum Preis von 35 Sfr/Tag genießen können. Natürlich können sie, wenn sie möchten, ihre Itri-Token auch auf dem Marktplatz handeln.",
-    "f6": "Itri.Living",
-    "f7": "Engagement",
-    "f8": "gegenüber den Mitgliedern des Itri-NFT-Clubs:",
+   "f6": "Itri.Living",
+"f7": "Engagement",
+"f8": "gegenüber den Itri-NFT-Mitgliedern:"
+,
     "f9": "Wir sind bestrebt sicherzustellen, dass Ihr Itri Living NFT-Besitz Ihnen außergewöhnlichen Wert und exklusive Möglichkeiten bietet."
   },
   "get_data8": [
