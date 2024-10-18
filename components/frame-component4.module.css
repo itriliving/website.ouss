@@ -276,7 +276,7 @@
     gap: var(--gap-9xl);
   }
   .itrilivingCommitmentToContainer {
-    font-size: var(--font-size-10xl);
+    font-size: 50%;
     line-height: 43px;
   }
   .weAreDedicatedContainer {
