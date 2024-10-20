@@ -26,7 +26,11 @@ const Card1 = ({
         <div className={styles.content}>
           <div className={styles.name} style={nameStyle}>
             <p className={styles.strongCommunityAnd}>{strongCommunityAnd}</p>
-            <p className={styles.strongCommunityAnd}>{sustainabilityFocus}</p>
+            <p className={styles.strongCommunityAnd}
+            style={{
+              fontSize:"5px"
+            }}
+            >{sustainabilityFocus}</p>
           </div>
         </div>
       </div>

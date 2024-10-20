@@ -53,18 +53,18 @@
     "b5": "Installations et services de pointe sur place, y compris piscines, équipements de fitness, centre de bien-être, et plus encore."
   ,"button" :"Exprimez votre intérêt"
   },
-"get_data4": {
+ "get_data4": {
     "c1": "Exceptionnel",
-    "c10": "Chez Itri.living, notre modèle de revenu ne repose pas uniquement sur les services d'hébergement que nous offrons. Notre marge provient également des frais que nous gagnons lorsque vous échangez des tokens Itri sur les plateformes d'échange.",
-    "c11": "Ainsi, lorsque vous gagnez de l'argent, nous en gagnons avec vous.",
+    "c10": "Chez Itri.living, notre modèle de revenus n'est pas uniquement basé sur les services d'hébergement que nous offrons. Notre marge provient également des frais que nous percevons lorsque vous échangez des jetons Itri sur des plateformes d'échange.",
+    "c11": "Ainsi, lorsque vous gagnez de l'argent, nous gagnons de l'argent avec vous.",
     "c2": "valeur",
-    "c3": "pour l'argent",
-    "c4": "Chez Itri.living, nous sommes en mesure d'offrir une valeur exceptionnelle pour l'argent à notre communauté grâce à une combinaison des éléments suivants :",
-    "c5": "En collaborant avec des promoteurs immobiliers qui ont déjà sécurisé les terrains des complexes hôteliers à des prix raisonnables.",
-    "c6": "Tout en ne faisant aucun compromis sur la sécurité, le confort et l'authenticité, nous sommes en mesure de garantir les meilleurs prix de construction pour le complexe et les unités d'hébergement.",
-    "c7": "En ayant opté pour un modèle entièrement numérique et en comptant sur la force de notre communauté, nous parvenons à économiser sur les coûts de marketing et d'acquisition de clients.",
-    "c8": "Pour ces raisons, le développement de complexes sur mesure et le choix d'un modèle entièrement numérique nous permettent de limiter nos coûts et de répercuter les économies sur notre communauté.",
-    "c9": "Cependant, le facteur le plus important est notre stratégie qui consiste à ne gagner de l'argent que lorsque vous en gagnez, alignant ainsi nos intérêts avec les vôtres dans une philosophie gagnant-gagnant."
+    "c3": "pour argent",
+    "c4": "Chez Itri.living, nous sommes en mesure d'offrir une valeur exceptionnelle pour votre argent à notre communauté grâce à une combinaison des éléments suivants :",
+    "c5": "En nous associant à des promoteurs immobiliers qui ont déjà sécurisé les terrains de station balnéaire à un prix raisonnable.",
+    "c6": "Sans faire de compromis sur la sécurité, le confort et l'authenticité, nous sommes en mesure d'obtenir les meilleurs prix de construction pour la station et les unités d'hébergement.",
+    "c7": "Ayant choisi un modèle entièrement numérique et comptant sur la force de notre communauté, nous sommes en mesure d'économiser sur les coûts de marketing et d'acquisition de clients.",
+    "c8": "Pour ces raisons, développer des stations sur mesure et choisir un modèle totalement numérique nous permet de limiter nos coûts et de transmettre les économies à notre communauté.",
+    "c9": "Cependant, le facteur le plus important est notre stratégie de gagner de l'argent uniquement lorsque vous gagnez de l'argent, alignant ainsi nos intérêts avec les vôtres, dans une philosophie gagnant-gagnant."
 },
   "get_data5": {
     "d1": "Séjournez avec",
@@ -87,7 +87,7 @@
     "e9": "à nos membres."
   },
   "get_data7": {
-    "f1": "Partenariat Itri.nft avec",
+    "f1": "Partenariat Tura.nft avec",
     "f10": "Notre engagement envers vous comprend :",
     "f11": "Offres d'hébergement exclusives :",
     "f12": "Chaque détenteur de NFT aura l'opportunité d'acheter jusqu'à 30 jours d'hébergement chaque année, dans nos complexes partenaires, à un prix significativement réduit par rapport au marché (entre 50 % et 80 % de réduction par rapport à la valeur marchande).",
@@ -96,12 +96,12 @@
     "f15": "Offres saisonnières à prix réduit :",
     "f16": "D'ici la saison des vacances d'été 2026, nous proposerons des offres d'hébergement temporaires. Bien que celles-ci ne comprennent pas tous nos services standards, elles offriront toujours au moins 50 % de réduction sur la valeur marchande.",
     "f2": "Itri.Living",
-    "f3": "Itri.living a développé un partenariat stratégique avec le projet Itri NFT et son club numérique. Ce partenariat offre aux détenteurs de NFT Itri les avantages suivants :",
-    "f4": "Chaque détenteur de NFT Itri/membre du club numérique pourra acheter 30 tokens (émis par Itri.living) par an au prix de 35 Sfr/token.",
-    "f5": "Cela signifie que les détenteurs de NFT Itri bénéficieront de 30 jours chaque année dans l'un de nos complexes exclusifs au coût de 35 Sfr/jour. Bien entendu, s'ils le souhaitent, ils peuvent également échanger leurs tokens Itri sur le Marché.",
+    "f3": "Itri.living a développé un partenariat stratégique avec le projet Tura NFT et son club numérique. Ce partenariat offre aux détenteurs de NFT Itri les avantages suivants :",
+    "f4": "Chaque détenteur de NFT Tura/membre du club numérique pourra acheter 30 tokens (émis par Itri.living) par an au prix de 35 Sfr/token.",
+    "f5": "Cela signifie que les détenteurs de NFT Tura bénéficieront de 30 jours chaque année dans l'un de nos complexes exclusifs au coût de 35 Sfr/jour. Bien entendu, s'ils le souhaitent, ils peuvent également échanger leurs tokens Itri sur le Marché.",
     "f6": "Itri.Living",
     "f7": "engagement",
-    "f8": "Aux membres du club Itri NFT:",
+    "f8": "Aux membres du club Tura NFT:",
     "f9": "Nous nous engageons à vous offrir une expérience unique et une valeur exceptionnelle."
   },
   "get_data8": [
@@ -180,7 +180,7 @@
     { "text": "Entièrement meublé" },
     { "text": "Cuisines bien équipées" },
     { "text": "Serviettes + Linge frais" },
-    { "text": "Nettoyé professionnellement" },
+    { "text": "Nettoyé par des professionnels" },
     { "text": "Sûr et sécurisé" },
     { "text": "Café + Thé" },
     { "text": "Enregistrement sans contact" },

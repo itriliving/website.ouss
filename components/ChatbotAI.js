@@ -5,7 +5,7 @@ const ChatbotAI = () => {
     return (
         <div className={styles.chatbotContainer}>
             <img
-                src="/logowtsp.png"
+                src="/whatsap.png"
                 alt="Chatbot"
                 className={styles.chatbotImage}
             />

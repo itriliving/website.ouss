@@ -67,13 +67,16 @@ const Concept = forwardRef(({ className = "" }, ref) => {
   return (
       <section ref={sectionRef} className={[styles.concept, className].join(" ")} id={"concept"}>
         <div className={styles.itriLivingConceptParent}>
+          
           <h1 className={"test"}>
           <span className={styles.itriLivingConceptContainer1}>
             <span className={styles.itriLiving}>{data.title}</span>
             <i style={{ margin : "3px"}} className={styles.concept1}>{data.title2}</i>
           </span>
           </h1>
+          
           <div className={styles.conceptContent}>
+            
             <div className={styles.contentContainerWrapper}>
               <div
                   className={`${styles.contentContainer} ${isVisible ? styles.slideInFromLeft : ""}`}
@@ -86,8 +89,13 @@ const Concept = forwardRef(({ className = "" }, ref) => {
                   <p className={styles.itrilivingIsA}>{data.p3}</p>
                   <p className={styles.itrilivingIsA}>&nbsp;</p>
                   <p className={styles.itrilivingIsA}>{data.p4}</p>
+                 
                 </div>
-                <div className={styles.requestCall}>
+                
+              </div>
+              <div className={styles.requestCall} 
+             
+              >
                   <b className={styles.requestACallContainer}>
                     <a
                         href="https://calendly.com/admin-itri/itri-living-concept-explained"
@@ -102,15 +110,17 @@ const Concept = forwardRef(({ className = "" }, ref) => {
                     </a>
                   </b>
                 </div>
-              </div>
             </div>
+            
             <img
                 className={`${styles.sea815134012801Icon} ${isVisible ? styles.slideInFromRightToLeft : ""}`}
                 loading="lazy"
                 alt=""
                 src="/sea8151340-1280-1@2x.png"
             />
+           
           </div>
+       
         </div>
       </section>
   );
