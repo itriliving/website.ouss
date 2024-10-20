@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Fragment>
 
           <Head>
+              <link rel="icon" href="/favicon.png" />
               <title>Itri Living</title>
               <meta
                   name="viewport"
