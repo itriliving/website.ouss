@@ -105,14 +105,14 @@ const FooterLinksContainer = ({ className = "", scrollToConcept, faqRef }) => {
               </a>
               
 
-              <a  target="_blank"  href={"https://x.com/itriliving"}></a>
+            <a  target="_blank"  href={"https://x.com/itriliving"}>
               <img
                   className="me-2"
                   alt="Twitter"
                   src="/link--twittericon2594da59svg.svg"
                   style={{width: '24px', height: '24px' }}
               />
-               </a>
+             </a>
               <img
                   className="me-2"
                   alt="Instagram"
