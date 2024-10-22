@@ -24,7 +24,7 @@ const Newsletter1 = ({ className = "" }) => {
           <div className="text-center mb-4">
             <h1 className="display-6">
               {data.title}
-              <i className="d-block fw-bold">{data.subtitle}</i>
+        
             </h1>
             <p className="mt-3">
               {data.description}
