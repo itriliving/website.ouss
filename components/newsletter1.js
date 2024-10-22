@@ -48,26 +48,7 @@ const Newsletter1 = ({ className = "" }) => {
           <p className="text-center small">
             {data.terms}
           </p>
-          <div className="d-flex justify-content-center gap-2 mt-4">
-            <button className="btn btn-outline-light d-flex align-items-center" style={{ fontSize: '0.875rem' }}>
-              <img
-                  src="/icon.svg"
-                  alt="Google Icon"
-                  className="me-2"
-                  style={{ height: '20px' }}
-              />
-              {data.googleSignIn}
-            </button>
-            <button className="btn btn-outline-light d-flex align-items-center" style={{ fontSize: '0.875rem' }}>
-              <img
-                  src="/facebook--original.svg"
-                  alt="Facebook Icon"
-                  className="me-2"
-                  style={{ height: '20px' }}
-              />
-              {data.facebookSignIn}
-            </button>
-          </div>
+          
         </div>
       </section>
   );
