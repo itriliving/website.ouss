@@ -268,12 +268,12 @@
     "description": "Si nos FAQ sur l'adhésion ne suffisent pas, n'hésitez pas à réserver un appel avec nous et nous serons ravis de vous aider!"
   },
   "dataNewsletter": {
-    "title": "Obtenez un accès anticipé pour vous inscrire à votre",
+    "title": "Rejoignez le voyage Itri Living ! Abonnez-vous à notre newsletter",
     "subtitle": "compte Itri.living",
-    "description": "Soyez le premier à découvrir nos dernières technologies innovantes en matière d'hospitalité.",
+    "description": "Et soyez le premier à découvrir des expériences de voyage exclusives, des mises à jour sur nos complexes et des offres spéciales. Votre prochaine aventure commence ici !",
     "placeholder": "Votre email",
     "buttonText": "Aller",
-    "terms": "En rejoignant, vous acceptez nos termes et conditions.",
+    "terms": "En vous inscrivant, vous acceptez nos conditions générales.",
     "googleSignIn": "Se connecter avec Google",
     "facebookSignIn": "Se connecter avec Facebook"
   },
