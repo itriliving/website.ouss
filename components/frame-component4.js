@@ -5,7 +5,6 @@ import englishData from "../public/locales/en/common.json";
 import frenchData from "../public/locales/fr/common.json";
 import germanData from "../public/locales/de/common.json";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from 'next/image';
 
 const FrameComponent4 = ({ className = "" }) => {
   const { language } = useLanguage(); 
@@ -101,15 +100,13 @@ const FrameComponent4 = ({ className = "" }) => {
             </p>
           </div>
           {!isMobile && (
-          <Image
-          className="img-fluid rounded mt-4 shadow"
-          loading="lazy"
-          alt="Description Image"
-          src="/faites-vos-valises-pour-ces-iles-mediterraneennes-1@2x.png"
-          style={{ width: '100%', height: '100%' }}
-          width={1200} // Replace with actual image width
-          height={800} // Replace with actual image height
-        />
+          <img
+            className="img-fluid rounded mt-4 shadow"
+            loading="lazy"
+            alt="Description Image"
+            src="/faites-vos-valises-pour-ces-iles-mediterraneennes-1@2x.png"
+            style={{ width: '100%', height: '100%' }} // Maximize the image size
+          />
         )}
         </div>
 
@@ -117,15 +114,13 @@ const FrameComponent4 = ({ className = "" }) => {
         <div className="col-lg-6 d-flex flex-column align-items-start">
           {/* Conditionally render the second image based on the screen size */}
      
-          <Image
-        className="img-fluid rounded mb-4 shadow"
-        loading="lazy"
-        alt="Another Description Image"
-        src="/valentinlacostegzu0b-ae2ckunsplash-1@2x.png"
-        style={{ width: '100%', height: 'auto' }}
-        width={1200} // Replace with actual image width
-        height={800} // Replace with actual image height
-      />
+            <img
+              className="img-fluid rounded mb-4 shadow"
+              loading="lazy"
+              alt="Another Description Image"
+              src="/valentinlacostegzu0b-ae2ckunsplash-1@2x.png"
+              style={{ width: '100%', height: 'auto' }} // Maximize the image size
+            />
         
           <div className={`d-flex flex-column ${inView ? "animate__animated animate__slideInLeft" : ""}`}>
             <h1 style={{ fontFamily: "Inria Serif, serif", fontWeight: "bold", fontSize: "2rem" }}>

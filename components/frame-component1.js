@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -90,15 +89,13 @@ const FrameComponent1 = ({ className = "" }) => {
 
             return (
                 <div className="card" key={index}>
-                  <Image
-    src={imagePath}
-    alt={title.title}
-    style={imageStyle}
-    className="card-img-top"
-    width={800} // Replace with the actual width of the image
-    height={600} // Replace with the actual height of the image
-    loading="lazy"
-/>
+                  <img
+                      src={imagePath}
+                      alt={title.title}
+                      style={imageStyle}
+                      className="card-img-top"
+                      loading="lazy" // Lazy loading for images
+                  />
                   <div className="card-body">
                     <h5 className="card-title">{title.title}</h5>
                   </div>

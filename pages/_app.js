@@ -22,9 +22,6 @@ function MyApp({ Component, pageProps }) {
           <Head>
               <link rel="icon" href="/favicon.jpg" />
               <title>Itri Living</title>
-
-              
-
               <meta
                   name="viewport"
                   content="minimum-scale=1, initial-scale=1, width=device-width"

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import Image from 'next/image'; // Import the Image component
 import styles from "./hero.module.css";
 
 const AccueilUser = () => {
@@ -8,24 +7,23 @@ const AccueilUser = () => {
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home" className={styles.navbarBrand}>
-                    <Image
+                    <img
                         className={styles.captureDEcran20240625AIcon}
                         alt="Hero"
                         src="/capture-d-ecran-20240625-a-132902removebgpreview-1@2x.png"
-                        width={100} // Adjust width as needed
-                        height={40}  // Adjust height as needed
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.navbarToggler} />
                 <Navbar.Collapse id="basic-navbar-nav" className={styles.navbarCollapse}>
                     <Nav className={`ms-auto align-items-center d-flex ${styles.navbarNav}`}>
+
                         <Dropdown align="end" className="mx-2">
                             <Dropdown.Toggle variant="light" id="language-dropdown" size="sm" className="d-flex align-items-center">
-                                <Image
+                                <img
                                     src="/globe.png"
                                     alt="Languages"
-                                    height={20} // Use height prop for Image
-                                    width={20}  // Use width prop for Image
+                                    height="20px"
+                                    width="20px"
                                     className={`d-inline-block align-top ${styles.globeIcon}`}
                                 />
                             </Dropdown.Toggle>

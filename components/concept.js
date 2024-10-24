@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef, forwardRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./concept.module.css";
 import { useLanguage } from "./LanguageContext"; // Correct import
-import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -113,16 +112,12 @@ const Concept = forwardRef(({ className = "" }, ref) => {
                 </div>
             </div>
             
-
-<Image
-    className={`${styles.sea815134012801Icon} ${isVisible ? styles.slideInFromRightToLeft : ""}`}
-    alt="" // Make sure to provide a meaningful alt text for accessibility
-    src="/sea8151340-1280-1@2x.png"
-    width={800} // Replace with the actual width of the image
-    height={600} // Replace with the actual height of the image
-    loading="lazy" // Lazy loading is enabled by default in Next.js <Image>
-/>
-
+            <img
+                className={`${styles.sea815134012801Icon} ${isVisible ? styles.slideInFromRightToLeft : ""}`}
+                loading="lazy"
+                alt=""
+                src="/sea8151340-1280-1@2x.png"
+            />
            
           </div>
        

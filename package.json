@@ -12,8 +12,6 @@
     "@radix-ui/react-select": "^2.1.1",
     "@syncfusion/ej2-react-dropdowns": "^27.1.48",
     "bootstrap": "^5.3.3",
-    "compression": "^1.7.4",
-    "express": "^4.21.1",
     "i18next": "^23.15.1",
     "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.445.0",
@@ -37,8 +35,9 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "lint": "next lint"
   }
 }

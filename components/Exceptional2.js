@@ -59,7 +59,7 @@ const Exceptional2 = ({ className = "" }) => {
                             <div className={styles.stylesecondarySmallfalse}>
                                 <div className={styles.contactUsFor}>
                                     <a
-                                        href="https://calendly.com/admin-itri/itri-living-concept-explained"
+                                        href="https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.noUnderline}

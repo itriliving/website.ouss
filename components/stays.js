@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import styles from "./stays.module.css";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "./LanguageContext"; // Import the language context
-import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -68,14 +67,12 @@ const Stays = ({ className = "" }) => {
                             </button>
                         </div>
                     </div>
-                    <Image
-        className={styles.sea815134012802Icon}
-        loading="lazy"
-        alt=""
-        src="/sea8151340-1280-2@2x.png"
-        width={800} // Replace with the actual image width
-        height={600} // Replace with the actual image height
-      />
+                    <img
+                        className={styles.sea815134012802Icon}
+                        loading="lazy"
+                        alt=""
+                        src="/sea8151340-1280-2@2x.png"
+                    />
                 </div>
             </div>
         </section>
