@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Dropdown } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'next/image';
 import styles from "./hero.module.css";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "./LanguageContext";
@@ -11,20 +12,20 @@ import frenchData from '../public/locales/fr/common.json';
 import germanData from '../public/locales/de/common.json';
 
 const Hero = ({ className = "" }) => {
-    const { language } = useLanguage(); // Get the current language from the context
+    const { language } = useLanguage();
     const [data, setData] = useState({
         a1: "",
         a2: "",
         a3: "",
         a4: "",
         a5: "",
-        a6: ""
+        a6: "",
+        button: ""
     });
 
     useEffect(() => {
         console.log("language changed in component hero.js", language);
 
-        // Switch between different JSON data based on the selected language
         let selectedData;
         if (language === 'English') {
             selectedData = englishData.get_data0;
@@ -34,11 +35,9 @@ const Hero = ({ className = "" }) => {
             selectedData = germanData.get_data0;
         }
 
-        // Set the selected data to state
         setData(selectedData);
     }, [language]);
 
-    // Scroll down function
     const handleScrollDown = () => {
         window.scrollTo({
             top: 500,
@@ -51,10 +50,12 @@ const Hero = ({ className = "" }) => {
             <header className={styles.heroContainerParent}>
                 <div className={styles.heroContainer}>
                     <a href={"/"}>
-                        <img
+                        <Image
                             className={styles.captureDEcran20240625AIcon}
                             alt="Hero"
                             src="/capture-d-ecran-20240625-a-132902removebgpreview-1@2x.png"
+                            width={500}
+                            height={300}
                         />
                     </a>
                     <div className={styles.heroContent}>
@@ -63,10 +64,12 @@ const Hero = ({ className = "" }) => {
                                 <LanguageSelector />
                             </div>
                             <div className={styles.vectorWrapper}>
-                                <img
+                                <Image
                                     className={styles.vectorIcon1}
                                     alt="Vector Icon"
                                     src="/vector-1.svg"
+                                    width={24}
+                                    height={24}
                                 />
                             </div>
                             <div className={styles.heroButton}>
@@ -80,8 +83,7 @@ const Hero = ({ className = "" }) => {
                                     <b className={styles.requestACallContainer}>
                                         <span
                                             className={styles.aCall}
-                                            style ={{fontSize:"10px"}}
-                                            
+                                            style={{ fontSize: "10px" }}
                                         >
                                             {data.a6}
                                         </span>
@@ -94,7 +96,7 @@ const Hero = ({ className = "" }) => {
                                     variant="link"
                                     id="dropdown-basic"
                                     className={styles.dropdownToggle}
-                                    style={{ minWidth: '200px' }} // Adjust min-width for dropdown in case of long text
+                                    style={{ minWidth: '200px' }}
                                 >
                                     <img
                                         className={styles.backgroundborderIcon}
@@ -115,6 +117,9 @@ const Hero = ({ className = "" }) => {
             </header>
             <div className={styles.uniquely}>
                 <div className={styles.experienceUniquelyParent}>
+                    {/* Déplacer le bouton au-dessus du texte */}
+                  
+                    
                     <h1 className={styles.experienceUniquely}>
                         <span>
                             <p className={styles.travelUniquely}>
@@ -127,21 +132,35 @@ const Hero = ({ className = "" }) => {
                             </p>
                         </span>
                     </h1>
+                    <div className={styles.expressInterestWrapper}>
+                        <button
+                            className={styles.expressInterestButton}
+                            style={{
+                                background: "#AC8E60",
+                                color: "#fff",
+                                padding: "10px 20px",
+                                border: "none",
+                                borderRadius: "109px",
+                                cursor: "pointer",
+                                fontSize: "16px",
+                                margin: "0",
+                            }}
+                        >
+                            {data.button}
+                        </button>
+                    </div>
                     <div className={styles.frameWrapper}>
                         <div className={styles.discoverItriLivingParent}>
-                            <div className={styles.discoverItriLiving}>{data.a5}</div>
-                            <img
-                                className={styles.icon}
-                                alt="Icon"
-                                src="/8@2x.png"
+                            <div
+                                className={styles.discoverItriLiving}
                                 onClick={handleScrollDown}
                                 style={{
                                     cursor: "pointer",
-                                    display: "block",
-                                    marginLeft: "auto",
-                                    marginRight: "auto",
+                                    textAlign: "center",
                                 }}
-                            />
+                            >
+                                {data.a5}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -38,20 +39,24 @@ const Layout = ({ className = "" }) => {
             <div className="row">
                 {/* Images on the left side */}
                 <div className="col-md-6 d-flex flex-row justify-content-center align-items-center">
-                    <img
-                        className="img-fluid rounded mb-4"
-                        loading="lazy"
-                        alt="Pool 1"
-                        src="/rectangle-6@2x.png"
-                        style={{ width: "45%", height: "auto", marginRight: "10px" }} // Same width and height for both images
-                    />
-                    <img
-                        className="img-fluid rounded"
-                        loading="lazy"
-                        alt="Pool 2"
-                        src="/rectangle-7@2x.png"
-                        style={{ width: "45%", height: "auto" }} // Same width and height for both images
-                    />
+                <Image
+        className="img-fluid rounded mb-4"
+        loading="lazy"
+        alt="Pool 1"
+        src="/rectangle-6@2x.png"
+        style={{ width: '45%', height: 'auto', marginRight: '10px' }}
+        width={800} // Replace with actual image width
+        height={600} // Replace with actual image height
+      />
+      <Image
+        className="img-fluid rounded"
+        loading="lazy"
+        alt="Pool 2"
+        src="/rectangle-7@2x.png"
+        style={{ width: '45%', height: 'auto' }}
+        width={800} // Replace with actual image width
+        height={600} // Replace with actual image height
+      />
                 </div>
 
                 {/* Text and button on the right side */}

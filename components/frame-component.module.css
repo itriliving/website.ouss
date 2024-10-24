@@ -255,6 +255,9 @@
   color: var(--color-azure);
   font-family: var(--font-inria-serif);
 }
+.actions {
+    margin-top: -40px; /* Adjust the value as needed */
+}
 .valuableContent {
   width: 620px;
   flex-direction: column;

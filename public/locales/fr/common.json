@@ -7,7 +7,8 @@
     "a5": "Découvrez Itri Living",
     "a6":"Demander un appel",
     "signIn": "Se connecter",
-    "createAccount": "Créer un compte"
+    "createAccount": "Créer un compte",
+    "button" :"Exprimez votre intérêt"
   },
   
   "request":"Demander un appel ",
@@ -267,16 +268,14 @@
     },
     "description": "Si nos FAQ sur l'adhésion ne suffisent pas, n'hésitez pas à réserver un appel avec nous et nous serons ravis de vous aider!"
   },
-  "dataNewsletter": {
-    "title": "Rejoignez le voyage Itri Living ! Abonnez-vous à notre newsletter",
-    "subtitle": "compte Itri.living",
-    "description": "Et soyez le premier à découvrir des expériences de voyage exclusives, des mises à jour sur nos complexes et des offres spéciales. Votre prochaine aventure commence ici !",
-    "placeholder": "Votre email",
-    "buttonText": "Aller",
-    "terms": "En vous inscrivant, vous acceptez nos conditions générales.",
-    "googleSignIn": "Se connecter avec Google",
-    "facebookSignIn": "Se connecter avec Facebook"
-  },
+ "dataNewsletter": {
+  "title": "Rejoignez l'aventure Itri Living ! Abonnez-vous à notre newsletter",
+  "description": "Et soyez le premier à découvrir des expériences de voyage exclusives, des mises à jour sur nos complexes, et des offres spéciales. Votre prochaine aventure commence ici !",
+  "placeholder": "Votre e-mail",
+  "buttonText": "Aller",
+  "terms": "En vous inscrivant, vous acceptez nos Termes et Conditions."
+}
+,
   "members": {
     "title": {
       "part1": "Qu'est-ce qui rend nos complexes",

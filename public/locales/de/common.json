@@ -7,7 +7,8 @@
     "a5": "Entdecken Sie Itri Living",
     "a6":"Anruf anfordern",
       "signIn": "Anmelden",
-    "createAccount": "Konto erstellen"
+    "createAccount": "Konto erstellen",
+     "button" :"Äußern Sie Ihr Interesse"
   },
   
   "get_data1": {
@@ -267,15 +268,13 @@
     }
   ],
   "dataNewsletter": {
-    "title": "Nehmen Sie an der Itri Living-Reise teil! Abonnieren Sie unseren Newsletter",
-    "subtitle": "Itri.living Konto",
-    "description": "Und entdecken Sie als Erster exklusive Reiseerlebnisse, Updates zu unseren Resorts und Sonderangebote. Ihr nächstes Abenteuer beginnt hier!",
-    "placeholder": "Ihre E-Mail",
-    "buttonText": "Los",
-    "terms": "Durch den Beitritt stimmen Sie unseren Geschäftsbedingungen zu.",
-    "googleSignIn": "Mit Google anmelden",
-    "facebookSignIn": "Mit Facebook anmelden"
-  },
+  "title": "Begleiten Sie die Itri Living Reise! Abonnieren Sie unseren Newsletter",
+  "description": "Seien Sie der Erste, der exklusive Reiseerlebnisse, Neuigkeiten über unsere Resorts und spezielle Angebote entdeckt. Ihr nächstes Abenteuer beginnt hier!",
+  "placeholder": "Ihre E-Mail",
+  "buttonText": "Los",
+  "terms": "Durch Ihre Anmeldung akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen."
+}
+,
   "members": {
     "title": {
       "part1": "Was macht unsere Resorts",

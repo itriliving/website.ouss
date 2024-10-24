@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./wrapper.module.css";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "./LanguageContext";
+import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -52,11 +53,15 @@ const Wrapper = ({ className = "" }) => {
         </h1>
         <div className={styles.benefits}>
           <div className={styles.highlight}>
-            <img
-              className={styles.leonardoPhoenixAHighlyDetaIcon}
-              alt="A detailed gold token"
-              src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1-1@2x.png"
-            />
+          <Image
+        className={styles.leonardoPhoenixAHighlyDetaIcon}
+        src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1-1@2x.png"
+        alt="A detailed gold token"
+        width={800} // Replace with the actual width of the image
+        height={600} // Replace with the actual height of the image
+        loading="lazy"
+
+      />
             <div className={styles.atItrilivingWeContainer}>
               <p className={styles.atItrilivingWe}>{data.c4}</p>
               <p className={styles.blankLine}>&nbsp;</p>
@@ -77,11 +82,15 @@ const Wrapper = ({ className = "" }) => {
               <p className={styles.blankLine}>&nbsp;</p>
               <p className={styles.blankLine}>{data.c11}</p>
             </div>
-            <img
-              className={styles.leonardoPhoenixAHighlyDetaIcon1}
-              alt="A detailed gold token"
-              src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1-2@2x.png"
-            />
+            <Image
+         className={styles.leonardoPhoenixAHighlyDetaIcon1}
+         src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1-2@2x.png"        alt="A detailed gold token"
+        width={800} // Replace with the actual width of the image
+        height={600} // Replace with the actual height of the image
+        loading="lazy"
+
+      />
+            
           </div>
         </div>
       </div>

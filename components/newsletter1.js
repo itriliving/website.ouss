@@ -10,47 +10,64 @@ const Newsletter1 = ({ className = "" }) => {
   let data = {};
 
   // Select the appropriate language data
-  if (language === 'English') {
-    data = englishData.dataNewsletter;
-  } else if (language === 'Français') {
-    data = frenchData.dataNewsletter;
-  } else if (language === 'Deutsch') {
-    data = germanData.dataNewsletter;
+  switch (language) {
+    case 'English':
+      data = englishData.dataNewsletter;
+      break;
+    case 'Français':
+      data = frenchData.dataNewsletter;
+      break;
+    case 'Deutsch':
+      data = germanData.dataNewsletter;
+      break;
+    default:
+      data = englishData.dataNewsletter; // Default to English
+      break;
   }
 
   return (
-      <section className={`d-flex justify-content-center align-items-center ${className}`} id={"SignUp"}>
-        <div className="card p-4 p-md-5" style={{ backgroundColor: '#4b3621', color: '#d1e7dd', maxWidth: '500px', width: '100%' }}>
-          <div className="text-center mb-4">
+    <section
+      className={`d-flex justify-content-center align-items-center ${className}`}
+      id="SignUp"
+    >
+      <div
+        className="card p-4 p-md-5"
+        style={{ 
+          backgroundColor: '#4b3621', 
+          color: '#d1e7dd', 
+          width: '650px', // Adjust width to make it more rectangular
+          height: '400px', // Adjust height
+          maxWidth: '100%',
+        }}
+      >
+        <div className="text-center mb-4">
+          {data.title && (
             <h1 className="display-6">
               {data.title}
-        
             </h1>
-            <p className="mt-3">
-              {data.description}
-            </p>
-          </div>
-          <div className="mb-4">
-            <div className="input-group">
-              <input
-                  type="text"
-                  className="form-control form-control-lg"
-                  placeholder={data.placeholder}
-              />
-              <button
-                  className="btn btn-lg"
-                  style={{ backgroundColor: '#b08d5b', color: '#fff' }}
-              >
-                {data.buttonText}
-              </button>
-            </div>
-          </div>
-          <p className="text-center small">
-            {data.terms}
-          </p>
-          
+          )}
+          {data.description && <p className="mt-3">{data.description}</p>}
         </div>
-      </section>
+        <div className="mb-4">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder={data.placeholder || "Enter your email"}
+              aria-label="Email address"
+            />
+            <button
+              className="btn btn-lg"
+              style={{ backgroundColor: '#b08d5b', color: '#fff' }}
+              aria-label="Subscribe"
+            >
+              {data.buttonText || "Subscribe"}
+            </button>
+          </div>
+        </div>
+        {data.terms && <p className="text-center small">{data.terms}</p>}
+      </div>
+    </section>
   );
 };
 

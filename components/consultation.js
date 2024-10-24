@@ -56,13 +56,9 @@ export default function Consultation() {
           <div className="col">
             <h1 className="display-4 fw-bold mb-3">{texts.a1}</h1>
             <p className="lead mb-4">{texts.a2}</p>
-            <button 
-  className="btn" 
-  style={{ backgroundColor: '#c1a57b', color: 'white' }}
-  onClick={() => window.open('https://calendly.com/admin-itri/itri-living-concept-explained', '_blank')}
->
-  {texts.a3}
-</button>
+            <button className="btn" style={{backgroundColor: '#c1a57b', color: 'white'}}>
+              {texts.a3}
+            </button>
           </div>
         </div>
         <div className="row row-cols-3 row-cols-md-3 row-cols-lg-4 g-2 g-md-3">

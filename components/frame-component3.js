@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useLanguage } from "./LanguageContext"; // Assuming you have a language context
+import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -33,12 +34,14 @@ const FrameComponent3 = ({ className = "" }) => {
           {data.newsItems?.map((item, index) => (
               <div key={index} className="col-md-6 mb-3"> {/* Adjusted column size to 6 for two cards per row */}
                 <div className="card h-100" style={{ minHeight: "350px" }}>
-                  <img
-                      className="card-img-top"
-                      alt=""
-                      src={`/gradient${index + 1}@2x.png`}
-                      style={{ maxHeight: "150px", objectFit: "cover" }}
-                  />
+                <Image
+        className="card-img-top"
+        alt=""
+        src={`/gradient${index + 1}@2x.png`}
+        style={{ maxHeight: '150px', objectFit: 'cover' }}
+        width={300} // Replace with actual image width
+        height={150} // Replace with actual image height
+      />
                   <div className="card-body p-3 d-flex flex-column">
                     <h6 className="text-muted mb-2">{item.date}</h6>
                     <h5 className="mb-2">{item.title}</h5>

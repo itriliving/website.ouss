@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./frame-component.module.css";
 import { useLanguage } from "./LanguageContext"; // Import the language context
+import Image from 'next/image';
 
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
@@ -85,13 +86,15 @@ const FrameComponent = ({ className = "" }) => {
               </h1>
               <div className={styles.memberToken}>
                 {/* Image */}
-                <img
-                    style={{ margin: "2px" }}
-                    className={`${styles.leonardoPhoenixAHighlyDetaIcon} ${!isVisible ? styles.hidden : styles.slideInFromLeft}`}
-                    loading="lazy"
-                    alt=""
-                    src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1@2x.png"
-                />
+                <Image
+    style={{ margin: "2px" }}
+    className={`${styles.leonardoPhoenixAHighlyDetaIcon} ${!isVisible ? styles.hidden : styles.slideInFromLeft}`}
+    alt=""
+    src="/leonardo-phoenix-a-highly-detailed-gold-token-with-a-prominent-1@2x.png"
+    width={800}
+    height={600}
+    loading="lazy"
+/>
                 {/* Texte */}
                 <div className={styles.tokenDescription}>
                   <div className={`${styles.atItrilivingAccomodationsContainer}`}>
