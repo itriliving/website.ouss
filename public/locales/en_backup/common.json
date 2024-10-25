@@ -9,8 +9,6 @@
     ,
     "signIn": "Sign In",
     "createAccount": "Create an Account"
-    ,
-    "button" :"Express your interest"
   },
   "get_data1": {
     "p1": "Itri.living is a Swiss hospitality services company (under incorporation) dedicated to providing unbeatable value and authentic travel experiences in exotic places.",
@@ -19,6 +17,7 @@
     "p4": "In the interim, Itri.living will curate select existing accommodations from existing resorts, offering good value to our community while we await the launch of our custom-built destinations.",
     "title": "Itri Living",
     "title2": "Concept"
+  
   },
   "get_data2": {
     "p1": "At Itri.Living, accommodations rights to our resorts portfolio are digitally represented as ERC-21 Tokens.",
@@ -42,7 +41,7 @@
     "p9": "at any Itri Resort.",
     "title": "Tokenised Accommodation Rights:",
     "title2": "Itri token",
-      "button" :"Express your interest"
+    "button" :"Express your interest"
   },
   "get_data3": {
     "b1": "Benefits to be found in all our",
@@ -269,10 +268,13 @@
   },
   "dataNewsletter": {
     "title": "Join the Itri Living journey ! Subscribe to our newsletter",
+    "subtitle": "Itri.living account",
     "description": "And be the first to discover exclusive travel experiences, updates on our resorts, and special offers. Your next adventure starts here!",
     "placeholder": "Your email",
     "buttonText": "Go",
-    "terms": "By joining, you agree to our Terms and Conditions."
+    "terms": "By joining, you agree to our Terms and Conditions.",
+    "googleSignIn": "Sign In with Google",
+    "facebookSignIn": "Sign In with Facebook"
   },
   "members": {
     "title": {
