@@ -132,23 +132,25 @@ const Hero = ({ className = "" }) => {
                             </p>
                         </span>
                     </h1>
+                    https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC
                     <div className={styles.expressInterestWrapper}>
-                        <button
-                            className={styles.expressInterestButton}
-                            style={{
-                                background: "#AC8E60",
-                                color: "#fff",
-                                padding: "10px 20px",
-                                border: "none",
-                                borderRadius: "109px",
-                                cursor: "pointer",
-                                fontSize: "16px",
-                                margin: "0",
-                            }}
-                        >
-                            {data.button}
-                        </button>
-                    </div>
+    <button
+        className={styles.expressInterestButton}
+        style={{
+            background: "#AC8E60",
+            color: "#fff",
+            padding: "10px 20px",
+            border: "none",
+            borderRadius: "109px",
+            cursor: "pointer",
+            fontSize: "16px",
+            margin: "0",
+        }}
+        onClick={() => window.location.href = "https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC"}
+    >
+        {data.button}
+    </button>
+</div>
                     <div className={styles.frameWrapper}>
                         <div className={styles.discoverItriLivingParent}>
                             <div
