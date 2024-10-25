@@ -132,7 +132,6 @@ const Hero = ({ className = "" }) => {
                             </p>
                         </span>
                     </h1>
-                    https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC
                     <div className={styles.expressInterestWrapper}>
     <button
         className={styles.expressInterestButton}
@@ -146,7 +145,7 @@ const Hero = ({ className = "" }) => {
             fontSize: "16px",
             margin: "0",
         }}
-        onClick={() => window.location.href = "https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC"}
+        onClick={() => window.open("https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC", "_blank")}
     >
         {data.button}
     </button>
