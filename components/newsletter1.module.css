@@ -209,7 +209,7 @@
   .card {
     padding-top: var(--padding-32xl);
     padding-bottom: var(--padding-32xl);
-    width: 100%;
+    width: 70%;
   }
   .newsletter {
     padding-bottom: var(--padding-8xl);
@@ -218,14 +218,14 @@
   }
   .emailForm,
   .newsletterContent {
-    width: 100%;
+    width: 70%;
     padding: 0 var(--padding-5xs);
   }
   .formContainer {
-    width: 100%;
+    width: 70%;
   }
   .yourEmail {
-    width: 100%;
+    width: 70%;
   }
 }
 
