@@ -35,7 +35,7 @@ const Newsletter1 = ({ className = "" }) => {
         style={{ 
           backgroundColor: '#4b3621', 
           color: '#d1e7dd', 
-          width: '650px', // Adjust width to make it more rectangular
+          width: '70%', // Adjust width to make it more rectangular
           height: '400px', // Adjust height
           maxWidth: '100%',
         }}
