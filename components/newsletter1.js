@@ -37,7 +37,7 @@ const Newsletter1 = ({ className = "" }) => {
           color: '#d1e7dd', 
           width: '650px', // Adjust width to make it more rectangular
           height: '400px', // Adjust height
-          maxWidth: '100%',
+          maxWidth: '60%',
         }}
       >
         <div className="text-center mb-4">
