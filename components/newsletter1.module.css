@@ -238,14 +238,14 @@
   .card {
     gap: var(--gap-xl);
     padding: var(--padding-16xl) var(--padding-md);
-    width: 100%;
+    width: 70%;
   }
   .emailForm {
     padding: 0;
     flex-direction: column;
   }
   .typedefault {
-    max-width: 100%;
+    max-width: 70%;
     padding: var(--padding-smi-5) var(--padding-md);
   }
   .socialLogin {
@@ -255,7 +255,7 @@
   .button,
   .button1 {
     padding: var(--padding-sm) var(--padding-5xl);
-    width: 100%;
+    width: 70%;
     justify-content: center;
   }
 }
