@@ -43,7 +43,7 @@ const FrameComponent3 = ({ className = "" }) => {
                     <h6 className="text-muted mb-2">{item.date}</h6>
                     <h5 className="mb-2">{item.title}</h5>
                     <p className="flex-grow-1 mb-2">{item.description}</p>
-                    <a href="#" className="btn mt-2" style={{ backgroundColor : "var(--color-tan)"}}>
+                    <a href="https://www.itri.club/" className="btn mt-2" style={{ backgroundColor : "var(--color-tan)"}}>
                       {data.readMoreText}
                     </a>
                   </div>
