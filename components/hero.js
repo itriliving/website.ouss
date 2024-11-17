@@ -145,7 +145,7 @@ const Hero = ({ className = "" }) => {
             fontSize: "16px",
             margin: "0",
         }}
-        onClick={() => window.open("https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC", "_blank")}
+        onClick={() => window.open("https://form.typeform.com/to/PpYLKqTN", "_blank")}
     >
         {data.button}
     </button>

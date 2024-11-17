@@ -47,7 +47,7 @@ const Exceptional = ({ className = "" }) => {
               <div className={styles.stylesecondarySmallfalse}>
                 <div className={styles.contactUsFor}>
                   <a
-                      href="https://8xw0ins2dnr.typeform.com/to/Ja7LbQzC"
+                      href="https://form.typeform.com/to/PpYLKqTN"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.noUnderline} // Ensure there's no underline
