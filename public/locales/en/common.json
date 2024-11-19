@@ -5,7 +5,7 @@
     "a3": "Live",
     "a4": "differently",
     "a5": "Discover Itri Living",
-    "a6" : "Request a Call"
+    "a6" : "Book a Call"
     ,
     "signIn": "Sign In",
     "createAccount": "Create an Account"
@@ -42,7 +42,7 @@
     "p9": "In the future, we may include a limited number of ultra luxury resorts, marketed under the Itri Luxury brand, and may require two Itri tokens for one accommodation night",
     "title": "Tokenised Accommodation Rights:",
     "title2": "Itri token",
-      "button" :"Express your interest"
+      "button" :"Dive In :-) "
   },
   "get_data3": {
     "b1": "Benefits to be found in all our",
@@ -50,7 +50,7 @@
     "b3": "Exceptional locations (beachfront, mountain, desert...)",
     "b4": "\u2028Authentic Accommodation for Enriching Experiences",
     "b5": "State-of-the-art facilities and services on site including pools, fitness amenities, a wellness center, and more."
- , "button" :"Express your interest"
+ , "button" :"Dive In :-) "
   },
   "get_data4": {
     "c1": "Exceptionnel",
@@ -76,9 +76,9 @@
   "get_data14": {
     "a1": "Itri Living",
     "a2": "in custom resorts",
-    "a3": "Request a call →"
+    "a3": "Book a call →"
   },
-   "request": "Request a call ",
+   "request": "Book a call ",
   "get_data6": {
     "e1": "Reminder",
     "e2": "Please note that, at this stage, we currently do not have any Capacity Purchase Agreements  in place, with operational RESORTS.",
