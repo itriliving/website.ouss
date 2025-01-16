@@ -1,28 +1,19 @@
 import { Fragment, useEffect } from 'react';
 import Head from 'next/head';
-// import { useRouter } from 'next/router';
 import { appWithTranslation } from 'next-i18next';
 import ChatbotAI from '../components/ChatbotAI';
 import { LanguageProvider } from '../components/LanguageContext';
 
-import '../styles/globals.css';
 import './global.css';
+import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 function MyApp({ Component, pageProps }) {
-	// const router = useRouter();
-	// const isPrivatePremint = router.pathname === '/private-premint';
-
-	// useEffect(() => {
-	// 	if (!isPrivatePremint) {
-	// 		import('bootstrap/dist/css/bootstrap.min.css');
-	// 		import('slick-carousel/slick/slick.css');
-	// 		import('slick-carousel/slick/slick-theme.css');
-	// 		import('./global.css');
-	// 	}
-	// }, [isPrivatePremint]);
+	useEffect(() => {
+		import('bootstrap/dist/css/bootstrap.min.css');
+		import('slick-carousel/slick/slick.css');
+		import('slick-carousel/slick/slick-theme.css');
+	}, []);
 
 	return (
 		<Fragment>
@@ -35,7 +26,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 			</Head>
 
-			{!isPrivatePremint && <ChatbotAI />}
+			<ChatbotAI />
 
 			<LanguageProvider>
 				<Component {...pageProps} />
