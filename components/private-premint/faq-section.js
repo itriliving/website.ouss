@@ -34,7 +34,7 @@ export default function FaqSection() {
 						>
 							{/* Number */}
 							<div className="flex-none">
-								<span className="text-4xl sm:text-7xl font-playfair text-beige">
+								<span className="text-4xl sm:text-7xl font-noto-serif-display text-beige">
 									{faq.number}
 								</span>
 							</div>

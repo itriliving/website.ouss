@@ -9,7 +9,7 @@ export default function HeroSection() {
 					<h1 className="max-w-4xl mb-6">
 						<span className="block text-4xl sm:text-5xl md:text-6xl font-bold text-dark-green-900 mb-4">
 							Exclusive Pre-Mint{' '}
-							<span className="font-playfair italic">
+							<span className="font-noto-serif-display italic">
 								Private Placement
 							</span>
 						</span>
@@ -19,13 +19,13 @@ export default function HeroSection() {
 					<div className="space-y-2 mb-10">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl text-dark-green-900/90">
 							Join a Visionary{' '}
-							<span className="font-playfair italic">
+							<span className="font-noto-serif-display italic">
 								Journey
 							</span>
 						</h2>
 						<h2 className="text-2xl sm:text-3xl md:text-4xl text-dark-green-900/90">
 							Own a Piece of{' '}
-							<span className="font-playfair italic">
+							<span className="font-noto-serif-display italic">
 								History
 							</span>
 						</h2>

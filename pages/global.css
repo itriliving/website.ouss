@@ -11,6 +11,7 @@ body {
 	line-height: normal;
 	background-color: var(--color-azure);
 }
+
 :root {
 	/* fonts */
 	--font-inter: Inter;

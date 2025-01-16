@@ -4,19 +4,21 @@ import FaqSection from '../components/private-premint/faq-section';
 import HeroSection from '../components/private-premint/hero-section';
 import HowItWorksSection from '../components/private-premint/how-it-works-section';
 import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
 import { PrivatePremintLayout } from '../components/layout/private-premint-layout';
 
 export default function PrivatePremint() {
 	return (
 		<PrivatePremintLayout>
 			<Header />
-			<main className="private-premint">
+			<main className="private-premint font-inter">
 				<HeroSection />
 				<AboutSection />
 				<HowItWorksSection />
 				<DiscountSection />
 				<FaqSection />
 			</main>
+			<Footer />
 		</PrivatePremintLayout>
 	);
 }

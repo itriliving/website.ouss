@@ -7,6 +7,10 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'system-ui', 'sans-serif'],
+				'noto-serif-display': ['"Noto Serif Display"', 'serif'],
+			},
 			colors: {
 				beige: '#AC8E60',
 				'light-blue': '#8BF3F3',
@@ -23,9 +27,6 @@ module.exports = {
 					DEFAULT: '#0D7676',
 					900: '#074B4B',
 				},
-			},
-			fontFamily: {
-				playfair: ['var(--font-playfair)'],
 			},
 		},
 	},

@@ -184,7 +184,7 @@ const LandingPageItriLiving = () => {
 				<Newsletter />
 				<div className={styles.horizontalborder}>
 					<div className={styles.itriLivingAll}>
-						© 2024 Itri Living. All rights reserved.
+						© 2025 Itri Living. All rights reserved.
 					</div>
 				</div>
 			</footer>
