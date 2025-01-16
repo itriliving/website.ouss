@@ -89,7 +89,7 @@ const FrameComponent4 = ({ className = "" }) => {
               </span>
             </h1>
 
-            <p className="mt-4" style={{
+            <div className="mt-4" style={{
              
               fontFamily: "Inter",
            
@@ -97,7 +97,7 @@ const FrameComponent4 = ({ className = "" }) => {
               <div style={{ marginBottom: "15px", display: "flex" }}>{data.f3}</div>
               <div style={{ marginBottom: "15px" }}>{data.f4}</div>
               <div>{data.f5}</div>
-            </p>
+            </div>
           </div>
           {!isMobile && (
           <img

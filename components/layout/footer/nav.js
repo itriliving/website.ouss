@@ -31,13 +31,17 @@ export default function Nav() {
 			<div className="flex flex-col gap-10 items-center md:items-start md:gap-y-10 ld:gap-y-0 md:grid md:grid-cols-2 lg:grid-cols-4">
 				<div className="flex flex-col items-center md:items-start">
 					<h4 className="font-medium text-lg mb-4">PRODUCT</h4>
-					<ul className="flex flex-col gap-1 text-white/85 items-center md:items-start">
+					<ul className="flex flex-col gap-1 pl-0 text-white/85 items-center md:items-start">
 						{firstColumnLinks.map((link) => (
 							<li
 								key={link.name}
 								className="hover:text-white transition-color"
 							>
-								<Link href={link.href} target="_blank">
+								<Link
+									className="text-inherit no-underline"
+									href={link.href}
+									target="_blank"
+								>
 									{link.name}
 								</Link>
 							</li>
@@ -46,13 +50,17 @@ export default function Nav() {
 				</div>
 				<div className="flex flex-col items-center md:items-start">
 					<h4 className="font-medium text-lg mb-4">COMPANY</h4>
-					<ul className="flex flex-col gap-1 text-white/85 items-center md:items-start">
+					<ul className="flex flex-col gap-1 pl-0  text-white/85 items-center md:items-start">
 						{secondColumnLinks.map((link) => (
 							<li
 								key={link.name}
 								className="hover:text-white transition-color"
 							>
-								<Link href={link.href} target="_blank">
+								<Link
+									className="text-inherit no-underline"
+									href={link.href}
+									target="_blank"
+								>
 									{link.name}
 								</Link>
 							</li>
@@ -61,13 +69,17 @@ export default function Nav() {
 				</div>
 				<div className="flex flex-col items-center md:items-start">
 					<h4 className="font-medium text-lg mb-4">SUPPORT</h4>
-					<ul className="flex flex-col gap-1 text-white/85 items-center md:items-start">
+					<ul className="pl-0 flex flex-col gap-1 text-white/85 items-center md:items-start">
 						{thirdColumnLinks.map((link) => (
 							<li
 								key={link.name}
 								className="hover:text-white transition-color"
 							>
-								<Link href={link.href} target="_blank">
+								<Link
+									className="text-inherit no-underline"
+									href={link.href}
+									target="_blank"
+								>
 									{link.name}
 								</Link>
 							</li>

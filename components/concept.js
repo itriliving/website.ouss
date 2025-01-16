@@ -23,9 +23,7 @@ const Concept = forwardRef(({ className = "" }, ref) => {
   const [button , setButton] =useState()
 
   useEffect(() => {
-    console.log("language changed in component concept.js", language);
 
-    // Load data from the correct JSON file based on the selected language
     let selectedData;
     if (language === 'English') {
       selectedData = englishData.get_data1;

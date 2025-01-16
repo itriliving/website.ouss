@@ -20,7 +20,6 @@ const Exceptional2 = ({ className = "" }) => {
     });
 
     useEffect(() => {
-        console.log("Language changed in component Exceptional2.js", language);
 
         // Load data from the correct JSON file based on the selected language
         let selectedData;

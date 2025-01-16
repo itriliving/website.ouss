@@ -36,9 +36,7 @@ const FrameComponent = ({ className = "" }) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    console.log("Language changed in component FrameComponent.js", language);
 
-    // Load data from the correct JSON file based on the selected language
     let selectedData;
     if (language === 'English') {
       selectedData = englishData.get_data2;
