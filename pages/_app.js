@@ -1,41 +1,47 @@
-import {Fragment, useEffect} from "react";
-import Head from "next/head";
-import "./global.css";
+import { Fragment, useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { appWithTranslation } from 'next-i18next';
+import Script from 'next/script';
+import ChatbotAI from '../components/ChatbotAI';
+import { LanguageProvider } from '../components/LanguageContext';
 
-import Script from "next/script";
-import ChatbotAI from "../components/ChatbotAI";
-import {LanguageProvider} from "../components/LanguageContext";
+// Import the new globals.css
+import '../styles/globals.css';
+
 function MyApp({ Component, pageProps }) {
-    useEffect(() => {
-        import ('bootstrap/dist/css/bootstrap.min.css');
-        import ("slick-carousel/slick/slick.css");
-        import ("slick-carousel/slick/slick-theme.css");
+	const router = useRouter();
+	const isPrivatePremint = router.pathname === '/private-premint';
 
+	useEffect(() => {
+		if (!isPrivatePremint) {
+			// Only load these styles for non-private-premint pages
+			import('bootstrap/dist/css/bootstrap.min.css');
+			import('slick-carousel/slick/slick.css');
+			import('slick-carousel/slick/slick-theme.css');
+			import('./global.css');
+		}
+	}, [isPrivatePremint]);
 
-    }, []);
-  return (
-      <Fragment>
+	return (
+		<Fragment>
+			<Head>
+				<link rel="icon" href="/favicon.jpg" />
+				<title>Itri Living</title>
+				<meta
+					name="viewport"
+					content="minimum-scale=1, initial-scale=1, width=device-width"
+				/>
+			</Head>
 
-          <Head>
-              <link rel="icon" href="/favicon.jpg" />
-              <title>Itri Living</title>
-              <meta
-                  name="viewport"
-                  content="minimum-scale=1, initial-scale=1, width=device-width"
-              />
+			{!isPrivatePremint && <ChatbotAI />}
 
-          </Head>
-            <ChatbotAI/>
-
-          <LanguageProvider>
-              <Component {...pageProps} />
-
-          </LanguageProvider>
-      </Fragment>
-  );
+			<LanguageProvider>
+				<Component {...pageProps} />
+			</LanguageProvider>
+		</Fragment>
+	);
 }
 
 export default appWithTranslation(MyApp);

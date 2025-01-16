@@ -1,0 +1,17 @@
+/* Reset styles for private-premint page */
+.private-premint-layout {
+	all: initial;
+	/* This will reset all inherited styles */
+
+	/* Add your base styles here */
+	font-family: system-ui, -apple-system, sans-serif;
+	line-height: 1.5;
+	color: #000;
+}
+
+.private-premint-layout * {
+	/* Ensure all elements inside get proper box-sizing */
+	box-sizing: border-box;
+}
+
+/* Your private-premint specific styles go here */
