@@ -11,7 +11,7 @@ export default function PrivatePremint() {
 	return (
 		<PrivatePremintLayout>
 			<Header />
-			<main className="private-premint font-inter">
+			<main className="private-premint font-inter bg-azure">
 				<HeroSection />
 				<AboutSection />
 				<HowItWorksSection />

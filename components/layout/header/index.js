@@ -6,7 +6,7 @@ import { Globe, ShoppingCart, User, Menu } from 'lucide-react';
 
 export default function Header() {
 	return (
-		<header className="text-sm">
+		<header className="text-sm bg-azure">
 			<div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
 				<Link href={'/'}>
 					<Logo />
@@ -19,11 +19,16 @@ export default function Header() {
 						<button>
 							<ShoppingCart size={20} />
 						</button>
-						<Link href={'/'}>
+						<Link
+							href={
+								'https://calendly.com/admin-itri/itri-living-concept-explained'
+							}
+							target="_blank"
+						>
 							<Button>Request a Call</Button>
 						</Link>
 						<Link href={'/'}>
-							<Button>Pre-Mint</Button>
+							<Button>Connect Your Wallet</Button>
 						</Link>
 					</div>
 					<div className="flex items-center gap-2 border border-black p-2 rounded-full">

@@ -10,6 +10,7 @@ import { useLanguage } from './LanguageContext';
 import englishData from '../public/locales/en/common.json';
 import frenchData from '../public/locales/fr/common.json';
 import germanData from '../public/locales/de/common.json';
+import Link from 'next/link';
 
 const Hero = ({ className = '' }) => {
 	const { language } = useLanguage();
@@ -69,6 +70,23 @@ const Hero = ({ className = '' }) => {
 									width={24}
 									height={24}
 								/>
+							</div>
+							<div className={styles.heroButton}>
+								<a
+									href="/private-premint"
+									rel="noopener noreferrer"
+									className={styles.buttonContainer}
+									style={{ textDecoration: 'none' }}
+								>
+									<b className={styles.requestACallContainer}>
+										<span
+											className={styles.aCall}
+											style={{ fontSize: '10px' }}
+										>
+											Private Mint
+										</span>
+									</b>
+								</a>
 							</div>
 							<div className={styles.heroButton}>
 								<a

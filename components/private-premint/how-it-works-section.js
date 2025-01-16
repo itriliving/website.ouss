@@ -21,13 +21,14 @@ export default function HowItWorksSection() {
 									<h3 className="text-xl font-bold text-dark-green-900">
 										Whitelist Your Wallet
 									</h3>
-									<ul className="space-y-2 text-dark-green-900/80">
+									<ul className="space-y-2 pl-0 text-dark-green-900/80">
 										<li className="flex items-start gap-2">
 											<span className="mt-2 h-1 w-1 rounded-full bg-dark-green-900/80 shrink-0" />
 											<p className="text-sm sm:text-base">
 												Provide your wallet address to
-												secure your spot in the pre-mint
-												private placement.
+												secure your spot in the private
+												mint. Don’t forget your Referral
+												wallet address.
 											</p>
 										</li>
 										<li className="flex items-start gap-2">
@@ -35,7 +36,7 @@ export default function HowItWorksSection() {
 											<p className="text-sm sm:text-base">
 												Use the form below or contact us
 												via email, LinkedIn, or through
-												one of our placement partners.
+												one of our partners.
 											</p>
 										</li>
 									</ul>
@@ -49,12 +50,13 @@ export default function HowItWorksSection() {
 								</div>
 								<div className="space-y-3">
 									<h3 className="text-xl font-bold text-dark-green-900">
-										Pre-Mint Period
+										Private-Mint
 									</h3>
 									<p className="text-sm sm:text-base text-dark-green-900/80">
-										Once your wallet is whitelisted, you'll
-										gain exclusive access to the pre-mint
-										window.
+										Once your wallet is whitelisted, and
+										your referral registered, you’ll gain
+										exclusive access to the private-mint
+										function.
 									</p>
 								</div>
 							</li>
@@ -66,12 +68,11 @@ export default function HowItWorksSection() {
 								</div>
 								<div className="space-y-3">
 									<h3 className="text-xl font-bold text-dark-green-900">
-										Mint Your NFT
+										Mint Your NFT during the mint period
 									</h3>
 									<p className="text-sm sm:text-base text-dark-green-900/80">
-										On the pre-mint day, connect your
-										wallet, choose your NFT, and complete
-										your purchase using ETH.
+										Connect your wallet, and complete your
+										purchase (using ETH){' '}
 									</p>
 								</div>
 							</li>
@@ -90,7 +91,7 @@ export default function HowItWorksSection() {
 									<span className="font-medium">
 										Whitelist Deadline:{' '}
 										<span className="font-bold">
-											January 25, 2025
+											February 10, 2025
 										</span>
 									</span>
 								</li>
@@ -99,7 +100,8 @@ export default function HowItWorksSection() {
 									<span className="font-medium">
 										Pre-Mint Period:{' '}
 										<span className="font-bold">
-											Shortly after whitelisting closes
+											24h after whitelisting closes (for a
+											period of 48h).
 										</span>
 									</span>
 								</li>

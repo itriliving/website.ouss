@@ -27,6 +27,7 @@ module.exports = {
 					DEFAULT: '#0D7676',
 					900: '#074B4B',
 				},
+				azure: '#f1ffff',
 			},
 		},
 	},

@@ -33,17 +33,21 @@ export default function HeroSection() {
 
 					{/* Description */}
 					<p className="max-w-2xl text-dark-green-900/70 text-base sm:text-lg leading-relaxed mb-10">
-						This is your opportunity to access Itri Living's
-						groundbreaking NFT collection before the public launch.
-						Be among the select few to join our exclusive Members
-						Club at an exceptional pre-mint price—offering up to 45%
-						savings compared to the official mint price in 2025.
+						This is your opportunity to access Itri Living’s
+						groundbreaking NFT collection before the public launch,
+						expected S2-2025. Be among the select few to join our
+						exclusive Digital Members Club at an exceptional
+						pre-mint price— offering up to 45% savings compared to
+						the official mint price in 2025.
 					</p>
 
 					{/* CTA Button */}
 					<div className="relative">
 						<button className="group bg-dark-green-900 text-white font-medium px-6 py-3 rounded-full hover:bg-dark-green-900/90 transition-all duration-300 flex items-center gap-2">
-							<span>Whitelist Your Wallet Now</span>
+							<span>
+								Whitelist Your Wallet{' '}
+								<span className="font-normal text-white/90">(Manually)</span>
+							</span>
 							<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
 						</button>
 						{/* Button Glow Effect */}

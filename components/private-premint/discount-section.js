@@ -13,7 +13,7 @@ export default function DiscountSection() {
 					{/* Discount Badge */}
 					<div className="inline-block">
 						<div className="bg-light-blue/20 backdrop-blur-sm px-6 py-2 rounded-full">
-							<p className="text-light-blue font-medium">
+							<p className="text-light-blue font-medium mb-0">
 								Limited Time Pre-Mint Offer
 							</p>
 						</div>
@@ -24,7 +24,7 @@ export default function DiscountSection() {
 						<h2 className="text-3xl sm:text-4xl md:text-5xl text-light-blue font-bold max-w-3xl mx-auto">
 							Up to{' '}
 							<span className="relative inline-block">
-								45%
+								40%
 								<div className="absolute -bottom-1 left-0 w-full h-1 bg-light-blue rounded-full opacity-30" />
 							</span>{' '}
 							Off the Public Mint Price
@@ -32,8 +32,8 @@ export default function DiscountSection() {
 
 						<p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
 							Secure your NFT now for a fraction of the cost and
-							become part of a community shaping the future of
-							digital art and real-world benefits.
+							become part of a Community shaping the future of
+							digital art and real-world tokenized benefits.
 						</p>
 
 						{/* CTA Button */}

@@ -9,18 +9,18 @@ const faqs = [
 	{
 		number: '2',
 		question: 'How can I whitelist my wallet?',
-		answer: 'You can whitelist your wallet by submitting your wallet address through the form below or by contacting us directly.',
+		answer: 'You can whitelist your wallet by submitting your email or wallet address through the form below or by contacting us directly.',
 	},
 	{
 		number: '3',
-		question: 'What happens after the pre-mint?',
+		question: 'What happens after the private-mint?',
 		answer: 'After the pre-mint, NFTs will no longer be available at this discounted price. They will be sold at the official mint price in 2025.',
 	},
 ];
 
 export default function FaqSection() {
 	return (
-		<section className="py-12 sm:py-20">
+		<section className="py-12 sm:py-20 md:py-32 lg:py-40">
 			<div className="max-w-7xl mx-auto px-4">
 				<h2 className="text-3xl sm:text-4xl md:text-5xl mb-16 text-dark-green-900 font-bold">
 					FAQ
