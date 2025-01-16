@@ -45,7 +45,7 @@ const Hero = ({ className = '' }) => {
 	};
 
 	return (
-		<section className={[styles.hero, className].join(' ')}>
+		<section className={`${[styles.hero, className].join(' ')}`}>
 			<header className={styles.heroContainerParent}>
 				<div className={styles.heroContainer}>
 					<a href={'/'}>

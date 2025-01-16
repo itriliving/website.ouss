@@ -8,10 +8,7 @@ export default function HeroSection() {
 					{/* Main Heading */}
 					<h1 className="max-w-4xl mb-6">
 						<span className="block text-4xl sm:text-5xl md:text-6xl font-bold text-dark-green-900 mb-4">
-							Exclusive Pre-Mint{' '}
-							<span className="font-noto-serif-display italic">
-								Private Placement
-							</span>
+							Exclusive Private Pre-Mint
 						</span>
 					</h1>
 
@@ -46,7 +43,9 @@ export default function HeroSection() {
 						<button className="group bg-dark-green-900 text-white font-medium px-6 py-3 rounded-full hover:bg-dark-green-900/90 transition-all duration-300 flex items-center gap-2">
 							<span>
 								Whitelist Your Wallet{' '}
-								<span className="font-normal text-white/90">(Manually)</span>
+								<span className="font-normal text-white/90">
+									(Manually)
+								</span>
 							</span>
 							<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
 						</button>

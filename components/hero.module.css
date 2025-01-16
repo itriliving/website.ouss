@@ -150,6 +150,7 @@
 	z-index: 1;
 }
 .heroContainerParent {
+  width: 100vw;
 	align-self: stretch;
 	display: flex;
 	flex-direction: row;

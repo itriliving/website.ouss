@@ -28,7 +28,7 @@ const thirdColumnLinks = [
 export default function Nav() {
 	return (
 		<nav className="w-full">
-			<div className="flex flex-col gap-10 items-center md:items-start md:gap-y-10 ld:gap-y-0 md:grid md:grid-cols-2 lg:grid-cols-4">
+			<div className="flex flex-col gap-10 items-center md:items-start md:gap-y-10 ld:gap-y-0 sm:grid md:grid-cols-2 lg:grid-cols-4">
 				<div className="flex flex-col items-center md:items-start">
 					<h4 className="font-medium text-lg mb-4">PRODUCT</h4>
 					<ul className="flex flex-col gap-1 pl-0 text-white/85 items-center md:items-start">
