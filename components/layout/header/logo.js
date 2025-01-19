@@ -8,7 +8,7 @@ export default function Logo() {
 			alt="Itri Living"
 			width={130}
 			height={130}
-			className="h-10 w-auto lg:h-12"
+			className="h-8 w-auto md:h-10"
 		/>
 	);
 }

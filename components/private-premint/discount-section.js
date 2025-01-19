@@ -1,9 +1,30 @@
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from '../../contexts/TranslationContext';
+import { useEffect, useCallback } from 'react';
+import { useRouter } from 'next/router';
 
 export default function DiscountSection() {
 	const { t } = useTranslation();
 	const discountPercent = 40;
+	const router = useRouter();
+
+	const handleDiscountClick = useCallback(() => {
+		// Add a query parameter to indicate highlight
+		router.push(
+			{
+				pathname: router.pathname,
+				query: { ...router.query, highlight: 'hero' },
+			},
+			undefined,
+			{ shallow: true }
+		);
+
+		// Scroll to top smoothly
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	}, [router]);
 
 	return (
 		<section className="bg-dark-green-900 py-16 sm:py-24 relative shadow-inner">
@@ -38,7 +59,10 @@ export default function DiscountSection() {
 
 						{/* CTA Button */}
 						<div className="pt-4 mx-auto">
-							<button className="font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed group flex gap-1 items-center bg-white hover:bg-white/90 shadow-lg text-dark-green-900">
+							<button
+								onClick={handleDiscountClick}
+								className="font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed group flex gap-1 items-center bg-white hover:bg-white/90 shadow-lg text-dark-green-900"
+							>
 								<span>{t('discount.cta')}</span>
 								<ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
 							</button>
