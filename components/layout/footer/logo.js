@@ -9,7 +9,7 @@ export default function Logo() {
 				alt="Itri Living Logo"
 				width={200}
 				height={50}
-				className="object-contain"
+				className="object-contain h-16 w-auto lg:h-20"
 			/>
 		</Link>
 	);

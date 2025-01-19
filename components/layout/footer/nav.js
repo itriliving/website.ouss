@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Socials from './socials';
 import { useTranslation } from '../../../contexts/TranslationContext';
 
 export default function Nav() {
@@ -72,25 +71,44 @@ export default function Nav() {
 				href: 'https://www.itri.living/',
 			},
 		],
+		social: [
+			{
+				name: 'Facebook',
+				href: 'https://facebook.com',
+			},
+			{
+				name: 'Twitter',
+				href: 'https://twitter.com',
+			},
+			{
+				name: 'Instagram',
+				href: 'https://instagram.com',
+			},
+			{
+				name: 'LinkedIn',
+				href: 'https://linkedin.com',
+			},
+			{
+				name: 'YouTube',
+				href: 'https://youtube.com',
+			},
+		],
 	};
 
 	return (
-		<nav className="w-full">
-			<div className="flex flex-col gap-10 items-center md:items-start md:gap-y-10 ld:gap-y-0 sm:grid md:grid-cols-2 lg:grid-cols-4">
-				<div className="flex flex-col items-center md:items-start">
-					<h4 className="font-medium text-lg mb-4">
-						{t('footer.sections.product.title')}
+		<nav className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8">
+			{Object.entries(sections).map(([key, links]) => (
+				<div key={key}>
+					<h4 className="text-sm font-semibold uppercase tracking-wider text-white/90 mb-6">
+						{t(`footer.sections.${key}.title`)}
 					</h4>
-					<ul className="flex flex-col gap-1 pl-0 text-white/85 items-center md:items-start">
-						{sections.product.map((link) => (
-							<li
-								key={link.name}
-								className="hover:text-white transition-color"
-							>
+					<ul className="pl-0 space-y-2">
+						{links.map((link) => (
+							<li key={link.name}>
 								<Link
-									className="text-inherit no-underline"
 									href={link.href}
 									target="_blank"
+									className="no-underline text-white/70 hover:text-white transition-colors text-sm"
 								>
 									{link.name}
 								</Link>
@@ -98,55 +116,7 @@ export default function Nav() {
 						))}
 					</ul>
 				</div>
-				<div className="flex flex-col items-center md:items-start">
-					<h4 className="font-medium text-lg mb-4">
-						{t('footer.sections.company.title')}
-					</h4>
-					<ul className="flex flex-col gap-1 pl-0  text-white/85 items-center md:items-start">
-						{sections.company.map((link) => (
-							<li
-								key={link.name}
-								className="hover:text-white transition-color"
-							>
-								<Link
-									className="text-inherit no-underline"
-									href={link.href}
-									target="_blank"
-								>
-									{link.name}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className="flex flex-col items-center md:items-start">
-					<h4 className="font-medium text-lg mb-4">
-						{t('footer.sections.support.title')}
-					</h4>
-					<ul className="pl-0 flex flex-col gap-1 text-white/85 items-center md:items-start">
-						{sections.support.map((link) => (
-							<li
-								key={link.name}
-								className="hover:text-white transition-color"
-							>
-								<Link
-									className="text-inherit no-underline"
-									href={link.href}
-									target="_blank"
-								>
-									{link.name}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className="flex flex-col items-center md:items-start">
-					<h4 className="font-medium text-lg mb-4">
-						{t('footer.sections.social.title')}
-					</h4>
-					<Socials />
-				</div>
-			</div>
+			))}
 		</nav>
 	);
 }

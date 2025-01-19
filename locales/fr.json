@@ -113,9 +113,15 @@
 	},
 	"hero": {
 		"title": "Pré-Mint Privé Exclusif",
-		"journey": "Rejoignez un Voyage Visionnaire",
-		"history": "Possédez un Morceau d'Histoire",
-		"description": "C'est votre opportunité d'accéder à la collection NFT révolutionnaire d'Itri Living avant le lancement public, prévu S2-2025. Soyez parmi les rares privilégiés à rejoindre notre Club de Membres Digital exclusif à un prix de pré-mint exceptionnel, offrant jusqu'à 45% d'économies par rapport au prix officiel du mint en 2025."
+		"subheading1": {
+			"text": "Rejoignez un Voyage",
+			"highlight": "Visionnaire"
+		},
+		"subheading2": {
+			"text": "Possédez un Morceau",
+			"highlight": "d'Histoire"
+		},
+		"description": "C'est votre opportunité d'accéder à la collection NFT révolutionnaire d'Itri Living avant le lancement public, prévu S2-2025..."
 	},
 	"howItWorks": {
 		"title": "Comment ça marche",

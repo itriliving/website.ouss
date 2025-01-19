@@ -13,23 +13,28 @@ export default function Newsletter() {
 	}
 
 	return (
-		<div className="flex flex-col items-center gap-4 mt-10">
-			<p className="max-w-80 text-center">
+		<div className="w-full max-w-md mx-auto mt-12">
+			<p className="text-sm text-white/70 text-center mb-6">
 				{t('footer.newsletter.description')}
 			</p>
 			<form onSubmit={handleSubmit} className="flex">
 				<input
-					className="border border-white/40 outline-none bg-white/10 px-6 py-2 rounded-l-full max-w-72"
-					type="text"
+					className="flex-1 bg-white/5 border border-white/10 rounded-l-full px-6 py-3 
+                    text-white placeholder:text-white/40
+                    focus:outline-none focus:border-white/20 focus:bg-white/10
+                    transition-colors"
+					type="email"
 					value={input}
 					placeholder={t('footer.newsletter.placeholder')}
 					onChange={(e) => setInput(e.target.value)}
 				/>
 				<button
-					className="pr-4 pl-2 border border-l-0 border-white/40 outline-none bg-white/10 hover:bg-white/25 rounded-r-full"
+					className="px-6 py-3 bg-white/10 border border-l-0 border-white/10 
+                    rounded-r-full hover:bg-white/20 transition-colors
+                    focus:outline-none focus:bg-white/20"
 					type="submit"
 				>
-					<Arrow height={25} />
+					<Arrow height={20} className="text-white" />
 				</button>
 			</form>
 		</div>

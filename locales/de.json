@@ -113,9 +113,15 @@
 	},
 	"hero": {
 		"title": "Exklusiver Private Pre-Mint",
-		"journey": "Seien Sie Teil einer Visionären Reise",
-		"history": "Besitzen Sie ein Stück Geschichte",
-		"description": "Dies ist Ihre Chance, vor dem öffentlichen Launch in S2-2025 Zugang zur bahnbrechenden NFT-Kollektion von Itri Living zu erhalten. Gehören Sie zu den Auserwählten, die unserem exklusiven Digital Members Club zu einem außergewöhnlichen Pre-Mint-Preis beitreten - mit bis zu 45% Ersparnis gegenüber dem offiziellen Mint-Preis in 2025."
+		"subheading1": {
+			"text": "Seien Sie Teil einer",
+			"highlight": "Visionären Reise"
+		},
+		"subheading2": {
+			"text": "Besitzen Sie ein Stück",
+			"highlight": "Geschichte"
+		},
+		"description": "Dies ist Ihre Chance, vor dem öffentlichen Launch in S2-2025 Zugang zur bahnbrechenden NFT-Kollektion von Itri Living zu erhalten..."
 	},
 	"howItWorks": {
 		"title": "So funktioniert's",

@@ -56,11 +56,11 @@ export default function HowItWorksSection() {
 
 					{/* Important Dates */}
 					<div className="flex-1 relative">
-						<div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
+						<div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden">
 							<div className="absolute inset-0 bg-white/20" />
 							<div className="absolute inset-0 backdrop-blur-xl" />
 						</div>
-						<div className="relative z-20 px-8 py-10  rounded-3xl space-y-6 shadow-[100px_20px_1000px_rgba(13,118,118,0.4)]">
+						<div className="relative z-20 px-8 py-10  rounded-xl space-y-6 shadow-[100px_20px_1000px_rgba(13,118,118,0.4)]">
 							<h3 className="text-xl font-bold text-dark-green-900 italic">
 								{t('howItWorks.importantDates.title')}
 							</h3>

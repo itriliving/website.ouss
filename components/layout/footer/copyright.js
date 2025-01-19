@@ -5,8 +5,6 @@ export default function Copyright() {
 	const { t } = useTranslation();
 
 	return (
-		<div>
-			<p>{t('footer.copyright')}</p>
-		</div>
+		<p className="mb-0 text-sm text-white/60">{t('footer.copyright')}</p>
 	);
 }

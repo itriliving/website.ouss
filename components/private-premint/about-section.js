@@ -6,8 +6,8 @@ export default function AboutSection() {
 
 	return (
 		<section className="py-12 sm:py-20 px-4">
-			<div className="relative max-w-7xl mx-auto px-10 lg:px-16 py-20 lg:py-32 rounded-3xl shadow-[100px_20px_2000px_rgba(13,118,118,0.6)] bg-dark-green-900/10">
-				<div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
+			<div className="relative max-w-7xl mx-auto px-10 lg:px-16 py-20 lg:py-32 rounded-xl shadow-[100px_20px_2000px_rgba(13,118,118,0.6)] bg-dark-green-900/10">
+				<div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden">
 					<div className="absolute inset-0 bg-white/20" />
 					<div className="absolute inset-0 backdrop-blur-xl" />
 				</div>
@@ -29,7 +29,7 @@ export default function AboutSection() {
 
 					{/* Images */}
 					<div className="flex-1 relative -top-12 h-[340px]">
-						<div className="group absolute left-0 top-0 w-2/3 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden">
+						<div className="group absolute left-0 top-0 w-2/3 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
 							<div className="relative">
 								<Image
 									src="/img/about-section.jpg"
@@ -38,10 +38,10 @@ export default function AboutSection() {
 									height={340}
 									className="w-full h-auto group-hover:scale-110 transition-all duration-300"
 								/>
-								<div className="absolute inset-0 backdrop-blur-md bg-black/5 rounded-2xl" />
+								<div className="absolute inset-0 backdrop-blur-md bg-black/5 rounded-xl" />
 							</div>
 						</div>
-						<div className="group absolute right-0 top-12 w-2/3 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden">
+						<div className="group absolute right-0 top-12 w-2/3 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
 							<div className="relative">
 								<Image
 									src="/img/about-section.jpg"
@@ -50,7 +50,7 @@ export default function AboutSection() {
 									height={340}
 									className="w-full h-auto group-hover:scale-110 transition-all duration-300"
 								/>
-								<div className="absolute inset-0 backdrop-blur-md bg-black/5 rounded-2xl" />
+								<div className="absolute inset-0 backdrop-blur-md bg-black/5 rounded-xl" />
 							</div>
 						</div>
 					</div>

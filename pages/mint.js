@@ -6,21 +6,28 @@ import HowItWorksSection from '../components/private-premint/how-it-works-sectio
 import DiscountSection from '../components/private-premint/discount-section';
 import FaqSection from '../components/private-premint/faq-section';
 import AnimatedBackground from '../components/private-premint/AnimatedBackground';
+import { useTranslation } from 'react-i18next';
 
 export default function Mint() {
+	const { t } = useTranslation();
+
 	return (
 		<div className="relative min-h-screen">
 			<AnimatedBackground />
 			<div className="relative z-10">
-				<Header />
-				<main className="private-premint font-inter bg-transparent">
-					<HeroSection />
-					<AboutSection />
-					<HowItWorksSection />
-					<DiscountSection />
-					<FaqSection />
-				</main>
-				<Footer />
+				{t && ( // Only render content when translations are available
+					<>
+						<Header />
+						<main className="private-premint font-inter bg-transparent">
+							<HeroSection />
+							<AboutSection />
+							<HowItWorksSection />
+							<DiscountSection />
+							<FaqSection />
+						</main>
+						<Footer />
+					</>
+				)}
 			</div>
 		</div>
 	);

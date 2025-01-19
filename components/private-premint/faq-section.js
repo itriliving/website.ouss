@@ -4,12 +4,11 @@ import { useTranslation } from '../../contexts/TranslationContext';
 export default function FaqSection() {
 	const { t } = useTranslation();
 
-	// Get FAQ items directly from translations
 	const faqs = t('faq.items', { returnObjects: true }) || [];
 
 	return (
 		<section className="py-12 sm:py-20 md:py-32 lg:py-40">
-			<div className="max-w-7xl mx-auto px-4">
+			<div className="max-w-7xl mx-auto px-4 pb-12">
 				<h2 className="text-3xl sm:text-4xl md:text-5xl mb-16 text-dark-green-900 font-bold">
 					{t('faq.title')}
 				</h2>

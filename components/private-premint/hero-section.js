@@ -19,10 +19,16 @@ export default function HeroSection() {
 					{/* Subheading */}
 					<div className="space-y-2 mb-10">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl text-dark-green-900/90">
-							{t('hero.journey')}{' '}
+							{t('hero.subheading1.text')}{' '}
+							<span className="font-noto-serif-display italic">
+								{t('hero.subheading1.highlight')}
+							</span>
 						</h2>
-						<h2 className="font-noto-serif-display italic text-2xl sm:text-3xl md:text-4xl text-dark-green-900/90">
-							{t('hero.history')}{' '}
+						<h2 className="text-2xl sm:text-3xl md:text-4xl text-dark-green-900/90">
+							{t('hero.subheading2.text')}{' '}
+							<span className="font-noto-serif-display italic">
+								{t('hero.subheading2.highlight')}
+							</span>
 						</h2>
 					</div>
 

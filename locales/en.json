@@ -113,8 +113,14 @@
 	},
 	"hero": {
 		"title": "Exclusive Private Pre-Mint",
-		"journey": "Join a Visionary Journey",
-		"history": "Own a Piece of History",
+		"subheading1": {
+			"text": "Join a Visionary",
+			"highlight": "Journey"
+		},
+		"subheading2": {
+			"text": "Own a Piece of",
+			"highlight": "History"
+		},
 		"description": "This is your opportunity to access Itri Living's groundbreaking NFT collection before the public launch, expected S2-2025. Be among the select few to join our exclusive Digital Members Club at an exceptional pre-mint price— offering up to 45% savings compared to the official mint price in 2025."
 	},
 	"howItWorks": {

@@ -12,20 +12,32 @@ const loadTranslationFile = async (lang) => {
 	}
 };
 
+function getBrowserLanguage() {
+	if (typeof window === 'undefined') return 'en';
+
+	const browserLang = navigator.language.split('-')[0];
+	const supportedLanguages = ['en', 'fr', 'de'];
+
+	return supportedLanguages.includes(browserLang) ? browserLang : 'en';
+}
+
 export function TranslationProvider({ children }) {
 	const [lang, setLang] = useState('en');
-	const [translations, setTranslations] = useState({});
+	const [translations, setTranslations] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		// Load saved language preference
+		// Load saved language preference or detect browser language
 		if (typeof window !== 'undefined') {
-			const savedLang = localStorage.getItem('language') || 'en';
+			const savedLang =
+				localStorage.getItem('language') || getBrowserLanguage();
 			setLang(savedLang);
 		}
 	}, []);
 
 	useEffect(() => {
 		async function loadTranslations() {
+			setIsLoading(true);
 			const newTranslations = await loadTranslationFile(lang);
 			if (newTranslations) {
 				setTranslations(newTranslations);
@@ -33,12 +45,22 @@ export function TranslationProvider({ children }) {
 					localStorage.setItem('language', lang);
 				}
 			}
+			setIsLoading(false);
 		}
 
 		loadTranslations();
 	}, [lang]);
 
+	const handleSetLang = (newLang) => {
+		setLang(newLang);
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('language', newLang);
+		}
+	};
+
 	function t(key, params = {}) {
+		if (!translations) return ''; // Return empty string if translations aren't loaded
+
 		// Split the key by dots to access nested properties
 		const keys = key.split('.');
 		let value = translations;
@@ -59,11 +81,17 @@ export function TranslationProvider({ children }) {
 			});
 		}
 
-		return value || key;
+		return value || '';
+	}
+
+	if (isLoading) {
+		return null; // Or a loading spinner component
 	}
 
 	return (
-		<TranslationContext.Provider value={{ lang, setLang, t }}>
+		<TranslationContext.Provider
+			value={{ lang, setLang: handleSetLang, t }}
+		>
 			{children}
 		</TranslationContext.Provider>
 	);
