@@ -1,12 +1,15 @@
 {
 	"header": {
 		"requestCall": "Request a Call",
-		"connectWallet": "Connect Your Wallet",
+		"connectWallet": "Connect Wallet",
 		"selectLanguage": "Select Language",
 		"welcomeTo": "Welcome to",
 		"signIn": "Sign In",
 		"createAccount": "Create an Account",
-		"cart": "Shopping Cart"
+		"cart": "Shopping Cart",
+		"connecting": "Connecting...",
+		"installMetamask": "Install MetaMask",
+		"walletError": "Wallet Error"
 	},
 	"whitelist": {
 		"title": "Whitelist Registration",
@@ -153,5 +156,17 @@
 				"date": "24h after whitelisting closes (for a period of 48h)."
 			}
 		}
+	},
+	"wallet": {
+		"title": "My Wallet",
+		"connectedAccount": "Connected Account",
+		"network": "Network",
+		"balance": "Balance",
+		"nfts": "NFTs",
+		"noNFTs": "No NFTs found in this wallet",
+		"disconnect": "Disconnect",
+		"copy": "Copy Address",
+		"copied": "Copied!",
+		"viewOnEtherscan": "View on Etherscan"
 	}
 }

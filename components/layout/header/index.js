@@ -6,9 +6,21 @@ import UserMenu from './UserMenu';
 import { ShoppingCart } from 'lucide-react';
 import LanguageMenu from './LanguageMenu';
 import { useTranslation } from '../../../contexts/TranslationContext';
+import { useWallet } from '../../../contexts/WalletContext';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+	const router = useRouter();
+	const { account, isConnecting, error, connect } = useWallet();
 	const { t } = useTranslation();
+
+	const handleWalletClick = async () => {
+		if (account) {
+			router.push('/wallet');
+		} else {
+			await connect();
+		}
+	};
 
 	return (
 		<header className="text-sm">
@@ -38,11 +50,20 @@ export default function Header() {
 							>
 								<Button>{t('header.requestCall')}</Button>
 							</Link>
-							<Link href={'/'}>
-								<Button variant="secondary">
-									{t('header.connectWallet')}
-								</Button>
-							</Link>
+
+							<Button
+								variant="secondary"
+								onClick={handleWalletClick}
+								disabled={isConnecting}
+							>
+								{account
+									? `${account.slice(0, 6)}...${account.slice(
+											-4
+									  )}`
+									: isConnecting
+									? t('header.connecting')
+									: t('header.connectWallet')}
+							</Button>
 						</div>
 					</div>
 					<UserMenu />

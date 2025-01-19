@@ -4,6 +4,7 @@ import { appWithTranslation } from 'next-i18next';
 import ChatbotAI from '../components/ChatbotAI';
 import { LanguageProvider } from '../components/LanguageContext';
 import { TranslationProvider } from '../contexts/TranslationContext';
+import { WalletProvider } from '../contexts/WalletContext';
 
 import './global.css';
 import '../styles/globals.css';
@@ -29,11 +30,13 @@ function MyApp({ Component, pageProps }) {
 
 			<ChatbotAI />
 
-			<LanguageProvider>
-				<TranslationProvider>
-					<Component {...pageProps} />
-				</TranslationProvider>
-			</LanguageProvider>
+			<WalletProvider>
+				<LanguageProvider>
+					<TranslationProvider>
+						<Component {...pageProps} />
+					</TranslationProvider>
+				</LanguageProvider>
+			</WalletProvider>
 		</Fragment>
 	);
 }

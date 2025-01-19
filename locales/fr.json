@@ -153,5 +153,17 @@
 				"date": "24h après la fermeture de la whitelist (pour une période de 48h)."
 			}
 		}
+	},
+	"wallet": {
+		"title": "Mon Portefeuille",
+		"connectedAccount": "Compte Connecté",
+		"network": "Réseau",
+		"balance": "Solde",
+		"nfts": "NFTs",
+		"noNFTs": "Aucun NFT trouvé dans ce portefeuille",
+		"disconnect": "Déconnecter",
+		"copy": "Copier l'Adresse",
+		"copied": "Copié !",
+		"viewOnEtherscan": "Voir sur Etherscan"
 	}
 }

@@ -2,11 +2,15 @@ import { Menu, User } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from '../../../contexts/TranslationContext';
+import { useWallet } from '../../../contexts/WalletContext';
+import { useRouter } from 'next/router';
 
 export default function UserMenu() {
 	const [isOpen, setIsOpen] = useState(false);
+	const router = useRouter();
 	const menuRef = useRef(null);
 	const { t } = useTranslation();
+	const { account, isConnecting, connect } = useWallet();
 
 	useEffect(() => {
 		function handleClickOutside(event) {
@@ -20,6 +24,15 @@ export default function UserMenu() {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
 	}, []);
+
+	const handleWalletClick = async () => {
+		if (account) {
+			router.push('/wallet');
+		} else {
+			await connect();
+		}
+		setIsOpen(false);
+	};
 
 	return (
 		<div className="relative" ref={menuRef}>
@@ -64,15 +77,20 @@ export default function UserMenu() {
 							>
 								{t('header.requestCall')}
 							</Link>
-							<Link
-								href="/"
-								className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
-								onClick={() => setIsOpen(false)}
-							>
-								{t('header.connectWallet')}
-							</Link>
 						</div>
 						{/* Account Links */}
+						<button
+							onClick={handleWalletClick}
+							className="md:hidden w-full flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
+						>
+							{account
+								? `${account.slice(0, 6)}...${account.slice(
+										-4
+								  )}`
+								: isConnecting
+								? t('header.connecting')
+								: t('header.connectWallet')}
+						</button>
 						<Link
 							href="/SignIn"
 							className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
