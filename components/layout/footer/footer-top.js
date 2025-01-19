@@ -1,14 +1,13 @@
 import Logo from './logo';
+import { useTranslation } from '../../../contexts/TranslationContext';
 
 export default function FooterTop() {
+	const { t } = useTranslation();
+
 	return (
 		<div className="flex flex-col items-center gap-6">
 			<Logo />
-			<p className="max-w-96 text-center">
-				{' '}
-				Discover dynamic spaces, engaging events, and an interactive
-				online Member Hub.
-			</p>
+			<p className="max-w-96 text-center">{t('footer.discover')}</p>
 		</div>
 	);
 }

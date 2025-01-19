@@ -1,24 +1,29 @@
 import Image from 'next/image';
+import { useTranslation } from '../../contexts/TranslationContext';
 
 export default function AboutSection() {
+	const { t } = useTranslation();
+
 	return (
-		<section className="py-12 sm:py-20">
-			<div className="max-w-7xl bg-neon-blue mx-auto px-10 py-32 rounded-md">
-				<div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+		<section className="py-12 sm:py-20 px-4">
+			<div className="relative max-w-7xl mx-auto px-10 lg:px-16 py-20 lg:py-32 rounded-3xl shadow-[100px_20px_2000px_rgba(13,118,118,0.6)] bg-dark-green-900/10">
+				<div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
+					<div className="absolute inset-0 bg-white/20" />
+					<div className="absolute inset-0 backdrop-blur-xl" />
+				</div>
+
+				{/* Content */}
+				<div className="relative z-20 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 					{/* Text Content */}
 					<div className="flex-1">
 						<h2 className="text-3xl sm:text-4xl md:text-5xl mb-12 font-bold text-dark-green-900">
-							About the Collection
+							{t('about.title')}
 						</h2>
 						<p className="text-xl sm:text-2xl mb-4 text-dark-green-900 font-bold">
-							"9999 Unique NFTs Inspired by the Cosmos"
+							{t('about.subtitle')}
 						</p>
 						<p className="text-dark-green-900/80 text-sm sm:text-base font-semibold">
-							Each NFT represents a historical constellation—a
-							timeless piece of the universe tied to humanity's
-							greatest milestones. Owning an Itri NFT grants you
-							membership to an elite digital club of pioneers who
-							value authenticity, exclusivity, and innovation.
+							{t('about.description')}
 						</p>
 					</div>
 
@@ -28,10 +33,10 @@ export default function AboutSection() {
 							<div className="relative">
 								<Image
 									src="/img/about-section.jpg"
-									alt="Constellation NFT Example 1"
+									alt={t('about.images.alt1')}
 									width={340}
 									height={340}
-									className="w-full h-auto  group-hover:scale-110 transition-all duration-300"
+									className="w-full h-auto group-hover:scale-110 transition-all duration-300"
 								/>
 								<div className="absolute inset-0 backdrop-blur-md bg-black/5 rounded-2xl" />
 							</div>
@@ -40,7 +45,7 @@ export default function AboutSection() {
 							<div className="relative">
 								<Image
 									src="/img/about-section.jpg"
-									alt="Constellation NFT Example 2"
+									alt={t('about.images.alt2')}
 									width={340}
 									height={340}
 									className="w-full h-auto group-hover:scale-110 transition-all duration-300"

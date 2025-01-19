@@ -1,0 +1,151 @@
+{
+	"header": {
+		"requestCall": "Anruf Anfordern",
+		"connectWallet": "Wallet Verbinden",
+		"selectLanguage": "Sprache Auswählen",
+		"welcomeTo": "Willkommen bei",
+		"signIn": "Anmelden",
+		"createAccount": "Konto Erstellen",
+		"cart": "Warenkorb"
+	},
+	"whitelist": {
+		"title": "Whitelist Registrierung",
+		"referralWallet": "Empfehlungs-Wallet",
+		"yourWallet": "Ihre Wallet",
+		"enterReferral": "Geben Sie die Empfehlungs-Wallet-Adresse ein",
+		"enterYourWallet": "Geben Sie Ihre Wallet-Adresse ein",
+		"cancel": "Abbrechen",
+		"confirm": "Bestätigen",
+		"submitting": "Wird gesendet...",
+		"submitted": "Gesendet!",
+		"success": "Erfolgreich registriert! Schließt in {seconds} Sekunden...",
+		"button": {
+			"text": "Whitelist Ihre Wallet",
+			"aria": "Whitelist-Registrierungsformular öffnen"
+		},
+		"modal": {
+			"title": "Whitelist Registrierung",
+			"referralWallet": "Referral-Wallet",
+			"yourWallet": "Ihre Wallet",
+			"enterReferral": "Geben Sie die Referral-Wallet-Adresse ein",
+			"enterYourWallet": "Geben Sie Ihre Wallet-Adresse ein",
+			"cancel": "Abbrechen",
+			"confirm": "Bestätigen",
+			"submitting": "Wird gesendet...",
+			"submitted": "Gesendet!",
+			"success": "Erfolgreich registriert! Schließt in {seconds} Sekunden..."
+		}
+	},
+	"footer": {
+		"discover": "Entdecken Sie dynamische Räume, spannende Events und einen interaktiven Online-Member-Hub.",
+		"newsletter": {
+			"description": "Bleiben Sie informiert über neue Standorte, Community-Events und andere Neuigkeiten.",
+			"placeholder": "Ihre E-Mail"
+		},
+		"copyright": "© 2025 Itri Living. Alle Rechte vorbehalten.",
+		"sections": {
+			"product": {
+				"title": "PRODUKT",
+				"links": {
+					"locations": "Standorte",
+					"spaces": "Räume",
+					"community": "Community",
+					"benefits": "Vorteile"
+				}
+			},
+			"company": {
+				"title": "UNTERNEHMEN",
+				"links": {
+					"about": "Über Uns",
+					"values": "Werte",
+					"press": "Presse",
+					"sustainability": "Nachhaltigkeit",
+					"partners": "Immobilienpartner",
+					"conduct": "Verhaltenskodex",
+					"privacy": "Datenschutz",
+					"terms": "AGB"
+				}
+			},
+			"support": {
+				"title": "SUPPORT",
+				"links": {
+					"contact": "Kontakt",
+					"guides": "ITRI Anleitungen",
+					"faq": "FAQ"
+				}
+			},
+			"social": {
+				"title": "SOCIAL"
+			}
+		}
+	},
+	"about": {
+		"title": "Über die Kollektion",
+		"subtitle": "\"9999 Einzigartige NFTs Inspiriert vom Kosmos\"",
+		"description": "Jedes NFT repräsentiert eine historische Konstellation—ein zeitloses Stück des Universums, verbunden mit den größten Meilensteinen der Menschheit. Der Besitz eines Itri NFTs gewährt Ihnen die Mitgliedschaft in einem elitären digitalen Club von Pionieren, die Authentizität, Exklusivität und Innovation schätzen.",
+		"images": {
+			"alt1": "Konstellation NFT Beispiel 1",
+			"alt2": "Konstellation NFT Beispiel 2"
+		}
+	},
+	"discount": {
+		"badge": "Zeitlich Begrenztes Pre-Mint Angebot",
+		"title": "Bis zu {percent}% Rabatt auf den öffentlichen Mint-Preis",
+		"description": "Sichern Sie sich jetzt Ihr NFT zu einem Bruchteil der Kosten und werden Sie Teil einer Community, die die Zukunft der digitalen Kunst und tokenisierter Vorteile gestaltet.",
+		"cta": "Platz Reservieren"
+	},
+	"faq": {
+		"title": "FAQ",
+		"items": [
+			{
+				"question": "Wie hoch ist der offizielle Mint-Preis in 2025?",
+				"answer": "Der offizielle Mint-Preis wird bei 10.000 $ pro NFT liegen. Der Pre-Mint bietet erhebliche Rabatte, was ihn zum besten Zeitpunkt für den Einstieg macht."
+			},
+			{
+				"question": "Wie kann ich meine Wallet whitelisten?",
+				"answer": "Sie können Ihre Wallet whitelisten, indem Sie Ihre E-Mail oder Wallet-Adresse über das untenstehende Formular einreichen oder uns direkt kontaktieren."
+			},
+			{
+				"question": "Was passiert nach dem Private-Mint?",
+				"answer": "Nach dem Pre-Mint werden die NFTs nicht mehr zu diesem reduzierten Preis verfügbar sein. Sie werden 2025 zum offiziellen Mint-Preis verkauft."
+			}
+		]
+	},
+	"hero": {
+		"title": "Exklusiver Private Pre-Mint",
+		"journey": "Seien Sie Teil einer Visionären Reise",
+		"history": "Besitzen Sie ein Stück Geschichte",
+		"description": "Dies ist Ihre Chance, vor dem öffentlichen Launch in S2-2025 Zugang zur bahnbrechenden NFT-Kollektion von Itri Living zu erhalten. Gehören Sie zu den Auserwählten, die unserem exklusiven Digital Members Club zu einem außergewöhnlichen Pre-Mint-Preis beitreten - mit bis zu 45% Ersparnis gegenüber dem offiziellen Mint-Preis in 2025."
+	},
+	"howItWorks": {
+		"title": "So funktioniert's",
+		"steps": [
+			{
+				"title": "Whitelist Ihre Wallet",
+				"bullets": [
+					"Geben Sie Ihre Wallet-Adresse an, um Ihren Platz im Private Mint zu sichern. Vergessen Sie nicht Ihre Referral-Wallet-Adresse.",
+					"Nutzen Sie das untenstehende Formular oder kontaktieren Sie uns per E-Mail, LinkedIn oder über einen unserer Partner."
+				]
+			},
+			{
+				"title": "Private-Mint",
+				"description": "Sobald Ihre Wallet gewhitelistet und Ihre Referral registriert ist, erhalten Sie exklusiven Zugang zur Private-Mint-Funktion."
+			},
+			{
+				"title": "Minten Sie Ihr NFT während der Mint-Periode",
+				"description": "Verbinden Sie Ihre Wallet und schließen Sie Ihren Kauf ab (mit ETH)"
+			}
+		],
+		"importantDates": {
+			"title": "Wichtige Termine:",
+			"whitelist": {
+				"label": "Whitelist-Deadline:",
+				"date": "10. Februar 2025"
+			},
+			"preMint": {
+				"label": "Pre-Mint-Zeitraum:",
+				"date": "24h nach Whitelist-Schluss (für einen Zeitraum von 48h)."
+			}
+		}
+	}
+}

@@ -2,21 +2,27 @@ import React from 'react';
 import Logo from './logo';
 import Button from '../../ui/button';
 import Link from 'next/link';
-import { Globe, ShoppingCart, User, Menu } from 'lucide-react';
+import UserMenu from './UserMenu';
+import { ShoppingCart } from 'lucide-react';
+import LanguageMenu from './LanguageMenu';
+import { useTranslation } from '../../../contexts/TranslationContext';
 
 export default function Header() {
+	const { t } = useTranslation();
+
 	return (
-		<header className="text-sm bg-azure">
+		<header className="text-sm">
 			<div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
 				<Link href={'/'}>
 					<Logo />
 				</Link>
 				<nav className="flex items-center gap-4">
 					<div className="hidden sm:flex gap-4 items-center">
-						<button>
-							<Globe size={20} />
-						</button>
-						<button>
+						<LanguageMenu />
+						<button
+							aria-label={t('header.cart')}
+							className="bg-white rounded-full p-[10px] text-dark-green-900 shadow-sm hover:text-dark-green-900 transition-colors"
+						>
 							<ShoppingCart size={20} />
 						</button>
 						<Link
@@ -25,20 +31,15 @@ export default function Header() {
 							}
 							target="_blank"
 						>
-							<Button>Request a Call</Button>
+							<Button>{t('header.requestCall')}</Button>
 						</Link>
 						<Link href={'/'}>
-							<Button>Connect Your Wallet</Button>
+							<Button variant="secondary">
+								{t('header.connectWallet')}
+							</Button>
 						</Link>
 					</div>
-					<div className="flex items-center gap-2 border border-black p-2 rounded-full">
-						<button className="flex items-center justify-center">
-							<User size={20} />
-						</button>
-						<button className="flex items-center justify-center">
-							<Menu size={20} />
-						</button>
-					</div>
+					<UserMenu />
 				</nav>
 			</div>
 		</header>

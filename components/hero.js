@@ -73,7 +73,7 @@ const Hero = ({ className = '' }) => {
 							</div>
 							<div className={styles.heroButton}>
 								<a
-									href="/private-premint"
+									href="/mint"
 									rel="noopener noreferrer"
 									className={styles.buttonContainer}
 									style={{ textDecoration: 'none' }}

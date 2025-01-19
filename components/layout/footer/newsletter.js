@@ -1,25 +1,28 @@
 'use client';
 import { useState } from 'react';
 import Arrow from '../../common/arrow';
+import { useTranslation } from '../../../contexts/TranslationContext';
 
 export default function Newsletter() {
 	const [input, setInput] = useState('');
+	const { t } = useTranslation();
+
 	function handleSubmit(e) {
 		e.preventDefault();
 		setInput('');
 	}
+
 	return (
 		<div className="flex flex-col items-center gap-4 mt-10">
 			<p className="max-w-80 text-center">
-				Keep up with location openings, community events, and other
-				news.
+				{t('footer.newsletter.description')}
 			</p>
 			<form onSubmit={handleSubmit} className="flex">
 				<input
 					className="border border-white/40 outline-none bg-white/10 px-6 py-2 rounded-l-full max-w-72"
 					type="text"
 					value={input}
-					placeholder="Your email"
+					placeholder={t('footer.newsletter.placeholder')}
 					onChange={(e) => setInput(e.target.value)}
 				/>
 				<button

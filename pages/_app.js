@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 import ChatbotAI from '../components/ChatbotAI';
 import { LanguageProvider } from '../components/LanguageContext';
+import { TranslationProvider } from '../contexts/TranslationContext';
 
 import './global.css';
 import '../styles/globals.css';
@@ -29,7 +30,9 @@ function MyApp({ Component, pageProps }) {
 			<ChatbotAI />
 
 			<LanguageProvider>
-				<Component {...pageProps} />
+				<TranslationProvider>
+					<Component {...pageProps} />
+				</TranslationProvider>
 			</LanguageProvider>
 		</Fragment>
 	);
