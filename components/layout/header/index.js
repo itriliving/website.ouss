@@ -16,28 +16,34 @@ export default function Header() {
 				<Link href={'/'}>
 					<Logo />
 				</Link>
-				<nav className="flex items-center gap-4">
-					<div className="hidden sm:flex gap-4 items-center">
-						<LanguageMenu />
-						<button
-							aria-label={t('header.cart')}
-							className="bg-white rounded-full p-[10px] text-dark-green-900 shadow-sm hover:text-dark-green-900 transition-colors"
-						>
-							<ShoppingCart size={20} />
-						</button>
-						<Link
-							href={
-								'https://calendly.com/admin-itri/itri-living-concept-explained'
-							}
-							target="_blank"
-						>
-							<Button>{t('header.requestCall')}</Button>
-						</Link>
-						<Link href={'/'}>
-							<Button variant="secondary">
-								{t('header.connectWallet')}
-							</Button>
-						</Link>
+				<nav className="flex items-center gap-3 md:gap-4">
+					<div className="flex gap-4 items-center">
+						<div className="flex gap-3">
+							<div className="">
+								<LanguageMenu />
+							</div>
+							<button
+								aria-label={t('header.cart')}
+								className="hidden md:block bg-white rounded-full p-[10px] text-dark-green-900 shadow-sm hover:text-dark-green-900 transition-colors"
+							>
+								<ShoppingCart size={20} />
+							</button>
+						</div>
+						<div className="hidden md:flex gap-3">
+							<Link
+								href={
+									'https://calendly.com/admin-itri/itri-living-concept-explained'
+								}
+								target="_blank"
+							>
+								<Button>{t('header.requestCall')}</Button>
+							</Link>
+							<Link href={'/'}>
+								<Button variant="secondary">
+									{t('header.connectWallet')}
+								</Button>
+							</Link>
+						</div>
 					</div>
 					<UserMenu />
 				</nav>

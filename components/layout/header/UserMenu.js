@@ -38,9 +38,7 @@ export default function UserMenu() {
 
 			{isOpen && (
 				<div className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-sm py-2">
-					<div
-						className="px-4 py-2 border-b border-dark-green-900/10"
-					>
+					<div className="px-4 py-2 border-b border-dark-green-900/10">
 						<p className="text-xs text-dark-green-900/60 mb-2">
 							{t('header.welcomeTo')}
 						</p>
@@ -49,6 +47,32 @@ export default function UserMenu() {
 						</h3>
 					</div>
 					<div className="py-1">
+						{/* Mobile Menu Items */}
+						<div className="md:hidden border-b border-dark-green-900/10 mb-1 pb-1">
+							<Link
+								href="#"
+								className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
+								onClick={() => setIsOpen(false)}
+							>
+								{t('header.cart')}
+							</Link>
+							<Link
+								href="https://calendly.com/admin-itri/itri-living-concept-explained"
+								target="_blank"
+								className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
+								onClick={() => setIsOpen(false)}
+							>
+								{t('header.requestCall')}
+							</Link>
+							<Link
+								href="/"
+								className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
+								onClick={() => setIsOpen(false)}
+							>
+								{t('header.connectWallet')}
+							</Link>
+						</div>
+						{/* Account Links */}
 						<Link
 							href="/SignIn"
 							className="no-underline flex items-center px-4 py-2 text-sm text-dark-green-900/80 hover:text-dark-green-900 hover:bg-dark-green-900/5 transition-colors"
