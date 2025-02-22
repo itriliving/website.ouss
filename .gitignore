@@ -39,3 +39,9 @@ rename_jsx_to_js.sh
 
 # service account
 itri-living-service-account.json
+
+# environment variables
+.env
+
+# temp folder
+/temp

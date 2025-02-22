@@ -1,76 +1,79 @@
 {
 	"header": {
-		"requestCall": "Demander un Appel",
-		"connectWallet": "Connecter le Portefeuille",
-		"selectLanguage": "Choisir la Langue",
-		"welcomeTo": "Bienvenue sur",
-		"signIn": "Se Connecter",
-		"createAccount": "Créer un Compte",
-		"cart": "Panier"
+		"requestCall": "Demande d'appel",
+		"connectWallet": "Connecter le portefeuille",
+		"selectLanguage": "Sélectionner la langue",
+		"welcomeTo": "Bienvenue à",
+		"signIn": "S'inscrire",
+		"createAccount": "Créer un compte",
+		"cart": "Panier d'achat",
+		"connecting": "Connexion...",
+		"installMetamask": "Installer MetaMask",
+		"walletError": "Erreur de portefeuille"
 	},
 	"whitelist": {
-		"title": "Inscription Whitelist",
-		"referralWallet": "Portefeuille de Parrainage",
-		"yourWallet": "Votre Portefeuille",
-		"enterReferral": "Entrez l'adresse du portefeuille de parrainage",
+		"title": "Inscription sur la liste blanche",
+		"referralWallet": "Portefeuille de référence",
+		"yourWallet": "Your Wallet",
+		"enterReferral": "Saisir l'adresse du portefeuille de parrainage",
 		"enterYourWallet": "Entrez l'adresse de votre portefeuille",
 		"cancel": "Annuler",
 		"confirm": "Confirmer",
-		"submitting": "Envoi en cours...",
-		"submitted": "Envoyé !",
-		"success": "Inscription réussie ! Fermeture dans {seconds} secondes...",
+		"submitting": "Soumettre...",
+		"submitted": "Soumis !",
+		"success": "Enregistrement réussi ! Fermeture dans {secondes} secondes...",
 		"button": {
-			"text": "Whitelistez Votre Wallet",
-			"aria": "Ouvrir le formulaire d'inscription whitelist"
+			"text": "Mettre votre portefeuille sur liste blanche",
+			"aria": "Ouvrir la fenêtre modale d'enregistrement de la liste blanche"
 		},
 		"modal": {
-			"title": "Inscription Whitelist",
-			"referralWallet": "Wallet de Parrainage",
-			"yourWallet": "Votre Wallet",
-			"enterReferral": "Entrez l'adresse du wallet de parrainage",
-			"enterYourWallet": "Entrez l'adresse de votre wallet",
+			"title": "Inscription sur la liste blanche",
+			"referralWallet": "Portefeuille de référence",
+			"yourWallet": "Your Wallet",
+			"enterReferral": "Saisir l'adresse du portefeuille de parrainage",
+			"enterYourWallet": "Entrez l'adresse de votre portefeuille",
 			"cancel": "Annuler",
 			"confirm": "Confirmer",
-			"submitting": "Envoi en cours...",
-			"submitted": "Envoyé !",
-			"success": "Inscription réussie ! Fermeture dans {seconds} secondes..."
+			"submitting": "Soumettre...",
+			"submitted": "Soumis !",
+			"success": "Enregistrement réussi ! Fermeture dans {secondes} secondes..."
 		}
 	},
 	"footer": {
-		"discover": "Découvrez des espaces dynamiques, des événements engageants et un Hub Membre interactif en ligne.",
+		"discover": "Découvrez des espaces dynamiques, des événements attrayants et un centre interactif en ligne pour les membres.",
 		"newsletter": {
-			"description": "Restez informé des ouvertures de sites, des événements communautaires et autres actualités.",
+			"description": "Restez informé des ouvertures de sites, des événements communautaires et d'autres nouvelles.",
 			"placeholder": "Votre email"
 		},
-		"copyright": "© 2025 Itri Living. Tous droits réservés.",
+		"copyright": "2025 Itri Living. Tous droits réservés.",
 		"sections": {
 			"product": {
 				"title": "PRODUIT",
 				"links": {
-					"locations": "Emplacements",
+					"locations": "Localisation des sites",
 					"spaces": "Espaces",
 					"community": "Communauté",
 					"benefits": "Avantages"
 				}
 			},
 			"company": {
-				"title": "ENTREPRISE",
+				"title": "SOCIÉTÉ",
 				"links": {
-					"about": "À Propos",
+					"about": "À propos de nous",
 					"values": "Valeurs",
 					"press": "Presse",
 					"sustainability": "Durabilité",
-					"partners": "Partenaires Immobiliers",
-					"conduct": "Code de Conduite",
-					"privacy": "Politique de Confidentialité",
-					"terms": "Conditions Générales"
+					"partners": "Partenaires immobiliers",
+					"conduct": "Code de conduite",
+					"privacy": "Politique de confidentialité",
+					"terms": "Conditions générales d'utilisation"
 				}
 			},
 			"support": {
-				"title": "SUPPORT",
+				"title": "SOUTIEN",
 				"links": {
-					"contact": "Contactez-nous",
-					"guides": "Guides ITRI",
+					"contact": "Nous contacter",
+					"guides": "Guides de l'ITRI",
 					"faq": "FAQ"
 				}
 			},
@@ -80,90 +83,105 @@
 		}
 	},
 	"about": {
-		"title": "À Propos de la Collection",
-		"subtitle": "\"9999 NFTs Uniques Inspirés par le Cosmos\"",
-		"description": "Chaque NFT représente une constellation historique—une pièce intemporelle de l'univers liée aux plus grandes étapes de l'humanité. Posséder un NFT Itri vous donne accès à un club numérique d'élite de pionniers qui valorisent l'authenticité, l'exclusivité et l'innovation.",
+		"title": "À propos de la collection",
+		"subtitle": "\"9999 NFT uniques inspirés par le cosmos\".",
+		"description": "Chaque NFT représente une constellation historique, un morceau d'univers intemporel lié aux plus grandes étapes de l'humanité. Posséder un NFT Itri, c'est devenir membre d'un club numérique d'élite composé de pionniers qui valorisent l'authenticité, l'exclusivité et l'innovation.",
 		"images": {
-			"alt1": "Exemple de NFT Constellation 1",
-			"alt2": "Exemple de NFT Constellation 2"
+			"alt1": "Constellation NFT Exemple 1",
+			"alt2": "Constellation NFT Exemple 2"
 		}
 	},
 	"discount": {
-		"badge": "Offre Pré-Mint Limitée",
-		"title": "Jusqu'à {percent}% de Réduction sur le Prix Public",
-		"description": "Sécurisez votre NFT maintenant à une fraction du coût et rejoignez une Communauté qui façonne l'avenir de l'art numérique et des avantages tokenisés.",
-		"cta": "Réservez Votre Place"
+		"badge": "Offre de pré-monnaie limitée dans le temps",
+		"title": "Jusqu'à 40 % de réduction sur le prix public de la Monnaie",
+		"description": "Sécurisez votre NFT dès maintenant pour une fraction du coût et faites partie d'une communauté qui façonne l'avenir de l'art numérique et des avantages symbolisés dans le monde réel.",
+		"cta": "Réservez votre place"
 	},
 	"faq": {
 		"title": "FAQ",
-		"items": [
-			{
-				"question": "Quel est le prix officiel du mint en 2025 ?",
-				"answer": "Le prix officiel du mint sera fixé à 10 000 $ par NFT. Le pré-mint offre des réductions significatives, ce qui en fait le meilleur moment pour rejoindre."
+		"items": {
+			"0": {
+				"question": "Quel est le prix officiel de la monnaie en 2025 ?",
+				"answer": "Le prix officiel de la frappe sera fixé à 10 000 dollars par NFT. La pré-monnaie offre des réductions importantes, ce qui en fait le meilleur moment pour s'inscrire."
 			},
-			{
-				"question": "Comment puis-je whitelister mon wallet ?",
-				"answer": "Vous pouvez whitelister votre wallet en soumettant votre email ou l'adresse de votre wallet via le formulaire ci-dessous ou en nous contactant directement."
+			"1": {
+				"question": "Comment puis-je mettre mon portefeuille sur liste blanche ?",
+				"answer": "Vous pouvez mettre votre portefeuille sur liste blanche en soumettant votre adresse électronique ou votre adresse de portefeuille au moyen du formulaire ci-dessous ou en nous contactant directement."
 			},
-			{
-				"question": "Que se passe-t-il après le private-mint ?",
-				"answer": "Après le pré-mint, les NFTs ne seront plus disponibles à ce prix réduit. Ils seront vendus au prix officiel du mint en 2025."
+			"2": {
+				"question": "Que se passera-t-il après la mise en place d'un ministère privé ?",
+				"answer": "Après la pré-monnaie, les NFT ne seront plus disponibles à ce prix réduit. Ils seront vendus au prix officiel de la frappe en 2025."
 			}
-		]
+		}
 	},
 	"hero": {
-		"title": "Pré-Mint Privé Exclusif",
+		"title": "Pré-monnaie privée exclusive",
 		"subheading1": {
-			"text": "Rejoignez un Voyage",
-			"highlight": "Visionnaire"
+			"text": "Rejoindre un visionnaire",
+			"highlight": "Voyage"
 		},
 		"subheading2": {
-			"text": "Possédez un Morceau",
-			"highlight": "d'Histoire"
+			"text": "Posséder un morceau de",
+			"highlight": "L'histoire"
 		},
-		"description": "C'est votre opportunité d'accéder à la collection NFT révolutionnaire d'Itri Living avant le lancement public, prévu S2-2025..."
+		"description": "C'est l'occasion d'accéder à la collection NFT révolutionnaire d'Itri Living avant le lancement public, prévu pour S2-2025. Faites partie des quelques privilégiés qui rejoindront notre club exclusif de membres numériques à un prix pré-empreinte exceptionnel - offrant jusqu'à 45 % d'économies par rapport au prix officiel de l'emprise de la monnaie en 2025."
 	},
 	"howItWorks": {
-		"title": "Comment ça marche",
-		"steps": [
-			{
-				"title": "Whitelistez Votre Wallet",
-				"bullets": [
-					"Fournissez l'adresse de votre wallet pour sécuriser votre place dans le mint privé. N'oubliez pas l'adresse du wallet de parrainage.",
-					"Utilisez le formulaire ci-dessous ou contactez-nous par email, LinkedIn, ou via l'un de nos partenaires."
-				]
+		"title": "Comment cela fonctionne-t-il ?",
+		"steps": {
+			"0": {
+				"title": "Mettre votre portefeuille sur liste blanche",
+				"bullets": {
+					"0": "Fournissez l'adresse de votre portefeuille pour garantir votre place dans la menthe privée. N'oubliez pas l'adresse de votre portefeuille de parrainage.",
+					"1": "Utilisez le formulaire ci-dessous ou contactez-nous par courriel, par LinkedIn ou par l'intermédiaire de l'un de nos partenaires."
+				}
 			},
-			{
-				"title": "Mint Privé",
-				"description": "Une fois votre wallet whitelisté et votre parrainage enregistré, vous aurez accès exclusif à la fonction de mint privé."
+			"1": {
+				"title": "Monnaie privée",
+				"description": "Une fois votre portefeuille inscrit sur la liste blanche et votre parrain enregistré, vous obtiendrez un accès exclusif à la fonction de menthe privée."
 			},
-			{
-				"title": "Mintez Votre NFT pendant la période de mint",
-				"description": "Connectez votre wallet et complétez votre achat (en ETH)"
+			"2": {
+				"title": "Monnaie Votre NFT pendant la période de frappe",
+				"description": "Connectez votre portefeuille et terminez votre achat (en utilisant l'ETH)."
 			}
-		],
+		},
 		"importantDates": {
-			"title": "Dates Importantes :",
+			"title": "Dates importantes :",
 			"whitelist": {
-				"label": "Date Limite de Whitelist :",
-				"date": "10 Février 2025"
+				"label": "Date limite d'inscription sur la liste blanche :",
+				"date": "10 février 2025"
 			},
 			"preMint": {
-				"label": "Période de Pré-Mint :",
-				"date": "24h après la fermeture de la whitelist (pour une période de 48h)."
+				"label": "Période pré-monnaie :",
+				"date": "24 heures après la clôture de la liste blanche (pour une période de 48 heures)."
 			}
 		}
 	},
 	"wallet": {
-		"title": "Mon Portefeuille",
-		"connectedAccount": "Compte Connecté",
+		"title": "Mon portefeuille",
+		"connectedAccount": "Compte connecté",
 		"network": "Réseau",
-		"balance": "Solde",
+		"balance": "Balance",
 		"nfts": "NFTs",
-		"noNFTs": "Aucun NFT trouvé dans ce portefeuille",
-		"disconnect": "Déconnecter",
-		"copy": "Copier l'Adresse",
+		"noNFTs": "Aucun NFT n'a été trouvé dans ce portefeuille",
+		"disconnect": "Déconnexion",
+		"copy": "Copie de l'adresse",
 		"copied": "Copié !",
 		"viewOnEtherscan": "Voir sur Etherscan"
+	},
+	"documents": {
+		"title": "Documents essentiels",
+		"description": "Accédez à notre documentation complète pour comprendre l'approche révolutionnaire d'ITRI Living en matière d'immobilier numérique et de création de communautés.",
+		"brochure": {
+			"badge": "Brochure",
+			"title": "Brochure ITRI Living",
+			"description": "Explorez notre vision, notre proposition de valeur unique et les avantages transformateurs de l'adhésion à notre club de membres numériques. Découvrez notre approche innovante pour combiner l'immobilier et la technologie blockchain."
+		},
+		"whitepaper": {
+			"badge": "Livre blanc",
+			"title": "Livre blanc ITRI Living",
+			"description": "Plongez dans notre architecture technique, notre modèle tokenomique et notre feuille de route détaillée. Comprendre la technologie qui alimente notre écosystème et notre vision stratégique pour l'avenir."
+		},
+		"download": "Télécharger"
 	}
 }

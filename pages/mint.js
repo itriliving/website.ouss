@@ -5,6 +5,7 @@ import AboutSection from '../components/private-premint/about-section';
 import HowItWorksSection from '../components/private-premint/how-it-works-section';
 import DiscountSection from '../components/private-premint/discount-section';
 import FaqSection from '../components/private-premint/faq-section';
+import DocumentsSection from '../components/private-premint/documents-section';
 import AnimatedBackground from '../components/private-premint/AnimatedBackground';
 import { useTranslation } from 'react-i18next';
 
@@ -23,6 +24,7 @@ export default function Mint() {
 							<AboutSection />
 							<HowItWorksSection />
 							<DiscountSection />
+							<DocumentsSection />
 							<FaqSection />
 						</main>
 						<Footer />

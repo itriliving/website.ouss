@@ -93,26 +93,26 @@
 	},
 	"discount": {
 		"badge": "Limited Time Pre-Mint Offer",
-		"title": "Up to {percent}% Off the Public Mint Price",
+		"title": "Up to 40% Off the Public Mint Price",
 		"description": "Secure your NFT now for a fraction of the cost and become part of a Community shaping the future of digital art and real-world tokenized benefits.",
 		"cta": "Reserve Your Spot"
 	},
 	"faq": {
 		"title": "FAQ",
-		"items": [
-			{
+		"items": {
+			"0": {
 				"question": "What is the official mint price in 2025?",
 				"answer": "The official mint price will be set at $10,000 per NFT. The pre-mint offers significant discounts, making it the best time to join."
 			},
-			{
+			"1": {
 				"question": "How can I whitelist my wallet?",
 				"answer": "You can whitelist your wallet by submitting your email or wallet address through the form below or by contacting us directly."
 			},
-			{
+			"2": {
 				"question": "What happens after the private-mint?",
 				"answer": "After the pre-mint, NFTs will no longer be available at this discounted price. They will be sold at the official mint price in 2025."
 			}
-		]
+		}
 	},
 	"hero": {
 		"title": "Exclusive Private Pre-Mint",
@@ -128,23 +128,23 @@
 	},
 	"howItWorks": {
 		"title": "How it works",
-		"steps": [
-			{
+		"steps": {
+			"0": {
 				"title": "Whitelist Your Wallet",
-				"bullets": [
-					"Provide your wallet address to secure your spot in the private mint. Don't forget your Referral wallet address.",
-					"Use the form below or contact us via email, LinkedIn, or through one of our partners."
-				]
+				"bullets": {
+					"0": "Provide your wallet address to secure your spot in the private mint. Don't forget your Referral wallet address.",
+					"1": "Use the form below or contact us via email, LinkedIn, or through one of our partners."
+				}
 			},
-			{
+			"1": {
 				"title": "Private-Mint",
 				"description": "Once your wallet is whitelisted, and your referral registered, you'll gain exclusive access to the private-mint function."
 			},
-			{
+			"2": {
 				"title": "Mint Your NFT during the mint period",
 				"description": "Connect your wallet, and complete your purchase (using ETH)"
 			}
-		],
+		},
 		"importantDates": {
 			"title": "Important Dates:",
 			"whitelist": {
@@ -168,5 +168,20 @@
 		"copy": "Copy Address",
 		"copied": "Copied!",
 		"viewOnEtherscan": "View on Etherscan"
+	},
+	"documents": {
+		"title": "Essential Documents",
+		"description": "Access our comprehensive documentation to understand ITRI Living's revolutionary approach to digital real estate and community building.",
+		"brochure": {
+			"badge": "Brochure",
+			"title": "ITRI Living Brochure",
+			"description": "Explore our vision, unique value proposition, and the transformative benefits of joining our digital members club. Learn about our innovative approach to combining real estate and blockchain technology."
+		},
+		"whitepaper": {
+			"badge": "Whitepaper",
+			"title": "ITRI Living Whitepaper",
+			"description": "Deep dive into our technical architecture, tokenomics model, and detailed roadmap. Understand the technology powering our ecosystem and our strategic vision for the future."
+		},
+		"download": "Download"
 	}
 }
