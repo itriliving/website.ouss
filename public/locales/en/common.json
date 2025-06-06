@@ -81,10 +81,10 @@
    "request": "Book a call ",
   "get_data6": {
     "e1": "Reminder",
-    "e2": "Please note that, at this stage, we currently do not have any Capacity Purchase Agreements  in place, with operational RESORTS.",
-    "e3": "However, WE HAVE PARTNERED WITH A DEVELOPER TO START construction IN AN AMAZING BEACH-FRONT LOCATION:",
-    "e4": "Itri Residences Nador, situated on the Mediterranean Sea. THREE OTHER beachfront projects, on the Mediterranean Sea and Atlantic Ocean, are under consideration with an objective to be operational BY SUMMER 2030.",
-    "e5": "Our Product Development team is also busy identifying existing Resorts that align with our values, so we can negociate bulk capacity purchase agreement ",
+    "e2": "Please note that, x",
+    "e3": "However, x",
+    "e4": " THREE OTHER beachfront projects, on the Mediterranean Sea and Atlantic Ocean, are under consideration with an objective to be operational BY SUMMER 2030.",
+    "e5": "Our Product Development team is also busy identifying potential Resorts that align with our values ",
     "e6": "While we aim to develop a diverse catalog of properties for Itri COMMUNITY, there is no guarantee that the tailor-made projects will be built IN-TIME, or that they will be in the specific location mentioned.",
     "e7": "However, we are committed to making every effort to offer a rich selection of",
     "e8": "TAILOR-MADE",
@@ -94,18 +94,18 @@
     "f1": " Exclusive Benefits for our community ",
     "f10": "Our commitment to you includes:",
     "f11": "Exclusive Accommodation offers:",
-    "f12": "Each community member will have the opportunity to purchase up to 30 accommodation days every year, at Itri resorts, at a significant discount to market price (up to 80% off the market value).",
+    "f12": "Each community member will have the opportunity to purchase up to 30 accommodation days every year, at Itri Living resorts, at a significant discount to market price",
     "f13": "Continuous Resort expansion:",
     "f14": "We will make every effort to introduce four new first tailor-made resort developed by our partner asset developer to our specific standards, by summer 2030",
     "f15": "Seasonal Discounted offers:",
-    "f16": "By the summer 2026 holiday season, we will conclude our 1st Bulk Capacity Purschase Agreement, and introduce our initial Resorts to our Community. These will always feature to the Itri NFT Club members, a min 50% discount off the market value.",
+    "f16": "By the summer 2026 holiday season, we will start operations in our first location, in in costal city of Bouznika (half way between Rabat and Casablanca)",
     "f2": "⭐",
-    "f3": "Itri.living has entered into a strategic Agreement with Tura NFTs Marketplace project. This partnership offers to Itri NFT holders the following benefits:",
-    "f4": "I - As discussed, each ITRI NFT holder/digital club member already has the ability to purchase 30 ITRI tokens (issued by Itri.living) per year at a special cost of 35 Sfr/token (a garanteed 40% discount to the official token price, and a 50% to 80% discount to market value). This means that ITRI NFT holders will benefit from 30 days every year in any of our exclusive resorts at a cost of 35 Sfr/day. Of course, they can also trade their Itri tokens (or NFT) at the TURA Marketplace.",
-    "f5": "II - On top of this, each ITRI NFT holder/digital club member will receive TURA governance tokens, to encourage the Itri community to support the TURA Project DAO, and trade their Itri NFTs/ Tokens ",
+    "f3": "Itri.living has entered into a strategic Agreement with x",
+    "f4": "x",
+    "f5": "x",
     "f7": "Commitment",
-    "f8": "to Itri NFT Digital Club Members:",
-    "f9": "We are dedicated to ensuring that your Itri Living NFT ownership brings you exceptional value and exclusive opportunities."
+    "f8": "to Itri Digital Club Members:",
+    "f9": "We are dedicated to ensuring that membership brings you exceptional value and exclusive opportunities."
   },
   "get_data8": [
     {
@@ -232,15 +232,15 @@
   "dataFaq": [
     {
       "question": "What is Itri.Living?",
-      "answer": "Itri Living is a Swiss hospitality services company (under incorporation) dedicated to providing unbeatable value and authentic travel experiences in exotic locations. By leveraging blockchain technology, and partnering with hospitality asset developers early on, we create bespoke resorts that reflect our values of well-being, authenticity, and great value for money."
+      "answer": "Itri Living is a brand, dedicated to providing luxurious and authentic travel experiences in exotic locations. By leveraging  technology, and partnering with  asset developers early on, we create bespoke resorts that reflect our values of well-being, authenticity, luxury."
     },
     {
       "question": "How does Itri Living work?",
-      "answer": "Itri Living offers tokenized accomodation rights on carefuling selected resorts. Members can book stays at our curated resorts using tokens and enjoy exclusive benefits and discounts with each reservation."
+      "answer": "Itri Living offers accomodation experiences on carefuling selected resorts. Guest can book stays at our resorts and enjoy exclusive benefits and discounts with each reservation."
     },
     {
       "question": "What makes Itri Living unique?",
-      "answer": "Our technology changes everything : it gives our members simplicity, transparency and liquidity.. One dedicated resorts will be designed to be environmentally friendly, combining eco-responsible architecture with local traditions. We offer immersive experiences focused on sustainability and authenticity, all at unbeatable prices."
+      "answer": "One dedicated resorts will be designed to be environmentally friendly, combining eco-responsible architecture with local traditions. We offer immersive experiences focused on sustainability and authenticity, and luxury"
     },
     {
       "question": "What types of experiences does Itri Living offer?",
@@ -252,7 +252,7 @@
     },
     {
       "question": "Who are the partners of Itri Living?",
-      "answer": "We will partner with both innovative web3 projects as well as etablished hospitality services companies, to bring value to our Community. Our partnership agreement with TURA NFTs Marketplace is a perfect exemple of this synergy"
+      "answer": "We will partner with both innovative  projects as well as etablished hospitality services companies, to bring value to our Community. Our partnership agreement with TURA NFTs Marketplace is a perfect exemple of this synergy"
     },
     {
       "question": "How can I take advantage of the exclusive offers and discounts?",
